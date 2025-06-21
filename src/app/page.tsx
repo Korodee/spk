@@ -35,7 +35,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-black/60 z-10" />
 
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white font-sans">
+      <div className="relative z-20 flex flex-col items-center justify-center px-4 pt-40 md:pt-0 md:h-full text-white font-sans">
         <motion.div
           className="text-center font-[family-name:var(--font-montserrat)]"
           variants={containerVariants}
