@@ -56,9 +56,9 @@ const ScheduleSection = () => {
               custom={i}
               className="group"
             >
-              <div className="flex items-center md:px-40 text-2xl md:text-4xl font-black uppercase tracking-tighter py-4 transition-colors duration-300">
+              <div className="flex items-center md:px-40 text-xl md:text-4xl font-black uppercase tracking-tighter py-4 transition-colors duration-300">
                 <div className="w-1/3 text-white">{item.day}</div>
-                <div className="flex-1 flex justify-end text-center items-center gap-8">
+                <div className="flex-1 flex justify-end text-center items-center gap-4 md:gap-8">
                   {item.open === "FERMÉ" ? (
                     <span className="text-red-500">{item.open}</span>
                   ) : (
