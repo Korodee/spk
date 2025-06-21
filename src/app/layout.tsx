@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",
