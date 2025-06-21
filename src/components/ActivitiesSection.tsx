@@ -111,7 +111,7 @@ const ActivitiesSection = () => {
   }, [emblaApi]);
 
   return (
-    <section className="pt-25 relative isolate overflow-hidden">
+    <section id="activities" className="pt-25 relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_70%,#3b0764_100%)]"></div>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
         <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-white text-center font-[family-name:var(--font-montserrat)]">

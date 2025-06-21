@@ -80,10 +80,13 @@ export default function Home() {
                 </motion.button>
               </Link>
             </motion.div>
+            <motion.div
+              variants={itemVariants}
+              className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
+            >
+              <InfoBar />
+            </motion.div>
           </motion.div>
-        </div>
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30">
-          <InfoBar />
         </div>
       </div>
       <ActivitiesSection />
