@@ -188,7 +188,24 @@ const ContactPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-full h-[500px] mt-12">
+      <div className="relative w-full h-[500px] mt-12">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <motion.div
+            className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.8, 1, 0.8],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <FiMapPin className="text-white text-3xl" />
+          </motion.div>
+          <div className="w-4 h-4 bg-purple-400 rounded-full absolute" />
+        </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3256077874313!2d-71.0560248843258!3d48.420888979247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfd12a32c77a49%3A0x8c1b69a19d76506a!2sSPK%20Karting!5e0!3m2!1sen!2sca!4v1624300000000!5m2!1sen!2sca"
           width="100%"
