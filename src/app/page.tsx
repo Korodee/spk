@@ -80,14 +80,16 @@ export default function Home() {
                 </motion.button>
               </Link>
             </motion.div>
-            <motion.div
-              variants={itemVariants}
-              className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
-            >
-              <InfoBar />
-            </motion.div>
           </motion.div>
         </div>
+        <motion.div
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, type: "spring", stiffness: 100 }}
+        >
+          <InfoBar />
+        </motion.div>
       </div>
       <ActivitiesSection />
       <ExperienceSection />
