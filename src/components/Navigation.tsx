@@ -25,10 +25,10 @@ const navItemVariants: Variants = {
 };
 
 const navLinks = [
-  { name: "Accueil", href: "/" },
-  { name: "Activités", href: "/activities" },
-  { name: "Tarifs", href: "/rates" },
-  { name: "Contact", href: "/contact" },
+  { href: "/", label: "Accueil" },
+  { href: "/activities", label: "Activités" },
+  { href: "/tarifs", label: "Tarifs" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -125,12 +125,12 @@ export default function Navigation() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 cursor-pointer">
           {navLinks.map((link) => (
-            <motion.div key={link.name} variants={navItemVariants}>
+            <motion.div key={link.label} variants={navItemVariants}>
               <Link
                 href={link.href}
                 className="relative text-lg font-medium tracking-wider uppercase transition-colors hover:text-orange-400"
               >
-                {link.name}
+                {link.label}
                 {pathname === link.href && (
                   <motion.span
                     layoutId="underline"
@@ -179,13 +179,13 @@ export default function Navigation() {
           >
             <div className="flex flex-col items-center gap-12">
               {navLinks.map((link) => (
-                <motion.div key={link.name} variants={mobileLinkVariants}>
+                <motion.div key={link.label} variants={mobileLinkVariants}>
                   <Link
                     href={link.href}
                     className="text-3xl font-bold text-white uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {link.name}
+                    {link.label}
                   </Link>
                 </motion.div>
               ))}

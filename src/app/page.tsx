@@ -6,6 +6,7 @@ import Link from "next/link";
 import ScheduleSection from "@/components/ScheduleSection";
 import ImportantInfoSection from "@/components/ImportantInfoSection";
 import Footer from "@/components/Footer";
+import ActivitiesSection from "@/components/ActivitiesSection";
 
 export default function Home() {
   const containerVariants: Variants = {
@@ -85,6 +86,7 @@ export default function Home() {
           <InfoBar />
         </div>
       </div>
+      <ActivitiesSection />
       <ExperienceSection />
       <ScheduleSection />
       <ImportantInfoSection />
