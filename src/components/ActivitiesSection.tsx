@@ -7,44 +7,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-const activities = [
-  {
-    name: "Jeu Laser",
-    image: "/laser-tag.jpg",
-    href: "/tarifs#laser-tag",
-  },
-  {
-    name: "Minigolf",
-    image: "/golf.jpg",
-    href: "/tarifs#minigolf",
-  },
-  {
-    name: "Réalité Virtuelle",
-    image: "/virtual-real.jpg",
-    href: "/tarifs#vr",
-  },
-  {
-    name: "Karting",
-    image: "/karting.jpg",
-    href: "/tarifs#karting",
-  },
-  {
-    name: "Paintball",
-    image: "/paintball.jpg",
-    href: "/tarifs#paintball",
-  },
-  {
-    name: "Cube SPK",
-    image: "/labyrinth.jpg",
-    href: "/tarifs#cube",
-  },
-  {
-    name: "Salle Arcade VIP",
-    image: "/arcade.jpg",
-    href: "/tarifs#arcade",
-  },
-];
+import { activities } from "@/lib/activities";
 
 const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
   const targetRef = React.useRef<HTMLDivElement>(null);
@@ -74,7 +37,7 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
         <h3 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter -skew-x-12">
           {activity.name}
         </h3>
-        <Link href={activity.href}>
+        <Link href={`/activity/${activity.slug}`}>
           <motion.button
             className="mt-4 text-lg font-bold text-yellow-300 border-2 border-yellow-300 rounded-full px-8 py-2 uppercase tracking-widest"
             whileHover={{

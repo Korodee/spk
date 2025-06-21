@@ -26,7 +26,7 @@ const navItemVariants: Variants = {
 
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/activities", label: "Activités" },
+  { href: "/#activities", label: "Activités" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/contact", label: "Contact" },
 ];
