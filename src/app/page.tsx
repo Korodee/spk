@@ -1,56 +1,85 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Link from "next/link";
+import InfoBar from "@/components/InfoBar";
 
 export default function Home() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, type: "spring" }}
-        className="text-center"
-      >
-        <motion.h1
-          className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Welcome to SPK
-        </motion.h1>
+    <div className="relative w-full h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: "url('/hero-img.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-black/60 z-10" />
 
-        <motion.p
-          className="text-xl text-gray-600 mb-8 max-w-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          Your premier destination for amazing experiences and unforgettable
-          adventures.
-        </motion.p>
-
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white font-sans">
         <motion.div
-          className="flex gap-4 justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          className="text-center font-[family-name:var(--font-montserrat)]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <motion.button
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <motion.p
+            className="text-lg md:text-xl tracking-widest uppercase mb-4 text-gray-300"
+            variants={itemVariants}
           >
-            Explore Activities
-          </motion.button>
-
-          <motion.button
-            className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            Passer une journée inoubliable
+          </motion.p>
+          <motion.h1
+            className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
+            variants={itemVariants}
           >
-            View Rates
-          </motion.button>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-600">
+              Centre
+            </span>{" "}
+            Amusement
+          </motion.h1>
+          <motion.h2
+            className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-400"
+            variants={itemVariants}
+          >
+            SPK
+          </motion.h2>
+          <motion.div variants={itemVariants} className="mt-8">
+            <Link href="/contact">
+              <motion.button
+                className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                whileHover={{
+                  boxShadow: "0px 0px 20px rgb(255,255,255,0.4)",
+                }}
+              >
+                Réserver
+              </motion.button>
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30">
+        <InfoBar />
+      </div>
     </div>
   );
 }
