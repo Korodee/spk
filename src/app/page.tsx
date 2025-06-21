@@ -40,7 +40,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
 
-        <div className="relative z-20 flex flex-col items-center justify-center pt-40 md:pt-0 md:h-full text-white font-sans">
+        <div className="relative z-20 flex flex-col items-center justify-center pt-35 md:pt-0 md:h-full text-white font-sans">
           <motion.div
             className="text-center font-[family-name:var(--font-montserrat)]"
             variants={containerVariants}
@@ -48,7 +48,7 @@ export default function Home() {
             animate="visible"
           >
             <motion.p
-              className="text-lg md:text-xl tracking-widest uppercase mb-4 text-gray-300"
+              className="text-lg md:text-xl px-4 tracking-widest uppercase mb-4 text-gray-300"
               variants={itemVariants}
             >
               Passer une journée inoubliable
@@ -83,7 +83,7 @@ export default function Home() {
           </motion.div>
         </div>
         <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
+          className="absolute bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, type: "spring", stiffness: 100 }}
