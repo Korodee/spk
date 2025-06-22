@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import GlitchTitle from "./GlitchTitle";
 
 const navVariants: Variants = {
   hidden: { y: -50, opacity: 0 },
@@ -31,8 +32,6 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 const mobileMenuVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -56,8 +55,6 @@ const mobileLinkVariants: Variants = {
 export default function Navigation() {
   const pathname = usePathname();
   const router = useRouter();
-  const [logoText, setLogoText] = useState("SPK");
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -88,35 +85,6 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrambleOnHover = () => {
-    let iteration = 0;
-    if (intervalRef.current) clearInterval(intervalRef.current);
-
-    intervalRef.current = setInterval(() => {
-      setLogoText(
-        "SPK"
-          .split("")
-          .map((_, index) => {
-            if (index < iteration) return "SPK"[index];
-            return CHARS[Math.floor(Math.random() * CHARS.length)];
-          })
-          .join("")
-      );
-
-      if (iteration >= 3) {
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        setLogoText("SPK");
-      }
-
-      iteration += 1 / 3;
-    }, 40);
-  };
-
-  const resetLogo = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    setLogoText("SPK");
-  };
-
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -146,7 +114,7 @@ export default function Navigation() {
         variants={navVariants}
         initial="hidden"
         animate="visible"
-        className={`fixed top-0 cursor-pointer left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 py-8 text-white transition-all duration-300 ${
+        className={`fixed top-0 cursor-pointer left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 py-4 text-white transition-all duration-300 ${
           isScrolled ? "bg-white/5 backdrop-blur-md" : ""
         }`}
         style={{
@@ -156,17 +124,7 @@ export default function Navigation() {
         }}
       >
         <motion.div variants={navItemVariants}>
-          <Link href="/">
-            <div
-              className="flex items-baseline text-4xl font-black uppercase"
-              onMouseEnter={scrambleOnHover}
-              onMouseLeave={resetLogo}
-            >
-              <span className="text-orange-400">{logoText[0]}</span>
-              <span className="text-purple-500">{logoText[1]}</span>
-              <span className="text-yellow-400">{logoText[2]}</span>
-            </div>
-          </Link>
+          <GlitchTitle />
         </motion.div>
 
         {/* Desktop Nav */}

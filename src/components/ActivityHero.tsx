@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { activities } from "@/lib/activities";
 import Link from "next/link";
+import AnimatedTitle from "./AnimatedTitle";
 
 type Activity = (typeof activities)[0];
 
@@ -29,11 +30,7 @@ const ActivityHero = ({ activity, customTitle }: ActivityHeroProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {customTitle || (
-            <h1 className="text-5xl mx-4 md:mx-0 font-black uppercase tracking-tighter text-white -skew-x-12">
-              {activity.name}
-            </h1>
-          )}
+          {customTitle || <AnimatedTitle text={activity.name} />}
           <motion.div className="mt-8">
             <Link href="/contact">
               <motion.button

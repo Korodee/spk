@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 const ratesData = [
   {
-    category: "Jeu Laser",
+    category: "Laser tag",
     image: "/laser-tag.jpg",
     items: [
       { name: "1ère partie", price: "11.50$" },
@@ -52,7 +52,7 @@ const ratesData = [
     ],
   },
   {
-    category: "Cube SPK",
+    category: "LABYRINTHE",
     image: "/labyrinth.jpg",
     items: [{ name: "Labyrinthe", price: "11$" }],
   },

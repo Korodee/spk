@@ -8,7 +8,7 @@ export interface Activity {
 
 export const activities: Activity[] = [
   {
-    name: "Jeu Laser",
+    name: "Laser Tag",
     slug: "jeu-laser",
     image: "/laser-tag.jpg",
     description:
@@ -68,11 +68,11 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Cube SPK",
-    slug: "cube-spk",
+    name: "Labyrinthe",
+    slug: "labyrinthe",
     image: "/labyrinth.jpg",
     description:
-      "Mettez votre logique et votre agilité à l'épreuve dans notre Cube SPK, un labyrinthe de défis inspiré de Fort Boyard.",
+      "Mettez votre logique et votre agilité à l'épreuve dans notre LABYRINTHE, un labyrinthe de défis inspiré de Fort Boyard.",
     details: [
       "Défis physiques et intellectuels",
       "Jeu en équipe",
@@ -80,8 +80,8 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Salle Arcade VIP",
-    slug: "salle-arcade-vip",
+    name: "Salle VIP",
+    slug: "salle-vip",
     image: "/arcade.jpg",
     description:
       "Revivez la nostalgie des jeux d'arcade classiques et découvrez les nouveautés dans notre salle VIP.",

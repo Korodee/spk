@@ -1,142 +1,107 @@
 "use client";
-
-import { motion, Variants } from "framer-motion";
-import React, { useState, useEffect } from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const GlitchLogo = () => {
-  const [text, setText] = useState("SPK");
-  const originalText = "SPK";
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    const handleMouseOver = () => {
-      let iteration = 0;
-      clearInterval(interval);
-
-      interval = setInterval(() => {
-        setText(
-          originalText
-            .split("")
-            .map((_letter, index) => {
-              if (index < iteration) {
-                return originalText[index];
-              }
-              return chars[Math.floor(Math.random() * chars.length)];
-            })
-            .join("")
-        );
-
-        if (iteration >= originalText.length) {
-          clearInterval(interval);
-        }
-
-        iteration += 1 / 3;
-      }, 50);
-    };
-
-    const logoElement = document.getElementById("glitch-logo");
-    if (logoElement) {
-      logoElement.addEventListener("mouseover", handleMouseOver);
-    }
-
-    return () => {
-      if (logoElement) {
-        logoElement.removeEventListener("mouseover", handleMouseOver);
-      }
-      clearInterval(interval);
-    };
-  }, []);
-
-  return (
-    <h1
-      id="glitch-logo"
-      className="text-5xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500 cursor-pointer"
-      onMouseOver={() => {}}
-    >
-      {text}
-    </h1>
-  );
-};
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import { activities } from "@/lib/activities";
+import GlitchTitle from "./GlitchTitle";
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative py-20 sm:py-28 bg-black">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] opacity-70"></div>
-      <motion.div
-        className="max-w-7xl mx-auto px-6 lg:px-8 text-center text-white"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <motion.div variants={itemVariants} className="mb-8">
-          <GlitchLogo />
-        </motion.div>
+    <footer className="relative bg-black text-white pt-24 pb-12 overflow-hidden">
+      <div className="absolute inset-0 footer-bg" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
-        <motion.div variants={itemVariants} className="mb-8">
-          <p className="text-lg text-gray-300">2175 Bd Saint-Paul</p>
-          <p className="text-lg text-gray-300">info@spk.com | 418-693-3334</p>
-        </motion.div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Column 1: About */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-6">
+              <GlitchTitle />
+            </div>
+            <p className="text-gray-400 text-center md:text-left text-sm leading-relaxed">
+              Le complexe de divertissement ultime. Adrénaline et plaisir
+              garantis pour tous les âges.
+            </p>
+          </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-center gap-6 mb-10"
-        >
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            <FaFacebook size={28} />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            <FaInstagram size={28} />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            <FaTwitter size={28} />
-          </a>
-        </motion.div>
+          {/* Column 2: Activités */}
+          <div>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-purple-300 mb-6 text-center md:text-left">
+              Activités
+            </h3>
+            <ul className="space-y-3 text-center md:text-left">
+              {activities.map((activity) => (
+                <li key={activity.slug}>
+                  <Link
+                    href={`/activity/${activity.slug}`}
+                    className="group text-gray-300 hover:text-white transition-colors duration-300 relative"
+                  >
+                    <span>{activity.name}</span>
+                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="border-t border-white/10 pt-8"
-        >
-          <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} SPK Entertainment. All Rights
-            Reserved.
+          {/* Column 3: Contact */}
+          <div>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-purple-300 mb-6 text-center md:text-left">
+              Contact
+            </h3>
+            <ul className="space-y-3 text-gray-300 text-center md:text-left">
+              <li>2175 Bd Saint-Paul</li>
+              <li>Chicoutimi, QC</li>
+              <li>info@spk.com</li>
+              <li>418-693-3334</li>
+            </ul>
+          </div>
+
+          {/* Column 4: Social */}
+          <div>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-purple-300 mb-6 text-center md:text-left">
+              Suivez-nous
+            </h3>
+            <div className="flex justify-center md:justify-start gap-5">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              >
+                <FaFacebook size={28} />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              >
+                <FaInstagram size={28} />
+              </a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              >
+                <FaTwitter size={28} />
+              </a>
+              <a
+                href="#"
+                aria-label="Tiktok"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              >
+                <FaTiktok size={28} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
+          <p>
+            &copy; {new Date().getFullYear()} SPK Entertainment. Tous droits
+            réservés.
           </p>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </footer>
   );
 };
