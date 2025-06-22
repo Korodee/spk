@@ -83,7 +83,7 @@ export default function Home() {
           </motion.div>
         </div>
         <motion.div
-          className="absolute bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
+          className="absolute bottom-5 md:bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, type: "spring", stiffness: 100 }}
