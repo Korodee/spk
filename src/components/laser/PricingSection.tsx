@@ -25,7 +25,23 @@ const pricingData = [
   },
 ];
 
-const PricingCard = ({ tier, price, color, gradient, shadow, index }: any) => {
+interface PricingCardProps {
+  tier: string;
+  price: string;
+  color: string;
+  gradient: string;
+  shadow: string;
+  index: number;
+}
+
+const PricingCard = ({
+  tier,
+  price,
+  color,
+  gradient,
+  shadow,
+  index,
+}: PricingCardProps) => {
   return (
     <motion.div
       className="relative p-1 rounded-2xl overflow-hidden"
