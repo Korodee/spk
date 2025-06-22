@@ -16,14 +16,14 @@ const slideData = [
     id: "Rétro",
     title: "Univers rétro",
     description:
-      "Imaginez-vous plongé dans l'univers rétro des bornes d'arcade, où vous pourrez défier vos amis dans des classiques intemporels tels que Pac-Man, Space Invaders ou Street Fighter.",
+      "Imaginez-vous plongé dans l'univers rétro des bornes d'arcade, où vous pourrez défier vos amis dans des classiques intemporels tels que Pac-Man, Space Invaders ou Street Fighter. Vous ressentirez l'excitation monter en vous alors que vous tenterez d'établir le meilleur score et de devenir le champion incontesté de la salle.",
     image: "/retro-3.jpg",
   },
   {
     id: "Adrénaline",
     title: "Fan de football ?",
     description:
-      "Et si vous êtes plus fan de football, notre baby-foot vous attend pour des parties endiablées. Maniez les joueurs habilement, déjouez les défenses adverses et faites trembler les filets avec vos tirs précis.",
+      "Et si vous êtes plus fan de football, notre baby-foot vous attend pour des parties endiablées. Maniez les joueurs habilement, déjouez les défenses adverses et faites trembler les filets avec vos tirs précis. Chaque but sera une victoire célébrée dans une ambiance conviviale et passionnée.",
     image: "/adrenaline-3.jpg",
   },
 ];
