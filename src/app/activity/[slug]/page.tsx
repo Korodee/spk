@@ -1,8 +1,8 @@
+import { notFound } from "next/navigation";
 import ActivityHero from "@/components/ActivityHero";
 import ActivityPageClient from "@/components/ActivityPageClient";
 import Footer from "@/components/Footer";
 import { activities } from "@/lib/activities";
-import { notFound } from "next/navigation";
 
 // Karting Components
 import CircuitSection from "@/components/karting/CircuitSection";
@@ -18,24 +18,27 @@ import TerrainGrid from "@/components/paintball/TerrainGrid";
 // VR Components
 import VrPageContent from "@/components/vr/VrPageContent";
 
-export function generateStaticParams() {
+// ✅ Define props locally (no import from .next/types!)
+type LocalPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return activities.map((activity) => ({
     slug: activity.slug,
   }));
 }
 
-interface PageProps {
-  params: { slug: string };
-}
-
-export default function ActivityPage({ params }: PageProps) {
-  const activity = activities.find((a) => a.slug === params.slug);
+export default async function ActivityPage({ params }: LocalPageProps) {
+  const { slug } = await params;
+  const activity = activities.find((a) => a.slug === slug);
 
   if (!activity) {
     notFound();
   }
 
-  // Define the custom title for the Karting hero
   const kartingTitle = (
     <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white">
       KARTING

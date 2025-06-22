@@ -30,7 +30,7 @@ const ActivityHero = ({ activity, customTitle }: ActivityHeroProps) => {
           transition={{ duration: 0.8 }}
         >
           {customTitle || (
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white -skew-x-12">
+            <h1 className="text-5xl mx-4 md:mx-0 font-black uppercase tracking-tighter text-white -skew-x-12">
               {activity.name}
             </h1>
           )}

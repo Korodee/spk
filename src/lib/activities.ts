@@ -1,4 +1,12 @@
-export const activities = [
+export interface Activity {
+  name: string;
+  slug: string;
+  image: string;
+  description: string;
+  details: string[];
+}
+
+export const activities: Activity[] = [
   {
     name: "Jeu Laser",
     slug: "jeu-laser",
