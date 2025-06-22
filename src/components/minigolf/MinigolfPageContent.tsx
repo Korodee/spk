@@ -53,7 +53,7 @@ const PricingTier = ({
     <p className="text-sm font-bold uppercase tracking-widest text-white/50">
       {title}
     </p>
-    <p className="text-7xl font-black my-4 text-white">{price}</p>
+    <p className="text-5xl font-black my-4 text-white">{price}</p>
     <div className="flex items-center justify-center gap-2 text-white/60">
       <FiCheckCircle className="text-purple-400" />
       <span>{details}</span>

@@ -35,7 +35,7 @@ const SalleCSlider = () => {
   const startSlideshow = () => {
     intervalRef.current = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slideData.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
   };
 
   const resetSlideshow = () => {
@@ -60,7 +60,7 @@ const SalleCSlider = () => {
   };
 
   return (
-    <div className="relative py-24 px-4 h-[80vh] md:h-screen">
+    <div className="relative py-16 md:py-24 px-4 min-h-[90vh] md:h-screen flex items-center">
       <AnimatePresence>
         <motion.div
           key={activeSlide}
@@ -81,38 +81,37 @@ const SalleCSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="absolute top-0 left-0 z-20">
-          <div className="bg-black/50 backdrop-blur-sm p-4 rounded-lg border-b-2 border-yellow-400">
-            <h3 className="text-4xl font-bold uppercase text-yellow-400">
-              Salle Disco C
-            </h3>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center min-h-[60vh] pt-24">
-          <div className="md:col-span-2">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-              >
-                <h2 className="text-6xl font-black uppercase tracking-tighter mb-4">
-                  {slideData[activeSlide].title}
-                </h2>
-                <p className="text-lg text-gray-300 max-w-2xl">
-                  {slideData[activeSlide].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-center w-full">
+          <div className="lg:col-span-2 order-2 lg:order-1 text-center lg:text-left">
+            <div className="bg-black/40 backdrop-blur-sm p-8 rounded-2xl lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeSlide}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                >
+                  <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
+                    {slideData[activeSlide].title}
+                  </h2>
+                  <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                    {slideData[activeSlide].description}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
 
-          <div className="md:col-span-1 flex justify-center">
-            <div className="p-2 bg-black/30 backdrop-blur-lg border border-white/10 rounded-xl">
-              <ul className="space-y-2">
+          <div className="lg:col-span-1 flex justify-center order-1 lg:order-2">
+            <div className="w-full max-w-sm bg-black/30 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden">
+              <div className="bg-black/50 p-4 border-b-2 border-yellow-400">
+                <h3 className="text-2xl font-bold uppercase text-yellow-400 text-center">
+                  Salle Disco C
+                </h3>
+              </div>
+              <ul className="p-2 space-y-2">
                 {slideData.map((slide, index) => (
                   <li key={slide.id}>
                     <button
@@ -133,7 +132,7 @@ const SalleCSlider = () => {
                         />
                       )}
                       <div className="relative z-10 flex items-center gap-4">
-                        <div className="relative w-24 h-16 rounded-md overflow-hidden">
+                        <div className="relative w-20 h-14 md:w-24 md:h-16 rounded-md overflow-hidden">
                           <Image
                             src={slide.image}
                             alt={slide.id}
@@ -141,7 +140,7 @@ const SalleCSlider = () => {
                             objectFit="cover"
                           />
                         </div>
-                        <span className="font-bold uppercase tracking-wider">
+                        <span className="font-bold uppercase tracking-wider text-sm md:text-base">
                           {slide.id}
                         </span>
                       </div>

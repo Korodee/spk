@@ -69,7 +69,7 @@ export const activities: Activity[] = [
   },
   {
     name: "Labyrinthe",
-    slug: "labyrinthe",
+    slug: "labyrinth",
     image: "/labyrinth.jpg",
     description:
       "Mettez votre logique et votre agilité à l'épreuve dans notre LABYRINTHE, un labyrinthe de défis inspiré de Fort Boyard.",
@@ -81,7 +81,7 @@ export const activities: Activity[] = [
   },
   {
     name: "Salle VIP",
-    slug: "salle-vip",
+    slug: "salle-arcade-vip",
     image: "/arcade.jpg",
     description:
       "Revivez la nostalgie des jeux d'arcade classiques et découvrez les nouveautés dans notre salle VIP.",

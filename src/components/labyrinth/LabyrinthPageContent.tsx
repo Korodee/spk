@@ -63,7 +63,7 @@ const LabyrinthPageContent = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="p-8 rounded-2xl bg-white/5 border border-white/10 shadow-lg backdrop-blur-md transition-colors hover:bg-white/10"
+            className="p-4 mx-4 md:mx-0 md:p-8 rounded-2xl bg-white/5 border border-white/10 shadow-lg backdrop-blur-md transition-colors hover:bg-white/10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + index * 0.15, duration: 0.6 }}
