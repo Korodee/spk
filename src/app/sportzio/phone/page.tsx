@@ -31,7 +31,6 @@ export default function PhoneParallax() {
         frame = FRAME_COUNT - 1;
       }
       setCurrentFrame(Math.min(Math.max(frame, 0), FRAME_COUNT - 1));
-      // Show text only after scrolling 100vh into the section
       setShowText(scrolled > windowHeight);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
