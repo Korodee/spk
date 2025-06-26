@@ -59,7 +59,7 @@ export default function StadiumParallax() {
   const sideText = getTextForFrame(currentFrame);
 
   return (
-    <div ref={containerRef} style={{ height: `${FRAME_COUNT * 10}vh` }}>
+    <div ref={containerRef} style={{ height: `${FRAME_COUNT * 5}vh` }}>
       <section
         className="sticky top-0 h-screen flex items-center justify-center overflow-hidden"
         style={{ zIndex: 10 }}
