@@ -48,7 +48,7 @@ export default function PhoneParallax() {
         style={{ zIndex: 10 }}
       >
         <div className="relative w-full h-full flex items-center justify-center">
-          <div className="flex items-center justify-center">
+          <div className="md:flex items-center justify-center">
             <div className="relative w-72 h-150">
               {Array.from({ length: FRAME_COUNT }).map((_, i) => (
                 <Image
@@ -72,7 +72,7 @@ export default function PhoneParallax() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 40 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="ml-8 bg-[#0a0d12] rounded-xl px-4 py-4 text-white text-md font-semibold max-w-[250px] shadow-xl pointer-events-none"
+                  className="md:ml-8 mt-4 mx-auto md:text-left md:mt-0 bg-[#0a0d12] rounded-xl px-4 py-4 text-white text-md font-semibold max-w-[250px] shadow-xl pointer-events-none"
                 >
                   {sideText}
                 </motion.div>

@@ -65,7 +65,7 @@ export default function StadiumParallax() {
         style={{ zIndex: 10 }}
       >
         <div className="relative w-full h-full flex items-center justify-center">
-          <div className="relative w-200 h-200">
+          <div className="relative w-100 h-100 md:w-200 md:h-200">
             {Array.from({ length: FRAME_COUNT }).map((_, i) => (
               <Image
                 key={i}
@@ -87,7 +87,7 @@ export default function StadiumParallax() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 40 }}
                   transition={{ duration: 0.15, ease: "easeInOut" }}
-                  className="absolute top-80 -right-60 m-8 text-white text-right text-md font-medium max-w-[250px] leading-snug z-50 pointer-events-none"
+                  className="absolute -bottom-20 md:top-80 md:-right-60 md:m-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 text-white md:text-right text-md font-medium max-w-[250px] leading-snug z-50 pointer-events-none"
                 >
                   {sideText}
                 </motion.div>

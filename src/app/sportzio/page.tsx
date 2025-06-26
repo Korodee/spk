@@ -9,9 +9,9 @@ export default function Sportzio() {
   return (
     <div className="relative w-full min-h-screen bg-black">
       <PhoneParallax />
-      <div style={{ height: `20vh` }} />
+      <div className="md:h-[10vh]" />
       <StadiumParallax />
-      <div style={{ height: `20vh` }} />
+      <div className="md:h-[10vh]" />
       <RestaurantParallax />
     </div>
   );
