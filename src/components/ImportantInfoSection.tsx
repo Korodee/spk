@@ -66,10 +66,10 @@ const ImportantInfoSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
               Informations
             </span>{" "}
-            <span className="text-gray-900">Importantes</span>
+            <span className="text-gray-700">Importantes</span>
           </motion.h2>
 
           <motion.p
