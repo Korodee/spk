@@ -1,29 +1,7 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
 import React from "react";
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.8,
-      type: "spring",
-      stiffness: 80,
-    },
-  }),
-};
-
-const iconVariants: Variants = {
-  hover: {
-    scale: 1.2,
-    rotate: 15,
-    transition: { type: "spring", stiffness: 300, damping: 10 },
-  },
-};
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -46,6 +24,8 @@ const features = [
     title: "PLONGEZ DANS L'ACTION",
     description:
       "Vivez des expériences immersives uniques grâce à nos arènes de jeu modernes et nos équipements de pointe. Préparez-vous à être transporté.",
+    gradient: "from-blue-500 to-cyan-500",
+    bgGradient: "from-blue-50 to-cyan-50",
   },
   {
     icon: (props: React.SVGProps<SVGSVGElement>) => (
@@ -72,6 +52,8 @@ const features = [
     title: "DÉFIEZ VOS LIMITES",
     description:
       "Participez à nos ligues de Karting, affrontez vos amis et visez la première place. La compétition est à son comble chez SPK!",
+    gradient: "from-purple-500 to-pink-500",
+    bgGradient: "from-purple-50 to-pink-50",
   },
   {
     icon: (props: React.SVGProps<SVGSVGElement>) => (
@@ -93,61 +75,143 @@ const features = [
     title: "DÉTENDEZ-VOUS & PROFITEZ",
     description:
       "Après l'effort, le réconfort. Notre service de bar et collation vous attend pour célébrer une victoire ou simplement pour vous détendre.",
+    gradient: "from-orange-500 to-red-500",
+    bgGradient: "from-orange-50 to-red-50",
   },
 ];
 
 export default function ExperienceSection() {
   return (
-    <section className="relative py-24 sm:py-32">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-[-1] bg-gradient-to-br from-purple-900/20 via-black to-orange-900/10"
-      />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <motion.h2
-          className="text-4xl sm:text-5xl font-black uppercase tracking-tighter text-white font-[family-name:var(--font-montserrat)]"
-          initial={{ opacity: 0, y: 20 }}
+    <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-transparent rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-30 blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-            Une Expérience
-          </span>{" "}
-          Totale
-        </motion.h2>
+          <motion.div
+            className="inline-flex items-center justify-center mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+            <span className="mx-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Notre Philosophie
+            </span>
+            <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+          </motion.div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12">
-          {features.map((feature, i) => (
+          <motion.h2
+            className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Une Expérience{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Totale
+            </span>
+          </motion.h2>
+
+          <motion.p
+            className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Découvrez ce qui rend SPK unique et pourquoi nos visiteurs
+            reviennent sans cesse pour vivre des moments inoubliables
+          </motion.p>
+        </motion.div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="group relative p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10"
-              variants={cardVariants}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
+              className="group relative h-full"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-orange-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <motion.div
-                variants={iconVariants}
-                whileHover="hover"
-                className="relative w-16 h-16 mx-auto text-yellow-400"
+              {/* Card */}
+              <div
+                className={`relative bg-gradient-to-br ${feature.bgGradient} rounded-xl p-6 lg:p-8 border border-gray-200/50 hover:border-gray-300 transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 group-hover:-translate-y-1 h-full flex flex-col`}
               >
-                <feature.icon className="w-full h-full" />
-              </motion.div>
-              <h3 className="mt-6 text-xl font-bold text-white uppercase">
-                {feature.title}
-              </h3>
-              <p className="mt-4 text-gray-400">{feature.description}</p>
+                {/* Icon Container */}
+                <motion.div
+                  className={`w-12 h-12 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.gradient} p-3 shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 flex-shrink-0`}
+                  whileHover={{ rotate: 5 }}
+                >
+                  <feature.icon className="w-full h-full text-white" />
+                </motion.div>
+
+                {/* Content */}
+                <div className="text-center flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight flex-shrink-0">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-md flex-1">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Decorative elements */}
+                <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-3 left-3 w-4 h-4 rounded-full bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"></div>
+              </div>
+
+              {/* Background glow effect */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-xl opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-500 -z-10`}
+              ></div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <motion.button
+            className="cursor-pointer inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 text-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Découvrir Nos Activités
+            <svg
+              className="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

@@ -115,7 +115,7 @@ export default function Navigation() {
         initial="hidden"
         animate="visible"
         className={`fixed top-0 cursor-pointer left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 py-6 text-white transition-all duration-300 ${
-          isScrolled ? "bg-white/5 backdrop-blur-md" : ""
+          isScrolled ? "bg-black/50 backdrop-blur-md" : ""
         }`}
         style={{
           background: isScrolled

@@ -7,7 +7,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-slate-900 text-white pt-24 pb-12 overflow-hidden">
       <div className="absolute inset-0 footer-bg" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 

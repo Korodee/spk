@@ -1,86 +1,168 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 
 const scheduleData = [
-  { day: "Lundi", open: "FERMÉ", close: "" },
-  { day: "Mardi", open: "FERMÉ", close: "" },
-  { day: "Mercredi", open: "12 PM", close: "10 PM" },
-  { day: "Jeudi", open: "12 PM", close: "10 PM" },
-  { day: "Vendredi", open: "12 PM", close: "10 PM" },
-  { day: "Samedi", open: "9 AM", close: "10 PM" },
-  { day: "Dimanche", open: "9 AM", close: "5 PM" },
+  { day: "Lundi", open: "FERMÉ", close: "", icon: "🌙" },
+  { day: "Mardi", open: "FERMÉ", close: "", icon: "🌙" },
+  { day: "Mercredi", open: "12 PM", close: "10 PM", icon: "🌅" },
+  { day: "Jeudi", open: "12 PM", close: "10 PM", icon: "🌅" },
+  { day: "Vendredi", open: "12 PM", close: "10 PM", icon: "🌅" },
+  { day: "Samedi", open: "9 AM", close: "10 PM", icon: "⭐" },
+  { day: "Dimanche", open: "9 AM", close: "5 PM", icon: "☀️" },
 ];
-
-const rowVariants: Variants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.h2
-          className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-white text-center mb-16 font-[family-name:var(--font-montserrat)]"
-          initial={{ opacity: 0, y: 50 }}
+    <section className="py-24 bg-slate-900 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-            Nos Horaires
-          </span>
-        </motion.h2>
+          <motion.div
+            className="inline-flex items-center justify-center mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-12 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+            <span className="mx-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              Horaires d&apos;ouverture
+            </span>
+            <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+          </motion.div>
+
+          <motion.h2
+            className="text-3xl md:text-4xl font-black text-white mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Nos{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Horaires
+            </span>
+          </motion.h2>
+          <motion.p
+            className="text-lg text-slate-400"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Planifiez votre visite selon nos heures d&apos;ouverture
+          </motion.p>
+        </motion.div>
 
         <motion.div
-          className="flex flex-col"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden shadow-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          {scheduleData.map((item, i) => (
+          {scheduleData.map((item, index) => (
             <motion.div
               key={item.day}
-              variants={rowVariants}
-              custom={i}
-              className="group"
+              className="group relative"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              <div className="flex items-center md:px-40 text-xl md:text-4xl font-black uppercase tracking-tighter py-4 transition-colors duration-300">
-                <div className="w-1/3 text-white">{item.day}</div>
-                <div className="flex-1 flex justify-end text-center items-center gap-4 md:gap-8">
+              <div className="flex items-center justify-between px-8 py-6 hover:bg-white/5 transition-all duration-300 relative">
+                {/* Day with icon */}
+                <div className="flex items-center gap-3">
+                  <motion.span
+                    className="text-lg opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 3,
+                    }}
+                  >
+                    {item.icon}
+                  </motion.span>
+                  <div className="text-lg font-semibold text-white group-hover:text-blue-100 transition-colors duration-300">
+                    {item.day}
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-center gap-4">
                   {item.open === "FERMÉ" ? (
-                    <span className="text-red-500">{item.open}</span>
+                    <motion.span
+                      className="text-red-400 font-medium px-3 py-1 rounded-full bg-red-400/10 border border-red-400/20"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {item.open}
+                    </motion.span>
                   ) : (
                     <>
-                      <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                      <motion.span
+                        className="text-slate-300 group-hover:text-white transition-colors duration-300 font-medium"
+                        whileHover={{ scale: 1.05 }}
+                      >
                         {item.open}
-                      </span>
-                      <span className="text-gray-600 items-center justify-center text-xl">
-                        -----
-                      </span>
-                      <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                      </motion.span>
+                      <motion.div
+                        className="w-1 h-1 bg-slate-500 rounded-full"
+                        animate={{ scale: [1, 1.5, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                      <motion.span
+                        className="text-slate-300 group-hover:text-white transition-colors duration-300 font-medium"
+                        whileHover={{ scale: 1.05 }}
+                      >
                         {item.close}
-                      </span>
+                      </motion.span>
                     </>
                   )}
                 </div>
+
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
               </div>
-              {i < scheduleData.length - 1 && (
-                <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent group-hover:via-orange-400 transition-colors duration-500" />
+
+              {index < scheduleData.length - 1 && (
+                <motion.div
+                  className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mx-8"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                  viewport={{ once: true }}
+                />
               )}
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Bottom info */}
+        <motion.div
+          className="text-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-slate-400 text-sm">
+            <span className="text-blue-400 font-medium">💡</span> Réservations
+            recommandées pour les groupes
+          </p>
         </motion.div>
       </div>
     </section>

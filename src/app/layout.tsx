@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
+// Apple's SF Pro Display font system with fallbacks
+const sfProDisplay = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
-  style: ["normal", "italic"],
+  variable: "--font-sf-pro-display",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
@@ -34,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-black`}
+        className={`${sfProDisplay.variable} font-sans antialiased bg-white`}
+        style={{
+          fontFamily: `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif`,
+        }}
       >
         <Navigation />
         <main>{children}</main>

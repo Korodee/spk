@@ -92,9 +92,17 @@ export default function Home() {
         </motion.div>
       </div>
       <ActivitiesSection />
+
+      {/* Experience Section */}
       <ExperienceSection />
+
+      {/* Schedule Section */}
       <ScheduleSection />
+
+      {/* Important Info Section */}
       <ImportantInfoSection />
+
+      {/* Footer */}
       <Footer />
     </>
   );

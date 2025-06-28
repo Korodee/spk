@@ -1,130 +1,126 @@
 "use client";
 
-import React, { useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { motion, useTransform, useScroll } from "framer-motion";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { activities } from "@/lib/activities";
+import { motion } from "framer-motion";
+import VipSection from "./VipSection";
 
-const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
-  const targetRef = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
-
+const ActivityCard = ({
+  activity,
+  index,
+}: {
+  activity: (typeof activities)[0];
+  index: number;
+}) => {
   return (
-    <div
-      ref={targetRef}
-      className="embla__slide relative h-[70vh] flex items-end justify-start p-8 md:p-12 overflow-hidden"
+    <motion.div
+      className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+      viewport={{ once: true }}
     >
-      <div className="absolute inset-0 z-0">
-        <motion.div
-          style={{ y }}
-          className="absolute -inset-24 w-[calc(100%+12rem)] h-[calc(100%+12rem)]"
-        >
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image
-            src={activity.image}
-            alt={activity.name}
-            fill
-            className="object-cover"
-          />
-        </motion.div>
+      <div className="relative h-80 overflow-hidden">
+        <Image
+          src={activity.image}
+          alt={activity.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
       </div>
-      <div className="relative z-20">
-        <h3 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter -skew-x-12">
+
+      <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+        <h3 className="text-3xl font-bold mb-3 group-hover:text-4xl duration-300">
           {activity.name}
         </h3>
+        <p className="text-slate-200 text-sm leading-relaxed mb-4 line-clamp-2">
+          {activity.description}
+        </p>
+
+        <div className="mb-6">
+          <ul className="space-y-2">
+            {activity.details.slice(0, 2).map((detail, detailIndex) => (
+              <li
+                key={detailIndex}
+                className="flex items-center text-slate-200 text-sm"
+              >
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3 group-hover:bg-blue-400 transition-colors duration-300"></div>
+                {detail}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <Link href={`/activity/${activity.slug}`}>
-          <motion.button
-            className="mt-4 text-lg font-bold text-yellow-300 border-2 border-yellow-300 rounded-full px-8 py-2 uppercase tracking-widest"
-            whileHover={{
-              backgroundColor: "#fde047",
-              color: "#000000",
-              scale: 1.1,
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+          <button className="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg">
             Découvrir
-          </motion.button>
+          </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const ActivitiesSection = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      align: "start",
-      containScroll: "trimSnaps",
-      loop: true,
-    },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  const regularActivities = activities.filter(
+    (a) => a.slug !== "salle-arcade-vip"
   );
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
   return (
-    <section id="activities" className="pt-25 relative isolate overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_70%,#3b0764_100%)]"></div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
-        <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-white text-center font-[family-name:var(--font-montserrat)]">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-            Nos Activités
-          </span>
-        </h2>
-      </div>
-      <div className="embla relative" ref={emblaRef}>
-        <div className="embla__container">
-          {activities.map((activity) => (
-            <ActivityCard key={activity.name} activity={activity} />
-          ))}
+    <>
+      <section id="activities" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="mb-2">
+              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-1 tracking-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  Nos
+                </span>{" "}
+                <span className="text-gray-900">Activités</span>
+              </h2>
+            </div>
+            <div className="max-w-2xl mx-auto">
+              <p className="text-lg md:text-lg text-gray-600 leading-relaxed font-medium">
+                Découvrez notre gamme complète d&apos;activités pour tous les
+                âges et tous les goûts
+              </p>
+            </div>
+            <div className="flex mt-4 items-center justify-center space-x-6">
+              <div className="w-20  h-px bg-gradient-to-r from-transparent via-gray-300 to-blue-500"></div>
+              <div className="flex space-x-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              </div>
+              <div className="w-20 h-px bg-gradient-to-l from-transparent via-gray-300 to-purple-500"></div>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularActivities.map((activity, index) => (
+              <ActivityCard
+                key={activity.name}
+                activity={activity}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20">
-        <button
-          onClick={scrollPrev}
-          className="bg-white/10 backdrop-blur-sm p-3 rounded-full text-white hover:bg-white/20 transition-colors"
-        >
-          <FiChevronLeft size={32} />
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
-        <button
-          onClick={scrollNext}
-          className="bg-white/10 backdrop-blur-sm p-3 rounded-full text-white hover:bg-white/20 transition-colors"
-        >
-          <FiChevronRight size={32} />
-        </button>
-      </div>
-      <style jsx global>{`
-        .embla {
-          overflow: hidden;
-        }
-        .embla__container {
-          display: flex;
-        }
-        .embla__slide {
-          flex: 0 0 80%;
-          min-width: 0;
-          padding-left: 1rem;
-        }
-        @media (min-width: 768px) {
-          .embla__slide {
-            flex: 0 0 50%;
-          }
-        }
-      `}</style>
-    </section>
+      </section>
+
+      <VipSection />
+    </>
   );
 };
 
