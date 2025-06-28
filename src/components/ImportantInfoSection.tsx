@@ -135,7 +135,7 @@ const ImportantInfoSection = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
+          <div className="bg-purple-50 rounded-2xl p-8 border border-purple-100 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Besoin d&apos;informations supplémentaires ?
             </h3>
@@ -144,7 +144,7 @@ const ImportantInfoSection = () => {
               parfaite
             </p>
             <motion.button
-              className="cursor-pointer bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="cursor-pointer bg-gradient-to-r from-purple-400 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -57,7 +57,7 @@ const ActivityCard = ({
         </div>
 
         <Link href={`/activity/${activity.slug}`}>
-          <button className="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg">
+          <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform group-hover:scale-105 shadow-lg">
             Découvrir
           </button>
         </Link>
