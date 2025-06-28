@@ -7,20 +7,14 @@ import { activities } from "@/lib/activities";
 import { motion } from "framer-motion";
 import VipSection from "./VipSection";
 
-const ActivityCard = ({
-  activity,
-  index,
-}: {
-  activity: (typeof activities)[0];
-  index: number;
-}) => {
+const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
-      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+      }}
     >
       <div className="relative h-80 overflow-hidden">
         <Image
@@ -107,15 +101,24 @@ const ActivitiesSection = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularActivities.map((activity, index) => (
-              <ActivityCard
-                key={activity.name}
-                activity={activity}
-                index={index}
-              />
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+            }}
+          >
+            {regularActivities.map((activity) => (
+              <ActivityCard key={activity.name} activity={activity} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
