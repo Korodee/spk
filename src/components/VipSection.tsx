@@ -69,7 +69,7 @@ const VipSection = () => {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
           {/* Left: Premium Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -163,14 +163,14 @@ const VipSection = () => {
 
             {/* Premium CTA */}
             <motion.div
-              className=""
+              className="text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
               viewport={{ once: true }}
             >
               <Link href={`/activity/${vipActivity.slug}`}>
-                <button className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-10 py-5 font-bold text-white shadow-2xl transition-all duration-300 hover:from-purple-700 hover:to-blue-700 hover:scale-105 hover:shadow-3xl">
+                <button className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-4 font-bold text-white shadow-2xl transition-all duration-300 hover:from-purple-700 hover:to-blue-700 hover:scale-105 hover:shadow-3xl">
                   <span className="relative cursor-pointer z-10 flex items-center">
                     Réserver la Salle VIP
                     <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
