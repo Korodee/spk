@@ -1,29 +1,28 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
 
-interface FloatingBallProps {
-  className: string;
-  delay?: number;
-}
+// interface FloatingBallProps {
+//   className: string;
+//   delay?: number;
+// }
 
-const FloatingBall = ({ className, delay = 0 }: FloatingBallProps) => (
-  <motion.div
-    className={`absolute w-16 h-16 rounded-full shadow-lg ${className}`}
-    initial={{ y: 0, opacity: 0 }}
-    animate={{ y: [0, -20, 0], opacity: 1 }}
-    transition={{
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay,
-    }}
-  >
-    <div className="absolute inset-0 rounded-full bg-white/80" />
-    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent to-white/20" />
-  </motion.div>
-);
+// const FloatingBall = ({ className, delay = 0 }: FloatingBallProps) => (
+//   <motion.div
+//     className={`absolute w-16 h-16 rounded-full shadow-lg ${className}`}
+//     initial={{ y: 0, opacity: 0 }}
+//     animate={{ y: [0, -20, 0], opacity: 1 }}
+//     transition={{
+//       duration: 4,
+//       repeat: Infinity,
+//       ease: "easeInOut",
+//       delay,
+//     }}
+//   >
+//     <div className="absolute inset-0 rounded-full bg-white/80" />
+//     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent to-white/20" />
+//   </motion.div>
+// );
 
 interface PricingTierProps {
   title: string;
@@ -77,14 +76,14 @@ const MinigolfPageContent = () => {
           défis deviennent encore plus excitants.
         </div>
       </motion.div>
-      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/50 via-black to-purple-900/50" />
         <FloatingBall className="top-1/4 left-1/4" delay={0.5} />
         <FloatingBall className="bottom-1/4 right-1/4 w-12 h-12" delay={1} />
-        <FloatingBall className="top-1/2 right-1/5" delay={1.5} />
+        <FloatingBall className="top-1/2 right-1/5" delay={1.5} /> */}
 
-        <div className="text-center z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4">
-          <motion.div
+      {/* <div className="text-center z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4">
+          {/* <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -108,9 +107,9 @@ const MinigolfPageContent = () => {
               layout="fill"
               objectFit="contain"
             />
-          </motion.div>
-        </div>
-      </div>
+          </motion.div> */}
+      {/* </div> */}
+      {/* </div> */}
 
       {/* Info Section */}
       <div className="py-20 px-4">
@@ -131,10 +130,10 @@ const MinigolfPageContent = () => {
 
       {/* Pricing Section */}
       <div className="py-20 px-4 relative">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-tr from-yellow-800/50 via-transparent to-transparent blur-3xl" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-green-800/50 via-transparent to-transparent blur-3xl" />
-        </div>
+        </div> */}
         <div className="relative z-10 max-w-5xl mx-auto">
           <motion.h2
             className="text-6xl font-black text-center uppercase tracking-tighter mb-16"

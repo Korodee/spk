@@ -36,7 +36,7 @@ const VrGallery = () => {
           initial={{ opacity: 0, y: -50, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, type: "spring" }}
-          className="text-6xl md:text-7xl font-black uppercase tracking-widest mb-4"
+          className="text-4xl md:text-6xl font-black uppercase tracking-widest mb-4"
         >
           <span className="text-glow">VR Gallery</span>
         </motion.h2>
