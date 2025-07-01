@@ -115,11 +115,11 @@ const SalleVipPageContent = () => {
           >
             {/* Glitch Title Effect */}
             <div className="relative mb-8">
-              <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 mb-4">
+              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 mb-4">
                 Salles VIP
               </h1>
               <motion.div
-                className="absolute inset-0 text-6xl md:text-8xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400"
+                className="absolute inset-0 text-4xl md:text-6xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400"
                 animate={{
                   x: [0, -2, 2, 0],
                   opacity: [1, 0.8, 0.9, 1],
@@ -158,7 +158,7 @@ const SalleVipPageContent = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="relative text-sm z-10 flex items-center gap-2">
                   <FiPlay className="text-xl" />
                   Sélectionner une salle
                 </span>

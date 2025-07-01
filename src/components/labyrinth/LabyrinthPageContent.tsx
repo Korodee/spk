@@ -164,11 +164,11 @@ const LabyrinthPageContent = () => {
           >
             {/* Glitch Title Effect */}
             <div className="relative mb-8">
-              <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 mb-4">
+              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 mb-4">
                 Le LABYRINTHE
               </h1>
               <motion.div
-                className="absolute inset-0 text-6xl md:text-8xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-orange-400"
+                className="absolute inset-0 text-4xl md:text-6xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-orange-400"
                 animate={{
                   x: [0, -2, 2, 0],
                   opacity: [1, 0.8, 0.9, 1],
@@ -207,7 +207,7 @@ const LabyrinthPageContent = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="relative text-sm z-10 flex items-center gap-2">
                   <FiPlay className="text-xl" />
                   Commencer l&apos;aventure
                 </span>
