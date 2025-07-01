@@ -104,10 +104,13 @@ export default async function ActivityPage({ params }: LocalPageProps) {
 
   return (
     <div className="bg-black">
-      <ActivityHero
-        activity={activity}
-        customTitle={activity.slug === "karting" ? kartingTitle : undefined}
-      />
+      {activity.slug !== "salle-arcade-vip" &&
+        activity.slug !== "labyrinth" && (
+          <ActivityHero
+            activity={activity}
+            customTitle={activity.slug === "karting" ? kartingTitle : undefined}
+          />
+        )}
 
       {activity.slug === "jeu-laser" ? (
         <>

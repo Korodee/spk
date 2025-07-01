@@ -84,7 +84,7 @@ const LabyrinthSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full h-full pt-32 md:pt-0 p-8 md:p-16">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full h-full pt-12 md:pt-0 p-8 md:p-16">
         <div className="w-full md:w-1/2 text-white">
           <AnimatePresence mode="wait">
             <motion.div
