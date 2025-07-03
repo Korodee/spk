@@ -525,16 +525,18 @@ const LabyrinthPageContent = () => {
 
                       {/* Booking CTA */}
                       <div className="text-center">
-                        <motion.button
-                          className="px-12 py-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
-                          whileHover={{
-                            scale: 1.05,
-                            boxShadow: "0 0 30px rgba(255, 69, 0, 0.5)",
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Réserver cette expérience
-                        </motion.button>
+                        <a href="tel:418-693-3334">
+                          <motion.button
+                            className="px-12 py-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
+                            whileHover={{
+                              scale: 1.05,
+                              boxShadow: "0 0 30px rgba(255, 69, 0, 0.5)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            Réserver cette expérience
+                          </motion.button>
+                        </a>
                       </div>
                     </div>
                   );

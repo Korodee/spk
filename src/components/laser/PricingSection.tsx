@@ -70,13 +70,15 @@ const PricingCard = ({
           <span className={`text-5xl text-${color}-400`}>$</span>
         </p>
         <p className="text-gray-500 mb-8">+ Taxes</p>
-        <motion.button
-          className={`w-full py-4 mt-auto font-bold uppercase rounded-lg bg-gradient-to-r ${gradient} shadow-lg ${shadow} transition-all duration-300`}
-          whileHover={{ scale: 1.05, y: -3, filter: "brightness(1.2)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Réserver
-        </motion.button>
+        <a href="tel:418-693-3334">
+          <motion.button
+            className={`w-full py-4 mt-auto font-bold uppercase rounded-lg bg-gradient-to-r ${gradient} shadow-lg ${shadow} transition-all duration-300`}
+            whileHover={{ scale: 1.05, y: -3, filter: "brightness(1.2)" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Réserver
+          </motion.button>
+        </a>
       </motion.div>
     </motion.div>
   );

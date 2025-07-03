@@ -77,13 +77,15 @@ const VipLigueSection = () => {
                 ))}
               </ul>
             </div>
-            <motion.button
-              className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-yellow-500 hover:bg-yellow-400 text-black"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              Réserver
-            </motion.button>
+            <a href="tel:418-693-3334">
+              <motion.button
+                className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-yellow-500 hover:bg-yellow-400 text-black"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Réserver
+              </motion.button>
+            </a>
           </motion.div>
 
           {/* League Card */}
@@ -120,13 +122,15 @@ const VipLigueSection = () => {
             <p className="text-xs text-gray-500 text-center mt-4">
               {vipData.league.note}
             </p>
-            <motion.button
-              className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-white hover:bg-gray-200 text-black"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              Réserver
-            </motion.button>
+            <a href="tel:418-693-3334">
+              <motion.button
+                className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-white hover:bg-gray-200 text-black"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Réserver
+              </motion.button>
+            </a>
           </motion.div>
         </div>
       </div>

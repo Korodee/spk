@@ -126,13 +126,15 @@ const KartGallery = () => {
           <p className="text-gray-400 text-lg mb-6">
             Prêt à vivre l&apos;expérience karting ultime ?
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            Réserver Maintenant
-          </motion.button>
+          <a href="tel:418-693-3334">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              Réserver Maintenant
+            </motion.button>
+          </a>
         </motion.div>
       </div>
     </section>

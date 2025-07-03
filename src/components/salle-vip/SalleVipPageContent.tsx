@@ -407,16 +407,18 @@ const SalleVipPageContent = () => {
 
                       {/* Booking CTA */}
                       <div className="text-center">
-                        <motion.button
-                          className="px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
-                          whileHover={{
-                            scale: 1.05,
-                            boxShadow: "0 0 30px rgba(147, 51, 234, 0.5)",
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Réserver cette salle
-                        </motion.button>
+                        <a href="tel:418-693-3334">
+                          <motion.button
+                            className="px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
+                            whileHover={{
+                              scale: 1.05,
+                              boxShadow: "0 0 30px rgba(147, 51, 234, 0.5)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            Réserver cette salle
+                          </motion.button>
+                        </a>
                       </div>
                     </div>
                   );

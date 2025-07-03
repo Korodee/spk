@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} SPK Entertainment. Tous droits
-            réservés.
+            réservés. Made by Salutary Agency.
           </p>
         </div>
       </div>

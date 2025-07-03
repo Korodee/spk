@@ -143,13 +143,15 @@ const ImportantInfoSection = () => {
               Notre équipe est là pour vous aider à planifier votre visite
               parfaite
             </p>
-            <motion.button
-              className="cursor-pointer bg-gradient-to-r from-purple-400 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Nous Contacter
-            </motion.button>
+            <a href="tel:418-693-3334">
+              <motion.button
+                className="cursor-pointer bg-gradient-to-r from-purple-400 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Nous Contacter
+              </motion.button>
+            </a>
           </div>
         </motion.div>
       </div>

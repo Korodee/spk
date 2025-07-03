@@ -4,13 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const scheduleData = [
-  { day: "Lundi", open: "9", close: "22", icon: "🌙" },
-  { day: "Mardi", open: "9", close: "22", icon: "🌙" },
-  { day: "Mercredi", open: "9", close: "22", icon: "🌅" },
-  { day: "Jeudi", open: "9", close: "22", icon: "🌅 " },
-  { day: "Vendredi", open: "9", close: "22", icon: "🌅" },
-  { day: "Samedi", open: "9", close: "22", icon: "⭐" },
-  { day: "Dimanche", open: "9", close: "22", icon: "⭐" },
+  { day: "Lundi", open: "9", close: "23", icon: "🌙" },
+  { day: "Mardi", open: "9", close: "23", icon: "🌙" },
+  { day: "Mercredi", open: "9", close: "23", icon: "🌅" },
+  { day: "Jeudi", open: "9", close: "23", icon: "🌅 " },
+  { day: "Vendredi", open: "9", close: "23", icon: "🌅" },
+  { day: "Samedi", open: "9", close: "23", icon: "⭐" },
+  { day: "Dimanche", open: "9", close: "23", icon: "⭐" },
 ];
 
 const ScheduleSection = () => {

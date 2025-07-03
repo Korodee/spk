@@ -169,7 +169,7 @@ const VipSection = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Link href={`/activity/${vipActivity.slug}`}>
+              <a href="tel:418-693-3334">
                 <button className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-4 font-bold text-white shadow-2xl transition-all duration-300 hover:from-purple-700 hover:to-blue-700 hover:scale-105 hover:shadow-3xl">
                   <span className="relative cursor-pointer z-10 flex items-center">
                     Réserver la Salle VIP
@@ -179,7 +179,7 @@ const VipSection = () => {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-              </Link>
+              </a>
 
               <p className="mt-4 text-sm text-gray-500">
                 Réservation exclusive • Accès prioritaire • Service premium

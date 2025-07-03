@@ -58,9 +58,11 @@ const PaintballPricing = () => {
               </p>
               <p className="text-gray-400">+ TAXES</p>
             </div>
-            <button className="w-full mt-6 py-3 bg-white text-black font-bold rounded-lg uppercase tracking-widest">
-              Réserver
-            </button>
+            <a href="tel:418-693-3334">
+              <button className="w-full mt-6 py-3 bg-white text-black font-bold rounded-lg uppercase tracking-widest">
+                Réserver
+              </button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -95,9 +97,11 @@ const PaintballPricing = () => {
                 <p className="text-gray-400">+ TAXES</p>
               </div>
             </div>
-            <button className="w-full mt-6 py-3 bg-white text-black font-bold rounded-lg uppercase tracking-widest">
-              Réserver
-            </button>
+            <a href="tel:418-693-3334">
+              <button className="w-full mt-6 py-3 bg-white text-black font-bold rounded-lg uppercase tracking-widest">
+                Réserver
+              </button>
+            </a>
           </motion.div>
         </div>
       </div>

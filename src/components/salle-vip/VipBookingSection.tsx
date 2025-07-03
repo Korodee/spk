@@ -109,13 +109,15 @@ const VipBookingSection = () => {
                 </p>
               </div>
             </div>
-            <motion.button
-              className="w-full max-w-md mx-auto mt-10 block py-4 md:py-5 text-lg md:text-xl font-bold uppercase rounded-lg bg-yellow-400 text-black shadow-lg shadow-yellow-400/30"
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Réserver
-            </motion.button>
+            <a href="tel:418-693-3334">
+              <motion.button
+                className="w-full max-w-md mx-auto mt-10 block py-4 md:py-5 text-lg md:text-xl font-bold uppercase rounded-lg bg-yellow-400 text-black shadow-lg shadow-yellow-400/30"
+                whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Réserver
+              </motion.button>
+            </a>
           </motion.div>
         );
       default:

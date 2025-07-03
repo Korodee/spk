@@ -125,7 +125,9 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      Réserver
+      <a href="tel:418-693-3334" className="block w-full h-full flex items-center justify-center">
+        Réserver
+      </a>
     </motion.button>
   </motion.div>
 );
