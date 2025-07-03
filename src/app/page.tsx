@@ -1,12 +1,11 @@
 "use client";
-import ExperienceSection from "@/components/ExperienceSection";
-import InfoBar from "@/components/InfoBar";
 import { motion, Variants } from "framer-motion";
-import Link from "next/link";
+import ActivitiesSection from "@/components/ActivitiesSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ImportantInfoSection from "@/components/ImportantInfoSection";
 import Footer from "@/components/Footer";
-import ActivitiesSection from "@/components/ActivitiesSection";
+import InfoBar from "@/components/InfoBar";
 
 export default function Home() {
   const containerVariants: Variants = {

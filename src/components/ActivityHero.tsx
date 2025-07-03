@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { activities } from "@/lib/activities";
-import Link from "next/link";
 import AnimatedTitle from "./AnimatedTitle";
 
 type Activity = (typeof activities)[0];
