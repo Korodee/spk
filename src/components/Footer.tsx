@@ -98,7 +98,19 @@ const Footer = () => {
         <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} SPK Entertainment. Tous droits
-            réservés. Made by Salutary Agency.
+            réservés.
+          </p>
+          <p className="text-sm mt-2">
+            Made by{" "}
+            <a
+              href="https://salutary.agency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-400 hover:text-purple-300 transition-colors"
+            >
+              Salutary Agency
+            </a>
+            .
           </p>
         </div>
       </div>
