@@ -1,11 +1,9 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { activities } from "@/lib/activities";
-import { FiStar } from "react-icons/fi";
 
 const VipSection = () => {
   const vipActivity = activities.find((a) => a.slug === "salle-arcade-vip");
