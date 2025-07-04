@@ -150,30 +150,32 @@ const SalleVipPageContent = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <motion.button
-                className="group relative px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 30px rgba(147, 51, 234, 0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative text-sm z-10 flex items-center gap-2">
-                  <FiPlay className="text-xl" />
-                  Sélectionner une salle
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  animate={{
-                    scale: [1, 1.1, 1],
+              <a href="tel:418-693-3334">
+                <motion.button
+                  className="group relative px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-2xl"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 0 30px rgba(147, 51, 234, 0.5)",
                   }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </motion.button>
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative text-sm z-10 flex items-center gap-2">
+                    <FiPlay className="text-xl" />
+                    Sélectionner une salle
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    animate={{
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                </motion.button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

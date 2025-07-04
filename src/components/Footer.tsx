@@ -103,7 +103,7 @@ const Footer = () => {
           <p className="text-sm mt-2">
             Made by{" "}
             <a
-              href="https://salutary.agency"
+              href="https://salutaryagency.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 transition-colors"
