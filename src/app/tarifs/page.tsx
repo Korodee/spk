@@ -36,12 +36,8 @@ const ratesData = [
     category: "Karting",
     image: "/karting.jpg",
     items: [
-      { name: "Adulte", price: "36$" },
-      { name: "Enfant (15 ans et moins)", price: "26$" },
-      { name: "Deuxième course", price: "26$" },
-      { name: "Mini Grand Prix", price: "64$" },
-      { name: "Karting Grand Prix", price: "69$" },
-      { name: "Carte VIP", price: "170$" },
+      { name: "Adulte", price: "36$/15 min" },
+      { name: "Enfant (15 ans et moins)", price: "26$/15 min" },
     ],
   },
   {
@@ -181,35 +177,7 @@ const TarifsPage = () => {
           </motion.div>
 
           {/* Floating Price Cards */}
-          <motion.div
-            className="flex justify-center gap-4 mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            {["11$", "36$", "39$"].map((price, index) => (
-              <motion.div
-                key={price}
-                className="bg-black/40 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 text-white font-bold text-lg"
-                animate={{
-                  y: [0, -10, 0],
-                  rotate: [0, 2, -2, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.5,
-                }}
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0 20px rgba(255, 165, 0, 0.5)",
-                }}
-              >
-                {price}
-              </motion.div>
-            ))}
-          </motion.div>
+          {/* (Removed as per user request) */}
 
           {/* Description */}
           <motion.p
@@ -336,6 +304,10 @@ const TarifsPage = () => {
             </motion.div>
           </div>
         ))}
+      </div>
+      {/* Add tax note at the bottom of the page */}
+      <div className="mt-12 text-center">
+        <span className="text-gray-400 text-sm">* tx non incluses</span>
       </div>
       <Footer />
     </div>

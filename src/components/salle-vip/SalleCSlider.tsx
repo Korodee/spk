@@ -108,7 +108,7 @@ const SalleCSlider = () => {
             <div className="w-full max-w-sm bg-black/30 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden">
               <div className="bg-black/50 p-4 border-b-2 border-yellow-400">
                 <h3 className="text-2xl font-bold uppercase text-yellow-400 text-center">
-                  Salle Disco C
+                  Salle C
                 </h3>
               </div>
               <ul className="p-2 space-y-2">

@@ -17,10 +17,10 @@ import {
 const challenges = [
   {
     id: "challenge-1",
-    name: "Le CUBE",
-    subtitle: "Mission Principale",
+    name: "Mission Principale",
+    subtitle: "Défi Complet",
     description:
-      "Parcourez notre labyrinthe de 6500 pieds carrés et résolvez les énigmes pour atteindre la salle des coffres en un temps record.",
+      "Parcourez notre labyrinthe de 6500 pieds carrés et résolvez les énigmes pour compléter votre mission en un temps record.",
     image: "/activite.jpg",
     features: [
       "6500 pieds carrés",
@@ -32,42 +32,6 @@ const challenges = [
     duration: "30min - 2h",
     price: "11$",
     color: "from-orange-500 to-red-500",
-  },
-  {
-    id: "challenge-2",
-    name: "Aventure",
-    subtitle: "Pour Tous",
-    description:
-      "Découvrez un labyrinthe captivant, relevez des défis, stimulez votre esprit et vivez une expérience mémorable.",
-    image: "/pourtous.jpg",
-    features: [
-      "Accessible à tous",
-      "Travail d'équipe",
-      "Stimulation cognitive",
-      "Créativité",
-    ],
-    difficulty: "Adaptatif",
-    duration: "30min - 2h",
-    price: "11$",
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    id: "challenge-3",
-    name: "Immersion",
-    subtitle: "Expérience Totale",
-    description:
-      "Plongez dans une expérience immersive où énigmes, défis, collaboration et créativité s'unissent pour des souvenirs inoubliables.",
-    image: "/immersion.jpg",
-    features: [
-      "Expérience immersive",
-      "Décors thématiques",
-      "Passages secrets",
-      "Allées sinueuses",
-    ],
-    difficulty: "Avancé",
-    duration: "30min - 2h",
-    price: "11$",
-    color: "from-purple-500 to-pink-500",
   },
 ];
 
@@ -97,7 +61,7 @@ const features = [
     icon: FiClock,
     title: "Temps Record",
     description:
-      "Tentez de battre le record de temps pour compléter le labyrinthe et atteindre la salle des coffres.",
+      "Tentez de battre le record de temps pour compléter le labyrinthe.",
     color: "from-green-400 to-emerald-500",
   },
 ];
@@ -189,8 +153,7 @@ const LabyrinthPageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Venez seul ou en groupe affronter « Le CUBE » et résolvez les
-              énigmes pour atteindre la salle des coffres.
+              Venez seul ou en groupe affronter notre labyrinthe et résolvez les énigmes pour réussir votre mission.
             </motion.p>
 
             {/* Start Button */}
@@ -277,8 +240,7 @@ const LabyrinthPageContent = () => {
               votre défi
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Trois expériences uniques pour tester vos compétences et votre
-              esprit d&apos;équipe.
+              Un défi unique pour tester vos compétences et votre esprit d&apos;équipe.
             </p>
           </motion.div>
 

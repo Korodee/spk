@@ -56,13 +56,10 @@ export default function Home() {
               className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
               variants={itemVariants}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-600">
-                Centre
-              </span>{" "}
               Amusement
             </motion.h1>
             <motion.h2
-              className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-400"
+              className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
               variants={itemVariants}
             >
               SPK

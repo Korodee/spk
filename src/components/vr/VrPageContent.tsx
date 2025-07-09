@@ -6,11 +6,10 @@ import VrCarousel from "./VrCarousel";
 const vrInfo = (
   <>
     <p>
-      Nous vous offrons la toute dernière technologie de réalité virtuelle 9D
-      sans réservations !
+      Nous vous offrons de la réalité virtuelle 9D sans réservations !
     </p>
     <p>
-      Embarquez et vivez, des sensations extrêmes à bord de nos simulateurs de
+      Embarquez et vivez des sensations extrêmes à bord de nos simulateurs de
       vol, de drift, de montagne russe et d&apos;horreur.
     </p>
   </>

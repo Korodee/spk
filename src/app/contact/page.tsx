@@ -2,15 +2,8 @@
 
 import { motion, Variants } from "framer-motion";
 import React, { useState, useRef } from "react";
-import {
-  FiMail,
-  FiMapPin,
-  FiPhone,
-  FiSend,
-  FiClock,
-  FiUsers,
-  FiZap,
-} from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone, FiSend, FiZap } from "react-icons/fi";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Footer from "@/components/Footer";
 
 const containerVariants: Variants = {
@@ -120,7 +113,7 @@ const ContactPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
             Une question, une suggestion ou besoin de réserver pour un grand
@@ -155,7 +148,7 @@ const ContactPage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <FiMail className="text-purple-400" />
-              <span>info@spk.com</span>
+              <span>spk@videotron.qc.ca</span>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -329,7 +322,7 @@ const ContactPage = () => {
                     <div className="space-y-3">
                       <div className="flex items-center gap-3 text-gray-300">
                         <FiMail className="text-purple-400" />
-                        <span className="text-lg">info@spk.com</span>
+                        <span className="text-lg">spk@videotron.qc.ca</span>
                       </div>
                       <div className="flex items-center gap-3 text-gray-300">
                         <FiPhone className="text-orange-400" />
@@ -340,7 +333,7 @@ const ContactPage = () => {
                 </div>
               </motion.div>
 
-              {/* Features Card */}
+              {/* Social Links Card (replaces Nos Atouts) */}
               <motion.div
                 className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-3xl px-4 py-8 md:p-8 shadow-2xl"
                 whileHover={{ scale: 1.02, y: -5 }}
@@ -351,19 +344,31 @@ const ContactPage = () => {
                     <FiZap className="text-white text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-3">Nos Atouts</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3 text-gray-300">
-                        <FiUsers className="text-orange-400" />
-                        <span>Piste intérieure sur plusieurs niveaux</span>
+                    <h3 className="text-2xl font-bold mb-4">Suivez-nous</h3>
+                    <div>
+                      <div className="mb-4 flex items-center gap-2">
+                        <a
+                          href="https://web.facebook.com/saguenaypaintballkarting"
+                          aria-label="Facebook"
+                          className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300 flex items-center gap-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaFacebook size={32} />
+                          <span className="text-lg font-medium">Facebook</span>
+                        </a>
                       </div>
-                      <div className="flex items-center gap-3 text-gray-300">
-                        <FiZap className="text-purple-400" />
-                        <span>Karts électriques haute performance</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-gray-300">
-                        <FiClock className="text-orange-400" />
-                        <span>Ouvert en tout temps</span>
+                      <div className="flex items-center gap-2">
+                        <a
+                          href="https://www.instagram.com/amusement_spk/"
+                          aria-label="Instagram"
+                          className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300 flex items-center gap-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaInstagram size={32} />
+                          <span className="text-lg font-medium">Instagram</span>
+                        </a>
                       </div>
                     </div>
                   </div>

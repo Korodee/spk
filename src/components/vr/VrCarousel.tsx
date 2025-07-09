@@ -52,12 +52,6 @@ const vrExperiences: VrExperience[] = [
     description:
       'Par joueurs pour nos modules multijoueurs "Zombies attaque" en coopération. Équipe de 4 en même temps contre l\'ordinateur.',
   },
-  {
-    image: "/dance.png",
-    title: "Dance mania",
-    price: "2$",
-    description: "Pour 2 chansons par joueur.",
-  },
 ];
 
 const cardVariants: Variants = {

@@ -48,10 +48,10 @@ export const activities: Activity[] = [
     slug: "karting",
     image: "/karting.jpg",
     description:
-      "Ressentez l'adrénaline de la vitesse sur notre piste de karting intérieure sur plusieurs niveaux. Qui sera le plus rapide ?",
+      "Ressentez l'adrénaline de la vitesse sur notre piste de karting extérieure asphaltée. Qui sera le plus rapide ?",
     details: [
-      "Karts électriques haute performance",
-      "Piste technique et rapide",
+      "Karts à gaz haute performance",
+      "Piste asphaltée de 900m",
       "Système de chronométrage",
     ],
   },

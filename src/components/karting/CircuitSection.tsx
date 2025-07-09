@@ -61,10 +61,9 @@ const CircuitSection = () => {
             mesure 900 mètres par 7.5 mètres de largeur. Plusieurs moniteurs
             seront disponibles pour vous dicter les règlements ainsi que de
             veiller à votre sécurité tout au long de votre activité. Équipée
-            d’un système de chronométrage à transpondeurs (du même type que
-            celui utilisé en Formule 1) ainsi qu’un éclairage de soir sur le
-            circuit, tables à pique-nique, terrasse extérieure et très grand
-            stationnement.
+            d&apos;un système de chronométrage à transpondeurs (du même type que
+            celui utilisé en Formule 1) ainsi qu&apos;un éclairage de soir sur
+            le circuit, terrasse extérieure et stationnement.
           </p>
         </motion.div>
       </div>

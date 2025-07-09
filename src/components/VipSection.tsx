@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { activities } from "@/lib/activities";
+import { FaTrophy } from "react-icons/fa";
 
 const VipSection = () => {
   const vipActivity = activities.find((a) => a.slug === "salle-arcade-vip");
@@ -62,39 +62,23 @@ const VipSection = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Une expérience exclusive et privée dans notre salle d&apos;arcade
-            premium
+            Une expérience exclusive et privée dans notre salle d&apos;arcade rétro et moderne.
           </motion.p>
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-5 items-center">
           {/* Left: Premium Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative flex items-center justify-center min-h-[220px]"
           >
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-              <Image
-                src={vipActivity.image}
-                alt={vipActivity.name}
-                width={300}
-                height={200}
-                className="w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-              {/* Premium Badge Overlay */}
-              <div className="absolute top-6 right-6">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  VIP ONLY
-                </div>
-              </div>
+            <div className="relative flex items-center justify-center w-120 h-90 mx-auto bg-gradient-to-br from-purple-500 via-pink-400 to-blue-500 rounded-2xl shadow-2xl animate-pulse">
+              <FaTrophy className="text-white text-9xl drop-shadow-lg" />
             </div>
-
             {/* Decorative Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-80"></div>
           </motion.div>
@@ -142,21 +126,24 @@ const VipSection = () => {
               </motion.h4>
 
               <div className="space-y-4">
-                {vipActivity.details.map((detail, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center text-gray-700 group"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="mr-4 p-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span className="text-lg font-medium">{detail}</span>
-                  </motion.div>
-                ))}
+                <motion.div className="flex items-center text-gray-700 group">
+                  <div className="mr-4 p-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-lg font-medium">Jeux rétro et modernes</span>
+                </motion.div>
+                <motion.div className="flex items-center text-gray-700 group">
+                  <div className="mr-4 p-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-lg font-medium">Espace privatisable</span>
+                </motion.div>
+                <motion.div className="flex items-center text-gray-700 group">
+                  <div className="mr-4 p-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-lg font-medium">Ambiance unique</span>
+                </motion.div>
               </div>
             </div>
 
@@ -181,7 +168,7 @@ const VipSection = () => {
               </a>
 
               <p className="mt-4 text-sm text-gray-500">
-                Réservation exclusive • Accès prioritaire • Service premium
+                Réservation exclusive • Accès prioritaire
               </p>
             </motion.div>
           </motion.div>

@@ -67,21 +67,23 @@ export default async function ActivityPage({ params }: LocalPageProps) {
   );
 
   const kartingInfo =
-    "SPK vous offre un circuit routier asphalté de 900 mètres par 7.5 mètres de largeur et des karts pouvant aller jusqu'à 75 KM/h ! Services de bar, atelier mécanique, achat, réparation et vente de karts et accessoires neufs et usagés.";
+    "SPK vous offre un circuit routier asphalté de 900 mètres par 7.5 mètres de largeur et des karts pouvant aller jusqu'à 75 KM/h !";
 
   const paintballInfo1 = (
     <>
-      <p>
-        Un dépôt de 55$ vous sera demander afin pour réserver vos parties de
-        paintball a l&apos;avance. Politique d&apos;annulation: 48h avant sinon
-        non remboursable.
-      </p>
-      <p>
+      <p className="mb-2">
         SPK vous offre une activité de paintball exceptionnelle sur les plus
         gros et magnifiques terrains de la région. Assisté d&apos;un moniteur,
         vous vivrez l&apos;expérience de votre été avec votre groupe
-        d&apos;amis. Communiquez avec nous pour toute demandes
-        d&apos;information ou pour réserver !
+        d&apos;amis. Communiquez avec nous pour toute demande d&apos;information
+        ou pour réserver !
+      </p>
+      <p>
+        <strong>Un dépôt de 55$</strong> vous sera demandé afin pour réserver
+        vos parties de paintball à l&apos;avance.
+        <br />
+        <strong>Politique d&apos;annulation :</strong> 48h avant sinon non
+        remboursable.
       </p>
     </>
   );
@@ -97,7 +99,8 @@ export default async function ActivityPage({ params }: LocalPageProps) {
         que des chaussures de sport robustes. Votre centre fournira les billes
         de peinture, mais apportez de l&apos;argent supplémentaire au cas où
         vous auriez besoin de recharger. Il est également conseillé d&apos;avoir
-        deux chargeurs supplémentaires pour une expérience de jeu ffluide.
+        deux chargeurs supplémentaires et du chasse-moustique pour une
+        expérience de jeu fluide.
       </p>
     </>
   );

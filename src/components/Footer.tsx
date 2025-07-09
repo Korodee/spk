@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { activities } from "@/lib/activities";
 import GlitchTitle from "./GlitchTitle";
 import React from "react";
@@ -52,8 +52,9 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300 text-center md:text-left">
               <li>2175 Bd Saint-Paul</li>
               <li>Chicoutimi, QC</li>
-              <li>info@spk.com</li>
+              <li>spk@videotron.qc.ca</li>
               <li>418-693-3334</li>
+              <li>7/7 9h à 23h</li>
             </ul>
           </div>
 
@@ -64,32 +65,20 @@ const Footer = () => {
             </h3>
             <div className="flex justify-center md:justify-start gap-5">
               <a
-                href="#"
+                href="https://web.facebook.com/saguenaypaintballkarting"
                 aria-label="Facebook"
                 className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FaFacebook size={28} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/amusement_spk/"
                 aria-label="Instagram"
                 className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FaInstagram size={28} />
-              </a>
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
-              >
-                <FaTwitter size={28} />
-              </a>
-              <a
-                href="#"
-                aria-label="Tiktok"
-                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
-              >
-                <FaTiktok size={28} />
               </a>
             </div>
           </div>

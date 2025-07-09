@@ -132,8 +132,7 @@ export default function ExperienceSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Découvrez ce qui rend SPK unique et pourquoi nos visiteurs
-            reviennent sans cesse pour vivre des moments inoubliables
+            Découvrez ce qui rend SPK unique et pourquoi nos visiteurs reviennent sans cesse pour vivre des moments inoubliables
           </motion.p>
         </motion.div>
 
