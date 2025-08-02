@@ -8,21 +8,19 @@ const pricingData = {
     {
       name: "Prix Réduit",
       price: "26",
-      features: [
-        "15 Minutes",
-        "15 minutes (2e course): 26,00$ + tx",
-        "15 ans et moins",
-      ],
+      features: ["15 Minutes", "15 ans et moins", "2e course: 26,00$ + tx"],
       color: "red",
     },
     {
       name: "Régulier",
       price: "36",
-      features: [
-        "15 Minutes",
-        "15 minutes (2e course): 26,00$ + tx",
-        "16 ans et plus",
-      ],
+      features: ["15 Minutes", "16 ans et plus", "2e course: 26,00$ + tx"],
+      color: "red",
+    },
+    {
+      name: "Les Deux",
+      price: "26",
+      features: ["15 Minutes", "2 courses", "26,00$ + tx"],
       color: "red",
     },
   ],
@@ -125,7 +123,10 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      <a href="tel:418-693-3334" className="block w-full h-full flex items-center justify-center">
+      <a
+        href="tel:418-693-3334"
+        className="block w-full h-full items-center justify-center"
+      >
         Réserver
       </a>
     </motion.button>

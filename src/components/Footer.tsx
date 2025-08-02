@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { activities } from "@/lib/activities";
 import GlitchTitle from "./GlitchTitle";
 import React from "react";
@@ -63,23 +64,45 @@ const Footer = () => {
             <h3 className="text-xl font-bold uppercase tracking-wider text-purple-300 mb-6 text-center md:text-left">
               Suivez-nous
             </h3>
-            <div className="flex justify-center md:justify-start gap-5">
-              <a
-                href="https://web.facebook.com/saguenaypaintballkarting"
-                aria-label="Facebook"
-                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
-                target="_blank" rel="noopener noreferrer"
-              >
-                <FaFacebook size={28} />
-              </a>
-              <a
-                href="https://www.instagram.com/amusement_spk/"
-                aria-label="Instagram"
-                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
-                target="_blank" rel="noopener noreferrer"
-              >
-                <FaInstagram size={28} />
-              </a>
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="flex gap-5">
+                <a
+                  href="https://web.facebook.com/saguenaypaintballkarting"
+                  aria-label="Facebook"
+                  className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook size={28} />
+                </a>
+                <a
+                  href="https://www.instagram.com/amusement_spk/"
+                  aria-label="Instagram"
+                  className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram size={28} />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@spk.chicoutimi?_t=ZS-8yWlL6GmrVy&_r=1"
+                  aria-label="TikTok"
+                  className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTiktok size={28} />
+                </a>
+              </div>
+              <div className="mt-2">
+                <Image
+                  src="/tiktok-qr.PNG"
+                  alt="QR Code TikTok"
+                  width={120}
+                  height={120}
+                  className="rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>

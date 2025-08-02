@@ -27,7 +27,7 @@ const rooms = [
     name: "Salle B",
     subtitle: "Bar & Lounge",
     description:
-      "Salle ludique avec bar spacieux et convivial pour vos événements",
+      "Une ambiance lounge avec bonne d'arcade pour vos événements",
     image: "/paradis.jpg",
     features: [
       "Table de Mississippi",

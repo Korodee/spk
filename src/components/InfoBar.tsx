@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const animatedTexts = ["Des activités amusantes", "Ou abordables!"];
+const animatedTexts = ["Des activités amusantes", "Et abordables!"];
 
 export default function InfoBar() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);

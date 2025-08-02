@@ -9,7 +9,7 @@ const vipData = {
     price: "170",
     features: [
       "5 courses de 15 min",
-      "24$ + Tx pour le reste de la saison",
+      "26$ + Tx pour le reste de la saison",
       "Possibilité de joindre une ligue.",
     ],
     icon: FiStar,

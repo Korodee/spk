@@ -4,6 +4,7 @@ import ActivitiesSection from "@/components/ActivitiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ImportantInfoSection from "@/components/ImportantInfoSection";
+import UpcomingActivitiesSection from "@/components/UpcomingActivitiesSection";
 import Footer from "@/components/Footer";
 import InfoBar from "@/components/InfoBar";
 
@@ -88,6 +89,9 @@ export default function Home() {
         </motion.div>
       </div>
       <ActivitiesSection />
+
+      {/* Upcoming Activities Section */}
+      <UpcomingActivitiesSection />
 
       {/* Experience Section */}
       <ExperienceSection />
