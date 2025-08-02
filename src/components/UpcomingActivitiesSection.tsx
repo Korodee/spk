@@ -21,7 +21,7 @@ const UpcomingActivitiesSection = () => {
             <span className="text-white">Activités</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Des activités excitantes arrivent bientôt ! Restez à l'affût pour découvrir 
+            Des activités excitantes arrivent bientôt ! Restez à l&apos;affût pour découvrir 
             nos nouvelles expériences qui vont révolutionner votre divertissement.
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ const UpcomingActivitiesSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Nous contacter pour plus d'infos
+              Nous contacter pour plus d&apos;infos
             </motion.button>
           </a>
         </motion.div>
