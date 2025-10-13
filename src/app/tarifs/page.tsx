@@ -62,10 +62,10 @@ const ratesData = [
         price: "60$/h",
         description: "Avec 50$ et + activités",
       },
-      { name: "Salle A / B / C (sans activité)", price: "50$/h" },
+      { name: "Salle A / B / C (sans activité)", price: "70$/h" },
       {
         name: "Salle pour soirée (A & B)",
-        price: "450$",
+        price: "500",
         description: "17h à 01h00, avec service de bar",
       },
     ],
