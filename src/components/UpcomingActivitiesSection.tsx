@@ -45,8 +45,8 @@ const UpcomingActivitiesSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Nouvelle Activité</h3>
-              <p className="text-gray-400 text-sm">Bientôt disponible</p>
+              <h3 className="text-xl font-bold text-white mb-2">ARCADE</h3>
+              <p className="text-gray-400 text-sm">Maintenant ouverte</p>
             </div>
           </motion.div>
 
