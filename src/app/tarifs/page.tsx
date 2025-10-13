@@ -51,7 +51,7 @@ const ratesData = [
   {
     category: "LABYRINTHE",
     image: "/labyrinth.jpg",
-    items: [{ name: "Labyrinthe", price: "11$" }],
+    items: [{ name: "Labyrinthe de l'horreur", price: "15$" }],
   },
   {
     category: "Salle Arcade VIP",
