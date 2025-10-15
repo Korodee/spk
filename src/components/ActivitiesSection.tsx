@@ -21,6 +21,7 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
           src={activity.image}
           alt={activity.name}
           fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
@@ -50,10 +51,11 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
           </ul>
         </div>
 
-        <Link href={`/activity/${activity.slug}`}>
-          <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform group-hover:scale-105 shadow-lg">
-            Découvrir
-          </button>
+        <Link
+          href={`/activity/${activity.slug}`}
+          className="inline-block bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform group-hover:scale-105 shadow-lg"
+        >
+          Découvrir
         </Link>
       </div>
     </motion.div>

@@ -36,7 +36,7 @@ export default function InfoBar() {
 
           {/* Middle Section */}
           <div className="w-full md:w-1/3 flex justify-center">
-            <Link href="/activities" className="cursor-pointer">
+            <Link href="/#activities" className="cursor-pointer">
               <div className="bg-white/5 hover:bg-white/10 transition-colors px-4 py-2 rounded-lg flex items-center justify-center">
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -64,7 +64,7 @@ export default function InfoBar() {
           {/* Right Section */}
           <div className="w-full md:w-1/3 text-center">
             <p className="text-xs uppercase tracking-wider text-gray-400">
-              Période Actuel
+              Période actuelle
             </p>
             <p className="mt-1 text-2xl font-black text-yellow-400 tracking-tighter">
               ÉTÉ

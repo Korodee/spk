@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import ActivityHero from "@/components/ActivityHero";
 import ActivityPageClient from "@/components/ActivityPageClient";
 import Footer from "@/components/Footer";
@@ -40,9 +41,9 @@ import SalleVipPageContent from "@/components/salle-vip/SalleVipPageContent";
 
 // ✅ Define props locally (no import from .next/types!)
 type LocalPageProps = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -51,8 +52,43 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }));
 }
 
-export default async function ActivityPage({ params }: LocalPageProps) {
-  const { slug } = await params;
+export function generateMetadata(
+  { params }: LocalPageProps
+): Metadata {
+  const activity = activities.find((a) => a.slug === params.slug);
+  if (!activity) {
+    return {
+      title: "Activité | SPK",
+      description: "Découvrez les activités du Centre Amusement SPK.",
+    };
+  }
+
+  const title = `${activity.name} | SPK`;
+  const description = activity.description;
+  const url = `/activity/${activity.slug}`;
+  const image = activity.image;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
+export default function ActivityPage({ params }: LocalPageProps) {
+  const { slug } = params;
   const activity = activities.find((a) => a.slug === slug);
 
   if (!activity) {

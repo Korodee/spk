@@ -1,5 +1,6 @@
 "use client";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ScheduleSection from "@/components/ScheduleSection";
@@ -34,9 +35,13 @@ export default function Home() {
   return (
     <>
       <div className="relative w-full h-screen overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: "url('/hero-img.jpg')" }}
+        <Image
+          src="/hero-img.jpg"
+          alt="Centre Amusement SPK - activités pour tous"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover z-0"
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
 
@@ -57,14 +62,8 @@ export default function Home() {
               className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
               variants={itemVariants}
             >
-              Amusement
+              Amusement SPK
             </motion.h1>
-            <motion.h2
-              className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
-              variants={itemVariants}
-            >
-              SPK
-            </motion.h2>
             <motion.div variants={itemVariants} className="mt-8">
               <a href="tel:418-693-3334">
                 <motion.button

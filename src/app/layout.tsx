@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import { MotionConfig } from "framer-motion";
 
 // Apple's SF Pro Display font system with fallbacks
 const sfProDisplay = Inter({
@@ -12,8 +13,32 @@ const sfProDisplay = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Centre Amusement SPK",
+  metadataBase: new URL("https://amusementspk.ca"),
+  title: {
+    default: "Centre Amusement SPK",
+    template: "%s | SPK",
+  },
   description: "Passez une journée inoubliable au Centre Amusement SPK!",
+  openGraph: {
+    title: "Centre Amusement SPK",
+    description: "Passez une journée inoubliable au Centre Amusement SPK!",
+    url: "/",
+    siteName: "SPK",
+    type: "website",
+    images: [{ url: "/hero-img.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Centre Amusement SPK",
+    description: "Passez une journée inoubliable au Centre Amusement SPK!",
+    images: ["/hero-img.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +54,10 @@ export default function RootLayout({
           fontFamily: `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif`,
         }}
       >
-        <Navigation />
-        <main>{children}</main>
+        <MotionConfig reducedMotion="user">
+          <Navigation />
+          <main>{children}</main>
+        </MotionConfig>
       </body>
     </html>
   );
