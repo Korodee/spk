@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 // Apple's SF Pro Display font system with fallbacks
 const sfProDisplay = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
           fontFamily: `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif`,
         }}
       >
+        <AnnouncementBanner />
         <Navigation />
         <main>{children}</main>
       </body>

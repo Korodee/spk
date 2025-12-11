@@ -38,7 +38,7 @@ const VrGallery = () => {
           transition={{ duration: 0.8, type: "spring" }}
           className="text-4xl md:text-6xl font-black uppercase tracking-widest mb-4"
         >
-          <span className="text-glow">VR Gallery</span>
+          <span className="text-glow">GALERIE VR</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

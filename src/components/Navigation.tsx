@@ -57,6 +57,7 @@ export default function Navigation() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
 
   const scrollToActivities = () => {
     if (pathname === "/") {
@@ -73,6 +74,20 @@ export default function Navigation() {
       router.push("/#activities");
     }
   };
+
+  // Check if banner is visible - starts as visible, only changes when dismissed
+  useEffect(() => {
+    // Listen for banner dismissal event
+    const handleBannerDismissed = () => {
+      setBannerVisible(false);
+    };
+
+    window.addEventListener("bannerDismissed", handleBannerDismissed);
+
+    return () => {
+      window.removeEventListener("bannerDismissed", handleBannerDismissed);
+    };
+  }, []);
 
   // Handle scroll detection
   useEffect(() => {
@@ -114,13 +129,15 @@ export default function Navigation() {
         variants={navVariants}
         initial="hidden"
         animate="visible"
-        className={`fixed top-0 cursor-pointer left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 py-6 text-white transition-all duration-300 ${
+        className={`fixed cursor-pointer left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 py-4 text-white transition-all duration-300 ${
           isScrolled ? "bg-black/50 backdrop-blur-md" : ""
         }`}
         style={{
+          top: bannerVisible ? "52px" : "0",
           background: isScrolled
             ? undefined
             : "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))",
+          transition: "top 0.3s ease-in-out",
         }}
       >
         <motion.div variants={navItemVariants}>

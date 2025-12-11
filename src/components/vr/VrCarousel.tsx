@@ -45,13 +45,6 @@ const vrExperiences: VrExperience[] = [
     price: "7$",
     description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
   },
-  {
-    image: "/special-force.png",
-    title: "Zombie",
-    price: "10$",
-    description:
-      'Par joueurs pour nos modules multijoueurs "Zombies attaque" en coopération. Équipe de 4 en même temps contre l\'ordinateur.',
-  },
 ];
 
 const cardVariants: Variants = {

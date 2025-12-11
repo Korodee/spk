@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ImportantInfoSection from "@/components/ImportantInfoSection";
 import UpcomingActivitiesSection from "@/components/UpcomingActivitiesSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import InfoBar from "@/components/InfoBar";
 
@@ -101,6 +102,9 @@ export default function Home() {
 
       {/* Important Info Section */}
       <ImportantInfoSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Footer */}
       <Footer />

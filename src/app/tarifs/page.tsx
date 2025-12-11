@@ -28,7 +28,6 @@ const ratesData = [
     items: [
       { name: "Régulière", price: "7$" },
       { name: "Horreur", price: "9$" },
-      { name: "Zombie", price: "10$" },
       { name: "360", price: "12$" },
     ],
   },
@@ -65,8 +64,8 @@ const ratesData = [
       { name: "Salle A / B / C (sans activité)", price: "70$/h" },
       {
         name: "Salle pour soirée (A & B)",
-        price: "500",
-        description: "17h à 01h00, avec service de bar",
+        price: "500$",
+        description: "17h à 01h00, possibilité de service de bar",
       },
     ],
   },

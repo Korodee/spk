@@ -167,6 +167,27 @@ const MinigolfPageContent = () => {
               delay={0.6}
             />
           </div>
+          
+          {/* Special Event Option */}
+          <motion.div
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <div className="bg-gradient-to-r from-green-900/30 to-purple-900/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-3">
+                Événement Spécial
+              </h3>
+              <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-400 mb-2">
+                500$
+              </p>
+              <p className="text-gray-300 text-sm">
+                Possibilité de service de bar
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

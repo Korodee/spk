@@ -85,7 +85,7 @@ const VipBookingSection = () => {
             <h3 className="text-center text-4xl md:text-5xl font-black text-white mb-8">
               Réserver une Salle VIP
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl text-center border border-white/10">
                 <p className="text-4xl md:text-5xl font-bold text-yellow-400">
                   60${" "}
@@ -106,6 +106,17 @@ const VipBookingSection = () => {
                 </p>
                 <p className="text-base md:text-lg mt-2 text-gray-300">
                   sans activité
+                </p>
+              </div>
+              <div className="bg-white/5 p-6 md:p-8 rounded-2xl text-center border border-white/10">
+                <p className="text-4xl md:text-5xl font-bold text-yellow-400">
+                  500$
+                </p>
+                <p className="text-base md:text-lg mt-2 text-gray-300">
+                  Salle pour soirée (A & B)
+                </p>
+                <p className="text-sm mt-2 text-gray-400">
+                  17h à 01h00, possibilité de service de bar
                 </p>
               </div>
             </div>

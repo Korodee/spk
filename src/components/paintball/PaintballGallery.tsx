@@ -95,7 +95,7 @@ const PaintballGallery = () => {
             className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight"
           >
             <span className="bg-gradient-to-r from-green-500 via-lime-400 to-green-600 bg-clip-text text-transparent animate-gradient">
-              COMBAT GALLERY
+              GALERIE DE COMBAT
             </span>
           </motion.h2>
 

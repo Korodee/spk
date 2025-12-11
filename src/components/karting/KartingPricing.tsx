@@ -8,13 +8,13 @@ const pricingData = {
     {
       name: "Prix Réduit",
       price: "26",
-      features: ["15 Minutes", "15 ans et moins", "2e course: 26,00$ + tx"],
+      features: ["15 Minutes", "15 ans et moins", "La 2e course: 26,00$ + tx"],
       color: "red",
     },
     {
       name: "Régulier",
       price: "36",
-      features: ["15 Minutes", "16 ans et plus", "2e course: 26,00$ + tx"],
+      features: ["15 Minutes", "16 ans et plus", "La 2e course: 26,00$ + tx"],
       color: "red",
     },
     {
@@ -137,6 +137,19 @@ const KartingPricing = () => {
   return (
     <section className="bg-black py-20 px-6">
       <div className="max-w-7xl mx-auto">
+        {/* Section Title */}
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-400 uppercase tracking-wider mb-4">
+            Section Karting
+          </h2>
+        </motion.div>
+
         <motion.h2
           className="text-5xl md:text-7xl font-black uppercase tracking-tighter -skew-x-12 text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

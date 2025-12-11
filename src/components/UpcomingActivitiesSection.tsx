@@ -3,6 +3,57 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const newActivities = [
+  {
+    name: "ARCADE",
+    status: "Maintenant ouverte",
+    gradient: "from-purple-900/20 to-pink-900/20",
+    border: "border-purple-500/30",
+    iconBg: "bg-purple-500/20",
+    iconColor: "text-purple-400",
+  },
+  {
+    name: "ESCAPE ROOM",
+    status: "Disponible maintenant",
+    gradient: "from-blue-900/20 to-cyan-900/20",
+    border: "border-blue-500/30",
+    iconBg: "bg-blue-500/20",
+    iconColor: "text-blue-400",
+  },
+  {
+    name: "SIMULATEUR VR",
+    status: "Nouveau",
+    gradient: "from-green-900/20 to-emerald-900/20",
+    border: "border-green-500/30",
+    iconBg: "bg-green-500/20",
+    iconColor: "text-green-400",
+  },
+  {
+    name: "LASER MAZE",
+    status: "Maintenant ouvert",
+    gradient: "from-orange-900/20 to-red-900/20",
+    border: "border-orange-500/30",
+    iconBg: "bg-orange-500/20",
+    iconColor: "text-orange-400",
+  },
+  {
+    name: "ARÈNE COMBAT",
+    status: "Disponible",
+    gradient: "from-yellow-900/20 to-amber-900/20",
+    border: "border-yellow-500/30",
+    iconBg: "bg-yellow-500/20",
+    iconColor: "text-yellow-400",
+  },
+  {
+    name: "BOWLING",
+    status: "Nouveau",
+    gradient: "from-indigo-900/20 to-violet-900/20",
+    border: "border-indigo-500/30",
+    iconBg: "bg-indigo-500/20",
+    iconColor: "text-indigo-400",
+  },
+];
+
 const UpcomingActivitiesSection = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -21,51 +72,39 @@ const UpcomingActivitiesSection = () => {
             <span className="text-white">Activités</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Des activités excitantes arrivent bientôt ! Restez à l&apos;affût pour découvrir 
-            nos nouvelles expériences qui vont révolutionner votre divertissement.
+            Découvrez nos nouvelles activités maintenant disponibles ! Explorez nos nouveaux espaces 
+            et vivez des expériences qui vont révolutionner votre divertissement.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {/* Placeholder for upcoming activity 1 */}
-          <motion.div
-            className="relative bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 h-64 flex items-center justify-center"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
+          {newActivities.map((activity, index) => (
+            <motion.div
+              key={activity.name}
+              className={`relative bg-gradient-to-br ${activity.gradient} border ${activity.border} rounded-2xl p-8 h-64 flex items-center justify-center`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-center">
+                <div className={`w-16 h-16 ${activity.iconBg} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <svg className={`w-8 h-8 ${activity.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{activity.name}</h3>
+                <p className="text-gray-400 text-sm">{activity.status}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">ARCADE</h3>
-              <p className="text-gray-400 text-sm">Maintenant ouverte</p>
-            </div>
-          </motion.div>
-
-          {/* Placeholder for upcoming activity 2 */}
-          <motion.div
-            className="relative bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl p-8 h-64 flex items-center justify-center"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Nouvelle Expérience</h3>
-              <p className="text-gray-400 text-sm">En développement</p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </motion.div>
 
         <motion.div
