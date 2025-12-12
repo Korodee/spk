@@ -3,7 +3,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiArrowRight, FiStar, FiZap, FiTarget, FiUsers, FiAward, FiActivity } from "react-icons/fi";
+import {
+  FiArrowRight,
+  FiStar,
+  FiZap,
+  FiTarget,
+  FiUsers,
+  FiAward,
+  FiActivity,
+} from "react-icons/fi";
 import Footer from "@/components/Footer";
 
 const funArenaActivities = [
@@ -11,7 +19,8 @@ const funArenaActivities = [
     id: "arcade",
     name: "Arcade",
     title: "Salle d'Arcade",
-    description: "Plongez dans un univers de jeux d'arcade classiques et modernes. Des centaines de machines vous attendent pour des heures de divertissement.",
+    description:
+      "Plongez dans un univers de jeux d'arcade classiques et modernes. Des centaines de machines vous attendent pour des heures de divertissement.",
     features: [
       "Plus de 100 machines d'arcade",
       "Jeux rétro et modernes",
@@ -26,7 +35,8 @@ const funArenaActivities = [
     id: "redemption",
     name: "Boutique de Récompenses",
     title: "Boutique d'Échange",
-    description: "Échangez vos tickets contre des prix incroyables ! Des peluches, des figurines, des bonbons et bien plus encore vous attendent.",
+    description:
+      "Échangez vos tickets contre des prix incroyables ! Des peluches, des figurines, des bonbons et bien plus encore vous attendent.",
     features: [
       "Large sélection de peluches",
       "Figurines et collectibles",
@@ -41,7 +51,8 @@ const funArenaActivities = [
     id: "claw-machines",
     name: "Machines à Pincer",
     title: "Machines à Pincer",
-    description: "Testez votre habileté avec nos machines à pincer dernier cri. Remportez des peluches et des prix exclusifs !",
+    description:
+      "Testez votre habileté avec nos machines à pincer dernier cri. Remportez des peluches et des prix exclusifs !",
     features: [
       "Machines Lucky Cat",
       "Machines Happy Games",
@@ -56,7 +67,8 @@ const funArenaActivities = [
     id: "racing-games",
     name: "Jeux de Course",
     title: "Simulateurs de Course",
-    description: "Vivez l'adrénaline de la course avec nos simulateurs de moto et de voiture. Défiez vos amis et établissez les meilleurs temps !",
+    description:
+      "Vivez l'adrénaline de la course avec nos simulateurs de moto et de voiture. Défiez vos amis et établissez les meilleurs temps !",
     features: [
       "Simulateurs de moto",
       "Simulateurs de voiture",
@@ -71,7 +83,8 @@ const funArenaActivities = [
     id: "boxing-games",
     name: "Jeux de Boxe",
     title: "Arène de Boxe",
-    description: "Libérez votre énergie avec nos jeux de boxe interactifs. Testez votre force et votre rapidité !",
+    description:
+      "Libérez votre énergie avec nos jeux de boxe interactifs. Testez votre force et votre rapidité !",
     features: [
       "Boxer Champion",
       "Super Boxer",
@@ -86,7 +99,8 @@ const funArenaActivities = [
     id: "bowling",
     name: "Bowling",
     title: "Bowling",
-    description: "Profitez de notre bowling moderne avec éclairage néon. Quatre pistes vous attendent pour des parties mémorables entre amis ou en famille.",
+    description:
+      "Profitez de notre bowling moderne avec éclairage néon. Quatre pistes vous attendent pour des parties mémorables entre amis ou en famille.",
     features: [
       "4 pistes de bowling modernes",
       "Éclairage néon immersif",
@@ -106,7 +120,7 @@ const HubDeJeuxPage = () => {
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-            <Image
+          <Image
             src="/1.jpg"
             alt="Hub de Jeux"
             fill
@@ -300,7 +314,9 @@ const HubDeJeuxPage = () => {
 
               {/* Content */}
               <motion.div
-                className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}
+                className={
+                  index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                }
                 initial={{ opacity: 0, x: index % 2 === 1 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -384,7 +400,7 @@ const HubDeJeuxPage = () => {
             </p>
             <a href="tel:418-693-3334">
               <motion.button
-                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center gap-3 mx-auto"
+                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-md sm:text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center gap-3 mx-auto"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 50px rgba(168, 85, 247, 0.7)",
@@ -405,4 +421,3 @@ const HubDeJeuxPage = () => {
 };
 
 export default HubDeJeuxPage;
-

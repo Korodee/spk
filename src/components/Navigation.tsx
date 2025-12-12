@@ -59,9 +59,23 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   
   // Hide banner on hub-de-jeux page
   const isBannerVisible = bannerVisible && pathname !== "/hub-de-jeux";
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Calculate top position based on banner visibility and screen size
+  const navTop = isBannerVisible ? (isMobile ? "43px" : "52px") : "0";
 
   const scrollToActivities = () => {
     if (pathname === "/") {
@@ -137,7 +151,7 @@ export default function Navigation() {
           isScrolled ? "bg-black/50 backdrop-blur-md" : ""
         }`}
         style={{
-          top: isBannerVisible ? "52px" : "0",
+          top: navTop,
           background: isScrolled
             ? undefined
             : "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))",

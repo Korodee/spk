@@ -40,51 +40,39 @@ const AnnouncementBanner = () => {
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.1)_50%,transparent_75%,rgba(255,255,255,.1)_100%)] bg-[length:20px_20px]"></div>
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-              <div className="flex items-center justify-center gap-3">
-                {/* Icon/Emoji */}
-                {/* <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 10, -10, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatDelay: 3,
-                  }}
-                  className="text-2xl"
-                >
-                  🎉
-                </motion.div> */}
-
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3">
+              <div className="flex flex-row items-center justify-center gap-1 sm:gap-3">
                 {/* Text Content */}
-                <div className="flex-1 text-center">
-                  <p className="text-white flex items-center justify-center font-bold text-sm sm:text-base md:text-lg tracking-wide mb-2">
+                <div className="text-center sm:text-left sm:flex-1 flex items-center">
+                  <p className="text-white flex flex-row items-center justify-center sm:justify-start font-bold text-sm sm:text-base md:text-lg tracking-wide">
                     <span className="inline-block">
-                      Nouveaux espaces ouverts ! Découvrez nos nouvelles
-                      activités excitantes{" "}
+                      Nouveaux espaces ouverts{" "}
+                      <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>
-                    <Link href="/hub-de-jeux">
-                      <motion.button
-                        className="inline-flex ml-2 items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white/30 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        Découvrir Hub de Jeux
-                        <FiArrowRight className="text-sm" />
-                      </motion.button>
-                    </Link>
                   </p>
                 </div>
+
+                <Link href="/hub-de-jeux" className="flex-shrink-0 flex items-center">
+                  <span className="sm:hidden text-white text-[12px] font-bold uppercase tracking-wider underline underline-offset-2">
+                    Découvrir Hub de Jeux
+                  </span>
+                  <motion.button
+                    className="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white/30 transition-all duration-300 whitespace-nowrap"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Découvrir Hub de Jeux
+                    <FiArrowRight className="text-sm" />
+                  </motion.button>
+                </Link>
 
                 {/* Close Button */}
                 <button
                   onClick={handleDismiss}
-                  className="flex-shrink-0 p-1 rounded-full hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="flex-shrink-0 p-1 rounded-full hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center"
                   aria-label="Fermer la bannière"
                 >
-                  <FiX className="w-5 h-5 text-white" />
+                  <FiX className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </button>
               </div>
             </div>
