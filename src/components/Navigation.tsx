@@ -28,6 +28,7 @@ const navItemVariants: Variants = {
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/#activities", label: "Activités" },
+  { href: "/hub-de-jeux", label: "Hub de Jeux" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/contact", label: "Contact" },
 ];
@@ -58,6 +59,9 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
+  
+  // Hide banner on hub-de-jeux page
+  const isBannerVisible = bannerVisible && pathname !== "/hub-de-jeux";
 
   const scrollToActivities = () => {
     if (pathname === "/") {
@@ -133,7 +137,7 @@ export default function Navigation() {
           isScrolled ? "bg-black/50 backdrop-blur-md" : ""
         }`}
         style={{
-          top: bannerVisible ? "52px" : "0",
+          top: isBannerVisible ? "52px" : "0",
           background: isScrolled
             ? undefined
             : "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))",

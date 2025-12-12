@@ -2,10 +2,16 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiX } from "react-icons/fi";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FiX, FiArrowRight } from "react-icons/fi";
 
 const AnnouncementBanner = () => {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
+  
+  // Hide banner on hub-de-jeux page
+  const shouldShow = isVisible && pathname !== "/hub-de-jeux";
 
   const handleDismiss = () => {
     setIsVisible(false);
@@ -13,9 +19,14 @@ const AnnouncementBanner = () => {
     window.dispatchEvent(new CustomEvent("bannerDismissed"));
   };
 
+  // Return null if banner shouldn't show (no whitespace)
+  if (!shouldShow) {
+    return null;
+  }
+
   return (
     <AnimatePresence>
-      {isVisible && (
+      {shouldShow && (
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -49,23 +60,21 @@ const AnnouncementBanner = () => {
 
                 {/* Text Content */}
                 <div className="flex-1 text-center">
-                  <p className="text-white font-bold text-sm sm:text-base md:text-lg tracking-wide">
+                  <p className="text-white flex items-center justify-center font-bold text-sm sm:text-base md:text-lg tracking-wide mb-2">
                     <span className="inline-block">
                       Nouveaux espaces ouverts ! Découvrez nos nouvelles
-                      activités excitantes – {" "}
+                      activités excitantes{" "}
                     </span>
-                    <motion.span
-                      className="inline-block font-black underline decoration-2 underline-offset-2"
-                      animate={{ opacity: [1, 0.7, 1] }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      {" "}
-                      Offre spéciale en cours
-                    </motion.span>
+                    <Link href="/hub-de-jeux">
+                      <motion.button
+                        className="inline-flex ml-2 items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white/30 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Découvrir Hub de Jeux
+                        <FiArrowRight className="text-sm" />
+                      </motion.button>
+                    </Link>
                   </p>
                 </div>
 

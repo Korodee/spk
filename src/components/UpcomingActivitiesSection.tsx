@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
 const newActivities = [
   {
@@ -13,7 +15,7 @@ const newActivities = [
     iconColor: "text-purple-400",
   },
   {
-    name: "ESCAPE ROOM",
+    name: "BOUTIQUE D'ÉCHANGE",
     status: "Disponible maintenant",
     gradient: "from-blue-900/20 to-cyan-900/20",
     border: "border-blue-500/30",
@@ -21,7 +23,7 @@ const newActivities = [
     iconColor: "text-blue-400",
   },
   {
-    name: "SIMULATEUR VR",
+    name: "MACHINES À PINCER",
     status: "Nouveau",
     gradient: "from-green-900/20 to-emerald-900/20",
     border: "border-green-500/30",
@@ -29,7 +31,7 @@ const newActivities = [
     iconColor: "text-green-400",
   },
   {
-    name: "LASER MAZE",
+    name: "BOWLING",
     status: "Maintenant ouvert",
     gradient: "from-orange-900/20 to-red-900/20",
     border: "border-orange-500/30",
@@ -37,7 +39,7 @@ const newActivities = [
     iconColor: "text-orange-400",
   },
   {
-    name: "ARÈNE COMBAT",
+    name: "ARÈNE DE BOXE",
     status: "Disponible",
     gradient: "from-yellow-900/20 to-amber-900/20",
     border: "border-yellow-500/30",
@@ -45,7 +47,7 @@ const newActivities = [
     iconColor: "text-yellow-400",
   },
   {
-    name: "BOWLING",
+    name: "SIMULATEURS DE COURSE",
     status: "Nouveau",
     gradient: "from-indigo-900/20 to-violet-900/20",
     border: "border-indigo-500/30",
@@ -108,19 +110,29 @@ const UpcomingActivitiesSection = () => {
         </motion.div>
 
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <a href="tel:418-693-3334">
+          <Link href="/hub-de-jeux">
             <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full uppercase tracking-wider hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full uppercase tracking-wider hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Nous contacter pour plus d&apos;infos
+              Découvrir Hub de Jeux
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.button>
+          </Link>
+          <a href="tel:418-693-3334">
+            <motion.button
+              className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-bold rounded-full uppercase tracking-wider hover:bg-purple-500/20 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Nous contacter
             </motion.button>
           </a>
         </motion.div>
