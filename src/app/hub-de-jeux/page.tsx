@@ -8,7 +8,6 @@ import {
   FiStar,
   FiZap,
   FiTarget,
-  FiUsers,
   FiAward,
   FiActivity,
 } from "react-icons/fi";
