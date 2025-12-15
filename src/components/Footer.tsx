@@ -67,24 +67,24 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col items-center md:items-start gap-4">
               <div className="flex gap-5">
-                <a
-                  href="https://web.facebook.com/saguenaypaintballkarting"
-                  aria-label="Facebook"
-                  className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              <a
+                href="https://web.facebook.com/saguenaypaintballkarting"
+                aria-label="Facebook"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  <FaFacebook size={28} />
-                </a>
-                <a
-                  href="https://www.instagram.com/amusement_spk/"
-                  aria-label="Instagram"
-                  className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+              >
+                <FaFacebook size={28} />
+              </a>
+              <a
+                href="https://www.instagram.com/amusement_spk/"
+                aria-label="Instagram"
+                className="text-gray-400 hover:text-purple-400 hover:scale-110 transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  <FaInstagram size={28} />
-                </a>
+              >
+                <FaInstagram size={28} />
+              </a>
                 <a
                   href="https://www.tiktok.com/@spk.chicoutimi?_t=ZS-8yWlL6GmrVy&_r=1"
                   aria-label="TikTok"
