@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { activities } from "@/lib/activities";
-import GlitchTitle from "./GlitchTitle";
 import React from "react";
 
 const Footer = () => {
@@ -17,7 +16,19 @@ const Footer = () => {
           {/* Column 1: About */}
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-6">
-              <GlitchTitle />
+              <Link href="/">
+                <div className="relative h-12 w-40 md:h-16 md:w-52 overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/spk-logo.png"
+                    alt="SPK Logo"
+                    width={100}
+                    height={64}
+                    className="object-contain"
+                    style={{ transform: 'scale(1.75)', transformOrigin: 'center center' }}
+                    priority
+                  />
+                </div>
+              </Link>
             </div>
             <p className="text-gray-400 text-center md:text-left text-sm leading-relaxed">
               Le complexe de divertissement ultime. Adrénaline et plaisir
