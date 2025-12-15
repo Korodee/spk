@@ -64,10 +64,10 @@ export default function InfoBar() {
           {/* Right Section */}
           <div className="w-full md:w-1/3 text-center">
             <p className="text-xs uppercase tracking-wider text-gray-400">
-              Période Actuel
+              Période Actuelle
             </p>
             <p className="mt-1 text-2xl font-black text-yellow-400 tracking-tighter">
-              ÉTÉ
+              HIVER
             </p>
           </div>
         </div>

@@ -74,7 +74,7 @@ export default async function ActivityPage({ params }: LocalPageProps) {
       <p className="mb-2">
         SPK vous offre une activité de paintball exceptionnelle sur les plus
         gros et magnifiques terrains de la région. Assisté d&apos;un moniteur,
-        vous vivrez l&apos;expérience de votre été avec votre groupe
+        vous vivrez une expérience inoubliable avec votre groupe
         d&apos;amis. Communiquez avec nous pour toute demande d&apos;information
         ou pour réserver !
       </p>
