@@ -15,8 +15,8 @@ const newActivities = [
     iconColor: "text-purple-400",
   },
   {
-    name: "QUILLES",
-    status: "Nouvelle activité",
+    name: "PETITES QUILLES",
+    status: "Disponible maintenant",
     gradient: "from-blue-900/20 to-cyan-900/20",
     border: "border-blue-500/30",
     iconBg: "bg-blue-500/20",
