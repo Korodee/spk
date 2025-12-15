@@ -160,7 +160,7 @@ export default function Navigation() {
       >
         <motion.div variants={navItemVariants}>
           <Link href="/">
-            <div className="relative h-10 w-32 md:h-12 md:w-40">
+            <div className="relative h-14 w-44 md:h-16 md:w-56">
               <Image
                 src="/spk-logo.png"
                 alt="SPK Logo"
