@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import GlitchTitle from "./GlitchTitle";
+import Image from "next/image";
 
 const navVariants: Variants = {
   hidden: { y: -50, opacity: 0 },
@@ -159,7 +159,17 @@ export default function Navigation() {
         }}
       >
         <motion.div variants={navItemVariants}>
-          <GlitchTitle />
+          <Link href="/">
+            <div className="relative h-10 w-32 md:h-12 md:w-40">
+              <Image
+                src="/spk-logo.png"
+                alt="SPK Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </Link>
         </motion.div>
 
         {/* Desktop Nav */}

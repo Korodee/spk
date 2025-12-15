@@ -55,7 +55,8 @@ const Footer = () => {
               <li>Chicoutimi, QC</li>
               <li>spk@videotron.qc.ca</li>
               <li>418-693-3334</li>
-              <li>7/7 9h à 23h</li>
+              <li>Dimanche à jeudi : 9h à 23h</li>
+              <li>Vendredi et samedi : 9h à 24h</li>
             </ul>
           </div>
 

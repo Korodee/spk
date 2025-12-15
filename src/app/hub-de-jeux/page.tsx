@@ -3,14 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  FiArrowRight,
-  FiStar,
-  FiZap,
-  FiTarget,
-  FiAward,
-  FiActivity,
-} from "react-icons/fi";
+import { FiArrowRight, FiStar, FiZap, FiTarget, FiActivity } from "react-icons/fi";
 import Footer from "@/components/Footer";
 
 const funArenaActivities = [
@@ -19,14 +12,14 @@ const funArenaActivities = [
     name: "Arcade",
     title: "Salle d'Arcade",
     description:
-      "Plongez dans un univers de jeux d'arcade classiques et modernes. Des centaines de machines vous attendent pour des heures de divertissement.",
+      "Plongez dans un univers de jeux d'arcade modernes avec une ambiance néon immersive et colorée.",
     features: [
-      "Plus de 100 machines d'arcade",
-      "Jeux rétro et modernes",
-      "Système de tickets et récompenses",
-      "Ambiance immersive avec éclairage néon",
+      "Sélection de jeux d'arcade modernes",
+      "Ambiance lumineuse et sonore unique",
+      "Espace adapté pour toute la famille",
+      "Aucune réservation nécessaire",
     ],
-    images: ["/1.jpg", "/2.jpg", "/3.jpg"],
+    images: ["/1.jpg", "/2.jpg", "/4.jpg"],
     color: "from-purple-500 to-pink-500",
     icon: FiZap,
   },
@@ -35,79 +28,47 @@ const funArenaActivities = [
     name: "Boutique de Récompenses",
     title: "Boutique d'Échange",
     description:
-      "Échangez vos tickets contre des prix incroyables ! Des peluches, des figurines, des bonbons et bien plus encore vous attendent.",
+      "Échangez vos tickets contre des prix variés : peluches, bonbons et surprises pour tous les goûts.",
     features: [
       "Large sélection de peluches",
       "Figurines et collectibles",
       "Bonbons et friandises",
       "Articles exclusifs SPK",
     ],
-    images: ["/4.jpg", "/5.jpg", "/6.jpg"],
+    images: ["/7.jpg", "/8.jpg", "/9.jpg"],
     color: "from-blue-500 to-cyan-500",
     icon: FiStar,
   },
   {
-    id: "claw-machines",
-    name: "Machines à Pincer",
-    title: "Machines à Pincer",
+    id: "winter-karting",
+    name: "Karting d'hiver",
+    title: "Karting d'hiver",
     description:
-      "Testez votre habileté avec nos machines à pincer dernier cri. Remportez des peluches et des prix exclusifs !",
+      "Découvrez le karting sur une piste adaptée à la saison froide pour une expérience hivernale unique.",
     features: [
-      "Machines Lucky Cat",
-      "Machines Happy Games",
-      "Peluches exclusives",
-      "Prix garantis",
-    ],
-    images: ["/7.jpg", "/8.jpg", "/9.jpg"],
-    color: "from-green-500 to-emerald-500",
-    icon: FiTarget,
-  },
-  {
-    id: "racing-games",
-    name: "Jeux de Course",
-    title: "Simulateurs de Course",
-    description:
-      "Vivez l'adrénaline de la course avec nos simulateurs de moto et de voiture. Défiez vos amis et établissez les meilleurs temps !",
-    features: [
-      "Simulateurs de moto",
-      "Simulateurs de voiture",
-      "Jeux compétitifs multijoueurs",
-      "Tableaux de classement",
+      "Piste conçue pour l'hiver",
+      "Expérience sécuritaire et encadrée",
+      "Parfait pour les amateurs de sensations",
+      "Informations détaillées à venir",
     ],
     images: ["/10.jpg", "/11.jpg", "/12.jpg"],
     color: "from-orange-500 to-red-500",
-    icon: FiZap,
+    icon: FiTarget,
   },
   {
-    id: "boxing-games",
-    name: "Jeux de Boxe",
-    title: "Arène de Boxe",
+    id: "active-zone",
+    name: "Active Zone",
+    title: "Active Zone",
     description:
-      "Libérez votre énergie avec nos jeux de boxe interactifs. Testez votre force et votre rapidité !",
+      "Une zone dynamique pour bouger, jouer et défier vos amis dans une ambiance énergétique.",
     features: [
-      "Boxer Champion",
-      "Super Boxer",
-      "Mesure de force",
-      "Défis entre amis",
+      "Jeux physiques et interactifs",
+      "Idéal pour les groupes et anniversaires",
+      "Ambiance festive",
+      "Nouveaux modules à découvrir",
     ],
     images: ["/13.jpg", "/14.jpg", "/15.jpg"],
     color: "from-yellow-500 to-amber-500",
-    icon: FiAward,
-  },
-  {
-    id: "bowling",
-    name: "Bowling",
-    title: "Bowling",
-    description:
-      "Profitez de notre bowling moderne avec éclairage néon. Quatre pistes vous attendent pour des parties mémorables entre amis ou en famille.",
-    features: [
-      "4 pistes de bowling modernes",
-      "Éclairage néon immersif",
-      "Écrans de score numériques",
-      "Ambiance festive et énergique",
-    ],
-    images: ["/16.jpg", "/17.jpg", "/18.jpg"],
-    color: "from-indigo-500 to-violet-500",
     icon: FiActivity,
   },
 ];
@@ -357,16 +318,10 @@ const HubDeJeuxPage = () => {
                   ))}
                 </ul>
 
-                <a href="tel:418-693-3334">
-                  <motion.button
-                    className={`group px-8 py-4 bg-gradient-to-r ${activity.color} text-white font-bold rounded-full uppercase tracking-wider flex items-center gap-2 shadow-lg`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    En savoir plus
-                    <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                  </motion.button>
-                </a>
+                <p className="text-sm text-gray-400">
+                  Aucune réservation nécessaire pour cette zone. Présentez-vous
+                  sur place pour profiter de l&apos;activité.
+                </p>
               </motion.div>
             </div>
           </div>

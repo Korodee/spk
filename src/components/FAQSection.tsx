@@ -18,7 +18,7 @@ const faqData = [
   {
     question: "Quels sont vos horaires d'ouverture ?",
     answer:
-      "Nous sommes ouverts 7 jours sur 7, de 9h à 23h. Nous restons ouverts les jours fériés (sauf le 25 décembre et le 1er janvier). Les horaires peuvent être ajustés selon l'achalandage, et nous offrons la possibilité de réservations privées en dehors des heures régulières.",
+      "Nous sommes ouverts 7 jours sur 7. Du dimanche au jeudi, de 9h à 23h, et le vendredi et samedi de 9h à 24h. Nous restons ouverts les jours fériés (sauf le 25 décembre et le 1er janvier). Les horaires peuvent être ajustés selon l'achalandage, et nous offrons la possibilité de réservations privées en dehors des heures régulières.",
   },
   {
     question: "Y a-t-il des restrictions d'âge pour les activités ?",

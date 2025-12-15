@@ -8,8 +8,8 @@ const scheduleData = [
   { day: "Mardi", open: "9", close: "23", icon: "🌙" },
   { day: "Mercredi", open: "9", close: "23", icon: "🌅" },
   { day: "Jeudi", open: "9", close: "23", icon: "🌅 " },
-  { day: "Vendredi", open: "9", close: "23", icon: "🌅" },
-  { day: "Samedi", open: "9", close: "23", icon: "⭐" },
+  { day: "Vendredi", open: "9", close: "24", icon: "🌅" },
+  { day: "Samedi", open: "9", close: "24", icon: "⭐" },
   { day: "Dimanche", open: "9", close: "23", icon: "⭐" },
 ];
 

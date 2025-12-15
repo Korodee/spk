@@ -298,7 +298,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-2xl font-bold mb-3">Notre Adresse</h3>
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      2175 Bd Saint-Paul, Chicoutimi, QC G7J 3Y9
+                      2175 Bd Saint-Paul, Chicoutimi, QC G7K 1E5
                     </p>
                     <p className="text-orange-400 font-semibold mt-2">
                       Passez nous voir pour une dose d&apos;adrénaline !
@@ -421,7 +421,7 @@ const ContactPage = () => {
             </motion.div>
 
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3256077874313!2d-71.0560248843258!3d48.420888979247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfd12a32c77a49%3A0x8c1b69a19d76506a!2sSPK%20Karting!5e0!3m2!1sen!2sca!4v1624300000000!5m2!1sen!2sca"
+              src="https://www.google.com/maps?q=2175+Bd+Saint-Paul,+Chicoutimi,+QC+G7K+1E5&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

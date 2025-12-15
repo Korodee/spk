@@ -53,6 +53,7 @@ export const activities: Activity[] = [
       "Karts à gaz haute performance",
       "Piste asphaltée de 900m",
       "Système de chronométrage",
+      "Fermé pour la saison hivernale",
     ],
   },
   {
@@ -65,6 +66,7 @@ export const activities: Activity[] = [
       "Équipement de sécurité complet",
       "Plusieurs scénarios de jeu",
       "Idéal pour les groupes",
+      "Fermé pour la saison hivernale",
     ],
   },
   {
@@ -77,6 +79,7 @@ export const activities: Activity[] = [
       "Défis physiques et intellectuels",
       "Jeu en équipe",
       "Course contre la montre",
+      "Fermé pour la saison hivernale",
     ],
   },
   {
