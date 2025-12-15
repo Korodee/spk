@@ -39,12 +39,6 @@ const vrExperiences: VrExperience[] = [
     price: "7$",
     description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
   },
-  {
-    image: "/simulator.png",
-    title: "Simulateur de Course",
-    price: "7$",
-    description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
-  },
 ];
 
 const cardVariants: Variants = {

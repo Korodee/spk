@@ -10,7 +10,7 @@ const vrInfo = (
     </p>
     <p>
       Embarquez et vivez des sensations extrêmes à bord de nos simulateurs de
-      vol, de drift, de montagne russe et d&apos;horreur.
+      vol, de montagne russe et d&apos;horreur.
     </p>
   </>
 );
