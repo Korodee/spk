@@ -50,7 +50,7 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
           </ul>
         </div>
 
-        <Link href={`/activity/${activity.slug}`}>
+        <Link href={activity.hubDeJeuxId ? `/hub-de-jeux#${activity.hubDeJeuxId}` : `/activity/${activity.slug}`}>
           <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform group-hover:scale-105 shadow-lg">
             Découvrir
           </button>

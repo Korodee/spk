@@ -58,12 +58,13 @@ const UpcomingActivitiesSection = () => {
             <span className="text-white">Activités</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Découvrez nos nouvelles activités maintenant disponibles ! Explorez nos nouveaux espaces 
-            et vivez des expériences qui vont révolutionner votre divertissement.
+            Découvrez nos nouvelles activités maintenant disponibles ! Explorez
+            nos nouveaux espaces et vivez des expériences qui vont révolutionner
+            votre divertissement.
           </p>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +92,7 @@ const UpcomingActivitiesSection = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -125,4 +126,4 @@ const UpcomingActivitiesSection = () => {
   );
 };
 
-export default UpcomingActivitiesSection; 
+export default UpcomingActivitiesSection;
