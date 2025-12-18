@@ -17,7 +17,7 @@ import {
 const challenges = [
   {
     id: "challenge-1",
-    name: "Labyrinthe de l'horreur",
+    name: "Labyrinthe",
     subtitle: "Défi Complet",
     description:
       "Parcourez notre labyrinthe de 6500 pieds carrés et résolvez les énigmes pour compléter votre mission en un temps record.",
@@ -30,7 +30,7 @@ const challenges = [
     ],
     difficulty: "Semi-difficile",
     duration: "30min - 2h",
-    price: "15$",
+    price: "11$",
     color: "from-orange-500 to-red-500",
   },
 ];

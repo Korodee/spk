@@ -25,7 +25,7 @@ export default function InfoBar() {
           {/* Left Section */}
           <div className="w-full md:w-1/3 text-center">
             <p className="text-xs uppercase tracking-wider text-gray-400">
-              Il pleut ?
+              Peu importe la météo
             </p>
             <p className="mt-1 text-base font-bold text-white uppercase">
               Ouvert en tout temps

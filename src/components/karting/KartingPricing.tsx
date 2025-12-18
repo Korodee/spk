@@ -20,7 +20,7 @@ const pricingData = {
     {
       name: "Les Deux",
       price: "26",
-      features: ["15 Minutes", "2 courses", "26,00$ + tx"],
+    features: ["15 Minutes", "2e course", "26,00$ + tx"],
       color: "red",
     },
   ],

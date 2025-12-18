@@ -71,7 +71,7 @@ const MinigolfPageContent = () => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-gray-300">
-          Bienvenue dans notre incroyable parcours de mini-golf fluo ! Plongez
+          Bienvenue dans notre incroyable parcours de minigolf fluo ! Plongez
           dans un monde fantastique où les couleurs s&apos;illuminent et les
           défis deviennent encore plus excitants.
         </div>
@@ -83,13 +83,13 @@ const MinigolfPageContent = () => {
         <FloatingBall className="top-1/2 right-1/5" delay={1.5} /> */}
 
       {/* <div className="text-center z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4">
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
             <h1 className="text-8xl font-black uppercase tracking-tighter">
-              Mini Golf <br />
+              Minigolf <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
                 Fluo
               </span>
@@ -103,28 +103,42 @@ const MinigolfPageContent = () => {
           >
             <Image
               src="/mini-golf.png"
-              alt="Mini Golf Fluo"
+              alt="Minigolf fluo"
               layout="fill"
               objectFit="contain"
             />
-          </motion.div> */}
-      {/* </div> */}
-      {/* </div> */}
+          </motion.div>
+      </div>
+      </div> */}
 
       {/* Info Section */}
       <div className="py-20 px-4">
         <motion.div
-          className="max-w-4xl mx-auto bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center text-lg text-gray-300 leading-relaxed"
+          className="max-w-4xl mx-auto bg-gradient-to-r from-red-700/80 via-orange-600/80 to-red-700/80 backdrop-blur-md border border-red-300/70 rounded-2xl p-8 text-center text-lg text-red-50 leading-relaxed shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1 }}
         >
-          18 trous passionnants, mais également deux trous bonus pour ajouter
-          une dimension supplémentaire à votre expérience de jeu. Chaque trou
-          est soigneusement conçu pour défier vos compétences et stimuler votre
-          créativité. De plus, nous sommes fiers de vous offrir un module de
-          jeux d&apos;enfants gratuit et inclus dans le mini-golf.
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-100 mb-3">
+            Information importante
+          </p>
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            Fermeture temporaire du minigolf
+          </h2>
+          <p className="mb-4">
+            Fermeture du 5 janvier au 6 février. Le minigolf sera complètement
+            démoli pour laisser la place à un tout nouveau minigolf interactif
+            avec une nouvelle thématique. Suivez-nous sur les réseaux pour en
+            savoir plus&nbsp;!
+          </p>
+          <p className="text-base md:text-lg text-red-50/90">
+            18 trous passionnants, mais également deux trous bonus pour ajouter
+            une dimension supplémentaire à votre expérience de jeu. Chaque trou
+            est soigneusement conçu pour défier vos compétences et stimuler
+            votre créativité. De plus, nous sommes fiers de vous offrir un
+            module de jeux d&apos;enfants gratuit et inclus dans le minigolf.
+          </p>
         </motion.div>
       </div>
 
@@ -136,7 +150,7 @@ const MinigolfPageContent = () => {
         </div> */}
         <div className="relative z-10 max-w-5xl mx-auto">
           <motion.h2
-            className="text-6xl font-black text-center uppercase tracking-tighter mb-16"
+            className="text-6xl font-black text-center uppercase tracking-tighter mb-4"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -144,6 +158,11 @@ const MinigolfPageContent = () => {
           >
             Nos Tarifs
           </motion.h2>
+          <p className="text-center text-sm md:text-base text-red-300 mb-12 max-w-2xl mx-auto">
+            Fermeture du 5 janvier au 6 février. Le minigolf est actuellement en
+            transformation pour devenir un tout nouveau minigolf interactif. Les
+            tarifs ci-dessous seront mis à jour à la réouverture.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PricingTier
               title="Adulte"

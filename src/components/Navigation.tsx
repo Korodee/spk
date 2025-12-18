@@ -28,7 +28,7 @@ const navItemVariants: Variants = {
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/#activities", label: "Activités" },
-  { href: "/hub-de-jeux", label: "Hub de Jeux" },
+  { href: "/hub-de-jeux", label: "Nouveautés" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/contact", label: "Contact" },
 ];
@@ -60,7 +60,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Hide banner on hub-de-jeux page
   const isBannerVisible = bannerVisible && pathname !== "/hub-de-jeux";
 
@@ -167,7 +167,10 @@ export default function Navigation() {
                 width={100}
                 height={64}
                 className="object-contain"
-                style={{ transform: 'scale(1.75)', transformOrigin: 'center center' }}
+                style={{
+                  transform: "scale(1.75)",
+                  transformOrigin: "center center",
+                }}
                 priority
               />
             </div>

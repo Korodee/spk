@@ -50,7 +50,18 @@ const ratesData = [
   {
     category: "LABYRINTHE",
     image: "/labyrinth.jpg",
-    items: [{ name: "Labyrinthe de l'horreur", price: "15$" }],
+    items: [{ name: "Labyrinthe", price: "11$" }],
+  },
+  {
+    category: "Quilles",
+    image: "/bowling.jpg",
+    items: [
+      {
+        name: "Allée de petites quilles (1 heure)",
+        price: "30$",
+        description: "+ 2$ bas antidérapant par personne",
+      },
+    ],
   },
   {
     category: "Salle Arcade VIP",
@@ -66,6 +77,29 @@ const ratesData = [
         name: "Salle pour soirée (A & B)",
         price: "500$",
         description: "17h à 01h00, possibilité de service de bar",
+      },
+    ],
+  },
+  {
+    category: "Arcade",
+    image: "/arcade.jpg",
+    items: [
+      {
+        name: "Accès libre à l'arcade",
+        price: "Voir sur place",
+        description: "Tarifs variables selon les jeux et promotions en cours",
+      },
+    ],
+  },
+  {
+    category: "Active Zone",
+    image: "/active-zone.jpg",
+    items: [
+      {
+        name: "Accès Active Zone",
+        price: "Voir sur place",
+        description:
+          "Tarifs et formules disponibles à la réception selon les jeux choisis",
       },
     ],
   },
@@ -253,6 +287,25 @@ const TarifsPage = () => {
               >
                 {category.category}
               </motion.h2>
+              {category.category === "Minigolf" && (
+                <motion.div
+                  className="max-w-3xl mx-auto mb-10"
+                  variants={cardVariants}
+                >
+                  <div className="bg-gradient-to-r from-red-700/90 via-orange-600/90 to-red-700/90 border border-red-300/80 rounded-2xl px-6 py-4 text-center shadow-xl">
+                    <p className="text-xs md:text-sm font-bold uppercase tracking-[0.18em] text-red-100 mb-2">
+                      Information importante
+                    </p>
+                    <p className="text-sm md:text-base text-red-50">
+                      Fermeture du 5 janvier au 6 février. Le minigolf sera
+                      complètement démoli pour laisser la place à un tout
+                      nouveau minigolf interactif avec une nouvelle
+                      thématique. Suivez-nous sur les réseaux pour en savoir
+                      plus&nbsp;!
+                    </p>
+                  </div>
+                </motion.div>
+              )}
               <motion.div
                 className="flex flex-wrap justify-center gap-6"
                 variants={containerVariants}

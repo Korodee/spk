@@ -106,7 +106,7 @@ const UpcomingActivitiesSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Découvrir Hub de Jeux
+              Découvrir les nouveautés
               <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </Link>

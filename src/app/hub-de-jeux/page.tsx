@@ -17,7 +17,7 @@ const funArenaActivities = [
       "Sélection de jeux d'arcade modernes",
       "Ambiance lumineuse et sonore unique",
       "Espace adapté pour toute la famille",
-      "Aucune réservation nécessaire",
+      "Idéal pour les sorties en groupe",
     ],
     images: ["/1.jpg", "/2.jpg", "/4.jpg"],
     color: "from-purple-500 to-pink-500",
@@ -35,7 +35,7 @@ const funArenaActivities = [
       "Bonbons et friandises",
       "Articles exclusifs SPK",
     ],
-    images: ["/7.jpg", "/8.jpg", "/9.jpg"],
+    images: ["/7.jpg", "/16.jpg", "/12.jpg"],
     color: "from-blue-500 to-cyan-500",
     icon: FiStar,
   },
@@ -49,9 +49,9 @@ const funArenaActivities = [
       "Piste courte enneigée",
       "Expérience hivernale unique",
       "Parfait pour les amateurs de sensations",
-      "Informations détaillées disponibles sur place",
+      "Réservation nécessaire (contactez-nous pour plus d'informations)",
     ],
-    images: ["/10.jpg", "/11.jpg", "/12.jpg"],
+    images: [],
     color: "from-orange-500 to-red-500",
     icon: FiTarget,
   },
@@ -67,7 +67,7 @@ const funArenaActivities = [
       "Jusqu'à 6 joueurs par allée",
       "Bas antidérapants SPK obligatoires (2$ par joueur)",
     ],
-    images: ["/16.jpg", "/17.jpg", "/18.jpg"],
+    images: ["/17.jpg"],
     color: "from-indigo-500 to-violet-500",
     icon: FiActivity,
   },
@@ -148,7 +148,7 @@ const HubDeJeuxPage = () => {
         <div className="absolute inset-0">
           <Image
             src="/1.jpg"
-            alt="Hub de Jeux"
+            alt="Nouvelles activités"
             fill
             className="object-cover opacity-30"
             priority
@@ -195,18 +195,6 @@ const HubDeJeuxPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            {/* Badge */}
-            <motion.div
-              className="inline-block mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <span className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
-                Nouveau
-              </span>
-            </motion.div>
-
             {/* Title */}
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-6"
@@ -215,7 +203,7 @@ const HubDeJeuxPage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400">
-                Hub de Jeux
+                Nouveautés
               </span>
             </motion.h1>
 
@@ -225,31 +213,10 @@ const HubDeJeuxPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Découvrez notre nouvel espace de divertissement ultime. Des jeux
-              d&apos;arcade aux espaces thématiques immersifs, vivez une
-              expérience inoubliable.
+              Découvrez nos nouvelles activités : un espace de divertissement
+              unique qui rassemble nos nouvelles activités pour toute la famille,
+              accessibles sans réservation.
             </motion.p>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <a href="tel:418-693-3334">
-                <motion.button
-                  className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg uppercase tracking-wider rounded-full shadow-2xl flex items-center gap-3 mx-auto"
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 40px rgba(168, 85, 247, 0.6)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Réserver Maintenant
-                  <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
-              </a>
-            </motion.div>
           </motion.div>
         </div>
 
@@ -377,59 +344,75 @@ const HubDeJeuxPage = () => {
                   ))}
                 </div>
 
-                <motion.p
-                  className="text-center text-sm text-gray-400 mt-8"
+                <motion.div
+                  className="text-center mt-8"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  Aucune réservation nécessaire pour cette zone. Présentez-vous
-                  sur place pour profiter de l&apos;activité.
-                </motion.p>
+                  <p className="text-sm text-gray-400 mb-4">
+                    Réservation nécessaire pour cette zone. Contactez-nous pour
+                    plus d&apos;informations et pour planifier votre visite.
+                  </p>
+                  <a href="tel:418-693-3334">
+                    <motion.button
+                      className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Réserver
+                      <FiArrowRight className="text-base" />
+                    </motion.button>
+                  </a>
+                </motion.div>
               </div>
             ) : (
               /* Standard layout for other activities */
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                className={`grid grid-cols-1 ${
+                  activity.id === "winter-karting" ? "lg:grid-cols-1" : "lg:grid-cols-2"
+                } gap-12 items-center ${
                   index % 2 === 1 ? "lg:grid-flow-dense" : ""
                 }`}
               >
-                {/* Image Gallery */}
-                <motion.div
-                  className={index % 2 === 1 ? "lg:col-start-2" : ""}
-                  initial={{ opacity: 0, x: index % 2 === 1 ? 50 : -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <div className="grid grid-cols-2 gap-4">
-                    {activity.images.slice(0, 3).map((img, imgIndex) => (
-                      <motion.div
-                        key={imgIndex}
-                        className={`relative h-64 rounded-2xl overflow-hidden ${
-                          imgIndex === 0 ? "col-span-2" : ""
-                        }`}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          duration: 0.6,
-                          delay: 0.2 + imgIndex * 0.1,
-                        }}
-                        whileHover={{ scale: 1.02 }}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${activity.name} ${imgIndex + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
+                {/* Image Gallery (hidden for Karting d'hiver to make section full-width) */}
+                {activity.id !== "winter-karting" && (
+                  <motion.div
+                    className={index % 2 === 1 ? "lg:col-start-2" : ""}
+                    initial={{ opacity: 0, x: index % 2 === 1 ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      {activity.images.slice(0, 3).map((img, imgIndex) => (
+                        <motion.div
+                          key={imgIndex}
+                          className={`relative h-64 rounded-2xl overflow-hidden ${
+                            imgIndex === 0 ? "col-span-2" : ""
+                          }`}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.6,
+                            delay: 0.2 + imgIndex * 0.1,
+                          }}
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          <Image
+                            src={img}
+                            alt={`${activity.name} ${imgIndex + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
 
                 {/* Content */}
                 <motion.div
@@ -477,10 +460,32 @@ const HubDeJeuxPage = () => {
                     ))}
                   </ul>
 
-                  <p className="text-sm text-gray-400">
-                    Aucune réservation nécessaire pour cette zone. Présentez-vous
-                    sur place pour profiter de l&apos;activité.
-                  </p>
+                  {activity.id === "petites-quilles" ||
+                  activity.id === "winter-karting" ||
+                  activity.id === "arcade" ||
+                  activity.id === "redemption" ? (
+                    <>
+                      <p className="text-sm text-gray-400 mb-4">
+                        Réservation nécessaire pour cette activité. Contactez-nous pour
+                        plus d&apos;informations et pour planifier votre visite.
+                      </p>
+                      <a href="tel:418-693-3334">
+                        <motion.button
+                          className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          Réserver
+                          <FiArrowRight className="text-base" />
+                        </motion.button>
+                      </a>
+                    </>
+                  ) : (
+                    <p className="text-sm text-gray-400">
+                      Aucune réservation nécessaire pour cette zone. Présentez-vous
+                      sur place pour profiter de l&apos;activité.
+                    </p>
+                  )}
                 </motion.div>
               </div>
             )}
@@ -536,29 +541,16 @@ const HubDeJeuxPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-              Prêt à vivre l&apos;expérience{" "}
+              Prêt à découvrir nos{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-                Hub de Jeux
+                nouveautés
               </span>
               ?
             </h2>
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-              Réservez dès maintenant et plongez dans un monde de divertissement
-              et d&apos;amusement sans limites.
+              Explorez toutes nos nouvelles activités et venez simplement sur place
+              pour en profiter, sans réservation.
             </p>
-            <a href="tel:418-693-3334">
-              <motion.button
-                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-md sm:text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center gap-3 mx-auto"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 50px rgba(168, 85, 247, 0.7)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Réserver Maintenant
-                <FiArrowRight className="text-2xl" />
-              </motion.button>
-            </a>
           </motion.div>
         </div>
       </section>

@@ -46,7 +46,7 @@ const AnnouncementBanner = () => {
                 <div className="text-center sm:text-left sm:flex-1 flex items-center">
                   <p className="text-white flex flex-row items-center justify-center sm:justify-start font-bold text-sm sm:text-base md:text-lg tracking-wide">
                     <span className="inline-block">
-                      Nouveaux espaces ouverts{" "}
+                      Nouveautés{" "}
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>
                   </p>
@@ -54,14 +54,14 @@ const AnnouncementBanner = () => {
 
                 <Link href="/hub-de-jeux" className="flex-shrink-0 flex items-center">
                   <span className="sm:hidden text-white text-[12px] font-bold uppercase tracking-wider underline underline-offset-2">
-                    Découvrir Hub de Jeux
+                    Découvrir les nouveautés
                   </span>
                   <motion.button
                     className="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white/30 transition-all duration-300 whitespace-nowrap"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Découvrir Hub de Jeux
+                    Découvrir les nouveautés
                     <FiArrowRight className="text-sm" />
                   </motion.button>
                 </Link>
