@@ -61,10 +61,6 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
 };
 
 const ActivitiesSection = () => {
-  const regularActivities = activities.filter(
-    (a) => a.slug !== "salle-arcade-vip"
-  );
-
   return (
     <>
       <section id="activities" className="py-24 bg-white">
@@ -115,7 +111,7 @@ const ActivitiesSection = () => {
               },
             }}
           >
-            {regularActivities.map((activity) => (
+            {activities.map((activity) => (
               <ActivityCard key={activity.name} activity={activity} />
             ))}
           </motion.div>
