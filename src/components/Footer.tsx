@@ -45,7 +45,7 @@ const Footer = () => {
               {activities.map((activity) => (
                 <li key={activity.slug}>
                   <Link
-                    href={`/activity/${activity.slug}`}
+                    href={activity.hubDeJeuxId ? `/hub-de-jeux#${activity.hubDeJeuxId}` : `/activity/${activity.slug}`}
                     className="group text-gray-300 hover:text-white transition-colors duration-300 relative"
                   >
                     <span>{activity.name}</span>
@@ -53,16 +53,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              {/* New activities entry pointing to the Nouveautés page */}
-              <li>
-                <Link
-                  href="/hub-de-jeux"
-                  className="group text-gray-300 hover:text-white transition-colors duration-300 relative"
-                >
-                  <span>Nouveautés</span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
             </ul>
           </div>
 

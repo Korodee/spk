@@ -96,7 +96,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Arcade",
+    name: "Salle d'Arcade",
     slug: "arcade",
     image: "/14.jpg",
     description:
@@ -109,17 +109,17 @@ export const activities: Activity[] = [
     hubDeJeuxId: "arcade",
   },
   {
-    name: "Petites quilles",
-    slug: "petites-quilles",
-    image: "/17.jpg",
+    name: "Boutique d'Échange",
+    slug: "boutique-echange",
+    image: "/16.jpg",
     description:
-      "4 allées de petites quilles destinées aux familles et fêtes d'enfants. Chaque allée peut accueillir jusqu'à 6 joueurs.",
+      "Échangez vos tickets contre des prix variés : peluches, bonbons et surprises pour tous les goûts.",
     details: [
-      "4 allées de petites quilles",
-      "Idéal pour les familles et fêtes d'enfants",
-      "Jusqu'à 6 joueurs par allée",
+      "Large sélection de peluches",
+      "Figurines et collectibles",
+      "Bonbons et friandises",
     ],
-    hubDeJeuxId: "petites-quilles",
+    hubDeJeuxId: "redemption",
   },
   {
     name: "Karting d'hiver",
@@ -135,106 +135,29 @@ export const activities: Activity[] = [
     hubDeJeuxId: "winter-karting",
   },
   {
-    name: "3 Planchers interactifs",
-    slug: "3-planchers-interactifs",
-    image: "/8.jpg",
+    name: "Petites quilles",
+    slug: "petites-quilles",
+    image: "/17.jpg",
     description:
-      "Jeu sportif immersif qui combine sport et technologie interactive avec des lumières LED interactives et des capteurs.",
+      "4 allées de petites quilles destinées aux familles et fêtes d'enfants. Chaque allée peut accueillir jusqu'à 6 joueurs.",
     details: [
-      "Lumières LED interactives",
-      "Agilité et coordination",
-      "Capacités physiques",
+      "4 allées de petites quilles",
+      "Idéal pour les familles et fêtes d'enfants",
+      "Jusqu'à 6 joueurs par allée",
     ],
-    hubDeJeuxId: "active-zone",
+    hubDeJeuxId: "petites-quilles",
   },
   {
-    name: "Arena Game",
-    slug: "arena-game",
-    image: "/11.jpg",
+    name: "Active Zone",
+    slug: "active-zone",
+    image: "/13.jpg",
     description:
-      "Réinvente de façon innovante le jeu du ballon prisonnier en le digitalisant avec des cibles hexagonales lumineuses.",
+      "L'Active Zone comprend 10 salles de jeu interactives, chacune équipée d'une technologie réagissant en temps réel. Les joueurs y sautent, grimpent, lancent, courent et se déplacent d'un défi à l'autre, vivant une aventure palpitante.",
     details: [
-      "Coordination œil-main",
-      "Précision et vitesse",
-      "Jeu digitalisé",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Climb Game",
-    slug: "climb-game",
-    image: "/10.jpg",
-    description:
-      "Simule une ascension de falaise : les joueurs doivent attraper les lumières vertes pour traverser la pièce.",
-    details: [
-      "Coordination et multitâche",
-      "Agilité",
-      "Défi d'équilibre",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Hide",
-    slug: "hide",
-    image: "/5.jpg",
-    description:
-      "Inspiré de Squid Game, Hide est un jeu de défi qui recrée les moments les plus intenses du scénario.",
-    details: [
-      "Réaction rapide",
-      "Stratégie et communication",
-      "Éviter les capteurs",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Hoops Game",
-    slug: "hoops-game",
-    image: "/4.jpg",
-    description:
-      "Apporte une touche innovante et dynamique au basketball avec des défis de tirs rapides et de précision.",
-    details: [
-      "Coordination œil-main",
-      "Mémorisation",
-      "Vitesse et précision",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Laser Maze",
-    slug: "laser-maze",
-    image: "/18.jpg",
-    description:
-      "Traversez la zone remplie de faisceaux laser et atteignez l'autre côté dans le temps imparti.",
-    details: [
-      "Agilité",
-      "Réaction rapide",
-      "Concentration",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Push",
-    slug: "push",
-    image: "/8.jpg",
-    description:
-      "Jeu de défi basé sur l'agilité et la mémoire avec des murs de boutons multicolores.",
-    details: [
-      "Coordination œil-main",
-      "Précision et vitesse",
-      "Coopération en équipe",
-    ],
-    hubDeJeuxId: "active-zone",
-  },
-  {
-    name: "Control",
-    slug: "control",
-    image: "/9.jpg",
-    description:
-      "Gardez votre équilibre sur une plateforme de commande et utilisez votre corps pour jouer à des classiques comme Tetris ou Pac-Man.",
-    details: [
-      "Jeu de jambes",
-      "Contrôle et coordination",
-      "Précision",
+      "10 salles de jeu interactives",
+      "Technologie réagissant en temps réel",
+      "Jeux physiques et dynamiques",
+      "Parfait pour les groupes et anniversaires",
     ],
     hubDeJeuxId: "active-zone",
   },
