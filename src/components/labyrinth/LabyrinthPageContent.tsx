@@ -145,6 +145,16 @@ const LabyrinthPageContent = () => {
               >
                 Le LABYRINTHE
               </motion.div>
+              <motion.div
+                className="mt-3 flex justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
+                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-orange-500/70 to-red-500/70 text-white text-base md:text-lg font-semibold rounded-full shadow-md border border-orange-300/30">
+                  (période estivale)
+                </span>
+              </motion.div>
             </div>
 
             <motion.p

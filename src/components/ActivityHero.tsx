@@ -10,9 +10,10 @@ type Activity = (typeof activities)[0];
 interface ActivityHeroProps {
   activity: Activity;
   customTitle?: React.ReactNode;
+  showPeriodNotice?: boolean;
 }
 
-const ActivityHero = ({ activity, customTitle }: ActivityHeroProps) => {
+const ActivityHero = ({ activity, customTitle, showPeriodNotice }: ActivityHeroProps) => {
   const hideBookingForSlugs = new Set([
     "realite-virtuelle",
     "minigolf",
@@ -37,6 +38,18 @@ const ActivityHero = ({ activity, customTitle }: ActivityHeroProps) => {
           transition={{ duration: 0.8 }}
         >
           {customTitle || <AnimatedTitle text={activity.name} />}
+          {showPeriodNotice && (
+            <motion.div
+              className="mt-4 flex justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-orange-500/70 to-red-500/70 text-white text-base md:text-lg font-semibold rounded-full shadow-md border border-orange-300/30">
+                (période estivale)
+              </span>
+            </motion.div>
+          )}
           {shouldShowBookingButton && (
             <motion.div className="mt-8">
               <a href="tel:418-693-3334">

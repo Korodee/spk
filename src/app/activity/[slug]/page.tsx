@@ -112,6 +112,7 @@ export default async function ActivityPage({ params }: LocalPageProps) {
           <ActivityHero
             activity={activity}
             customTitle={activity.slug === "karting" ? kartingTitle : undefined}
+            showPeriodNotice={activity.slug === "paintball"}
           />
         )}
 

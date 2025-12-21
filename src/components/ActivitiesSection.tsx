@@ -15,6 +15,10 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
       }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1, margin: "-50px" }}
+      transition={{ duration: 0.6 }}
     >
       <div className="relative h-80 overflow-hidden">
         <Image
@@ -101,7 +105,7 @@ const ActivitiesSection = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1, margin: "-100px" }}
             variants={{
               hidden: {},
               visible: {
