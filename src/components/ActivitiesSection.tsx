@@ -9,17 +9,7 @@ import VipSection from "./VipSection";
 
 const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
   return (
-    <motion.div
-      className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-      }}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1, margin: "-50px" }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20">
       <div className="relative h-80 overflow-hidden">
         <Image
           src={activity.image}
@@ -60,7 +50,7 @@ const ActivityCard = ({ activity }: { activity: (typeof activities)[0] }) => {
           </button>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -101,24 +91,11 @@ const ActivitiesSection = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1, margin: "-100px" }}
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {activities.map((activity) => (
               <ActivityCard key={activity.name} activity={activity} />
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
