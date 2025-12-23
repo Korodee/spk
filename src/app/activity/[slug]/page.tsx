@@ -32,7 +32,7 @@ import Recommendations from "@/components/laser/Recommendations";
 import PricingSection from "@/components/laser/PricingSection";
 import LaserGallery from "@/components/laser/LaserGallery";
 
-// Minigolf Components
+// Mini-golf fluo Components
 import MinigolfPageContent from "@/components/minigolf/MinigolfPageContent";
 
 // Salle VIP Components
@@ -112,7 +112,7 @@ export default async function ActivityPage({ params }: LocalPageProps) {
           <ActivityHero
             activity={activity}
             customTitle={activity.slug === "karting" ? kartingTitle : undefined}
-            showPeriodNotice={activity.slug === "paintball"}
+            showPeriodNotice={activity.slug === "paintball" || activity.slug === "karting"}
           />
         )}
 

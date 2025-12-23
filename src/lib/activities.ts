@@ -21,7 +21,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Minigolf",
+    name: "Mini-golf fluo",
     slug: "minigolf",
     image: "/golf.jpg",
     description:
@@ -52,9 +52,9 @@ export const activities: Activity[] = [
       "Ressentez l'adrénaline de la vitesse sur notre piste de karting extérieure asphaltée. Qui sera le plus rapide ?",
     details: [
       "Karts à gaz haute performance",
+      "période estivale",
       "Piste asphaltée de 900m",
       "Système de chronométrage",
-      "(période estivale)",
     ],
   },
   {
@@ -65,9 +65,9 @@ export const activities: Activity[] = [
       "Élaborez des stratégies et menez votre équipe à la victoire dans nos arènes de paintball thématiques.",
     details: [
       "Équipement de sécurité complet",
+      "période estivale",
       "Plusieurs scénarios de jeu",
       "Idéal pour les groupes",
-      "(période estivale)",
     ],
   },
   {
@@ -78,9 +78,9 @@ export const activities: Activity[] = [
       "Mettez votre logique et votre agilité à l'épreuve dans notre LABYRINTHE, un labyrinthe de défis inspiré de Fort Boyard.",
     details: [
       "Défis physiques et intellectuels",
+      "période estivale",
       "Jeu en équipe",
       "Course contre la montre",
-      "(période estivale)",
     ],
   },
   {

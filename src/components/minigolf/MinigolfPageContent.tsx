@@ -89,9 +89,9 @@ const MinigolfPageContent = () => {
             transition={{ duration: 1 }}
           >
             <h1 className="text-8xl font-black uppercase tracking-tighter">
-              Minigolf <br />
+              Mini-golf <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
-                Fluo
+                fluo
               </span>
             </h1>
           </motion.div>
@@ -103,7 +103,7 @@ const MinigolfPageContent = () => {
           >
             <Image
               src="/mini-golf.png"
-              alt="Minigolf fluo"
+              alt="Mini-golf fluo"
               layout="fill"
               objectFit="contain"
             />

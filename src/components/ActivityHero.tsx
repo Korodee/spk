@@ -40,7 +40,7 @@ const ActivityHero = ({ activity, customTitle, showPeriodNotice }: ActivityHeroP
           {customTitle || <AnimatedTitle text={activity.name} />}
           {showPeriodNotice && (
             <motion.div
-              className="mt-4 flex justify-center"
+              className="mt-3 flex justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}

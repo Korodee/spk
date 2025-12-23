@@ -15,7 +15,7 @@ const ratesData = [
     ],
   },
   {
-    category: "Minigolf",
+    category: "Mini-golf fluo",
     image: "/golf.jpg",
     items: [
       { name: "Adulte", price: "13.50$" },
@@ -108,7 +108,7 @@ const ratesData = [
 // Mapping of category names to activity slugs
 const categoryToSlug: { [key: string]: string } = {
   "Laser tag": "jeu-laser",
-  Minigolf: "minigolf",
+  "Mini-golf fluo": "minigolf",
   "Réalité Virtuelle": "realite-virtuelle",
   Karting: "karting",
   Paintball: "paintball",
@@ -287,7 +287,7 @@ const TarifsPage = () => {
               >
                 {category.category}
               </motion.h2>
-              {category.category === "Minigolf" && (
+              {category.category === "Mini-golf fluo" && (
                 <motion.div
                   className="max-w-3xl mx-auto mb-10"
                   variants={cardVariants}
