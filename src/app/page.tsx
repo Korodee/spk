@@ -8,6 +8,9 @@ import UpcomingActivitiesSection from "@/components/UpcomingActivitiesSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import InfoBar from "@/components/InfoBar";
+import { BookingButton } from "@/components/BookingButton";
+
+
 
 export default function Home() {
   const containerVariants: Variants = {
@@ -66,18 +69,16 @@ export default function Home() {
             >
               SPK
             </motion.h2>
-            <motion.div variants={itemVariants} className="mt-8">
-              <a href="tel:418-693-3334">
-                <motion.button
-                  className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
-                  whileHover={{
-                    boxShadow: "0px 0px 20px rgb(255,255,255,0.4)",
-                  }}
-                >
-                  Réserver
-                </motion.button>
-              </a>
-            </motion.div>
+          <motion.div variants={itemVariants} className="mt-8">
+  <BookingButton
+    className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+    whileHover={{ boxShadow: "0px 0px 20px rgb(255,255,255,0.4)" }}
+  >
+    Réserver
+  </BookingButton>
+</motion.div>
+
+
           </motion.div>
         </div>
         <motion.div

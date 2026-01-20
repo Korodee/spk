@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { activities } from "@/lib/activities";
 import AnimatedTitle from "./AnimatedTitle";
+import { BookingButton } from "@/components/BookingButton";
+
+
 
 type Activity = (typeof activities)[0];
 
@@ -50,20 +53,18 @@ const ActivityHero = ({ activity, customTitle, showPeriodNotice }: ActivityHeroP
               </span>
             </motion.div>
           )}
-          {shouldShowBookingButton && (
-            <motion.div className="mt-8">
-              <a href="tel:418-693-3334">
-                <motion.button
-                  className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
-                  whileHover={{
-                    boxShadow: "0px 0px 20px rgb(255,255,255,0.4)",
-                  }}
-                >
-                  Réserver
-                </motion.button>
-              </a>
-            </motion.div>
-          )}
+         {shouldShowBookingButton && (
+  <motion.div className="mt-8">
+  <BookingButton
+    className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+    whileHover={{ boxShadow: "0px 0px 20px rgb(255,255,255,0.4)" }}
+  >
+    Réserver
+  </BookingButton>
+</motion.div>
+
+)}
+
         </motion.div>
       </div>
     </div>

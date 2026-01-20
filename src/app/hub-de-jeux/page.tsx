@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowRight, FiStar, FiZap, FiTarget, FiActivity } from "react-icons/fi";
 import Footer from "@/components/Footer";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const funArenaActivities = [
   {
@@ -355,16 +357,16 @@ const HubDeJeuxPage = () => {
                     Réservation nécessaire pour cette zone. Contactez-nous pour
                     plus d&apos;informations et pour planifier votre visite.
                   </p>
-                  <a href="tel:418-693-3334">
-                    <motion.button
-                      className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Réserver
-                      <FiArrowRight className="text-base" />
-                    </motion.button>
-                  </a>
+                 <BookingButton
+  className="inline-flex items-center gap-2 px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+  whileHover={{ boxShadow: "0px 0px 20px rgb(255,255,255,0.4)" }}
+>
+  <span className="inline-flex items-center gap-2">
+    Réserver
+    <FiArrowRight className="text-base" />
+  </span>
+</BookingButton>
+
                 </motion.div>
               </div>
             ) : (
@@ -469,16 +471,17 @@ const HubDeJeuxPage = () => {
                         Réservation nécessaire pour cette activité. Contactez-nous pour
                         plus d&apos;informations et pour planifier votre visite.
                       </p>
-                      <a href="tel:418-693-3334">
-                        <motion.button
-                          className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Réserver
-                          <FiArrowRight className="text-base" />
-                        </motion.button>
-                      </a>
+                      <BookingButton
+  className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <span className="inline-flex items-center gap-2">
+    Réserver
+    <FiArrowRight className="text-base" />
+  </span>
+</BookingButton>
+
                     </>
                   ) : (
                     <p className="text-sm text-gray-400">

@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const images = [
   "/kart1.jpg",
@@ -126,15 +128,17 @@ const KartGallery = () => {
           <p className="text-gray-400 text-lg mb-6">
             Prêt à vivre l&apos;expérience karting ultime ?
           </p>
-          <a href="tel:418-693-3334">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              Réserver Maintenant
-            </motion.button>
-          </a>
+         <BookingButton
+  aria-label="Réserver karting"
+  className="inline-block bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Réserver Maintenant
+</BookingButton>
+
+
+
         </motion.div>
       </div>
     </section>
