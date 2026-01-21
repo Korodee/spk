@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown, FiHelpCircle } from "react-icons/fi";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const faqData = [
   {
@@ -206,15 +208,15 @@ const FAQSection = () => {
               Notre équipe est là pour vous aider. N&apos;hésitez pas à nous
               contacter !
             </p>
-            <a href="tel:418-693-3334">
-              <motion.button
-                className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Nous Contacter
-              </motion.button>
-            </a>
+            <BookingButton
+  aria-label="Réserver - FAQ"
+  className="inline-flex items-center justify-center w-full mt-4 px-6 py-3 rounded-lg font-bold uppercase tracking-widest text-center bg-white hover:bg-gray-200 text-black"
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+>
+  Réserver
+</BookingButton>
+
           </div>
         </motion.div>
       </div>
