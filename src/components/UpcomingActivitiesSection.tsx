@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
+import { BookingButton } from "@/components/BookingButton"; // ✅ AJOUTER
 
 const newActivities = [
   {
@@ -64,36 +65,6 @@ const UpcomingActivitiesSection = () => {
           </p>
         </motion.div>
 
-        {/* <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          {newActivities.map((activity, index) => (
-            <motion.div
-              key={activity.name}
-              className={`relative bg-gradient-to-br ${activity.gradient} border ${activity.border} rounded-2xl p-8 h-64 flex items-center justify-center`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="text-center">
-                <div className={`w-16 h-16 ${activity.iconBg} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <svg className={`w-8 h-8 ${activity.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{activity.name}</h3>
-                <p className="text-gray-400 text-sm">{activity.status}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
         <motion.div
           className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
@@ -111,15 +82,16 @@ const UpcomingActivitiesSection = () => {
               <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </Link>
-          <a href="tel:418-693-3334">
-            <motion.button
-              className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-bold rounded-full uppercase tracking-wider hover:bg-purple-500/20 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Nous contacter
-            </motion.button>
-          </a>
+
+          {/* ✅ Remplace le tel: par BookingButton */}
+          <BookingButton
+            aria-label="Nous contacter"
+            className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-bold rounded-full uppercase tracking-wider hover:bg-purple-500/20 transition-all duration-300 text-center block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Nous contacter
+          </BookingButton>
         </motion.div>
       </div>
     </section>

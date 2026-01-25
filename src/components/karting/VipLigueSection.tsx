@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { FiCheck, FiStar, FiAward } from "react-icons/fi";
+import { BookingButton } from "@/components/BookingButton";
 
 const vipData = {
   vipCard: {
@@ -75,12 +76,14 @@ const VipLigueSection = () => {
                   {vipData.vipCard.title}
                 </h3>
               </div>
+
               <div className="my-8">
                 <span className="text-7xl font-black text-white">
                   ${vipData.vipCard.price}
                 </span>
                 <span className="text-xl text-gray-400"> + taxes</span>
               </div>
+
               <ul className="space-y-4">
                 {vipData.vipCard.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
@@ -90,15 +93,15 @@ const VipLigueSection = () => {
                 ))}
               </ul>
             </div>
-            <a href="tel:418-693-3334">
-              <motion.button
-                className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-yellow-500 hover:bg-yellow-400 text-black"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                Réserver
-              </motion.button>
-            </a>
+
+            <BookingButton
+              aria-label="Réserver carte VIP karting"
+              className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-yellow-500 hover:bg-yellow-400 text-black text-center block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Réserver
+            </BookingButton>
           </motion.div>
 
           {/* League Card */}
@@ -116,9 +119,11 @@ const VipLigueSection = () => {
                   {vipData.league.title}
                 </h3>
               </div>
+
               <p className="text-center font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400 mb-4">
                 {vipData.league.subtitle}
               </p>
+
               <p className="text-center font-semibold text-lg text-gray-400 mb-4">
                 {vipData.league.price}
               </p>
@@ -132,18 +137,19 @@ const VipLigueSection = () => {
                 ))}
               </ul>
             </div>
+
             <p className="text-xs text-gray-500 text-center mt-4">
               {vipData.league.note}
             </p>
-            <a href="tel:418-693-3334">
-              <motion.button
-                className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-white hover:bg-gray-200 text-black"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                Réserver
-              </motion.button>
-            </a>
+
+            <BookingButton
+              aria-label="Réserver ligue de karting"
+              className="w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest bg-white hover:bg-gray-200 text-black text-center block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Réserver
+            </BookingButton>
           </motion.div>
         </div>
       </div>

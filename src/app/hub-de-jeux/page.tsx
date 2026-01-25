@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowRight, FiStar, FiZap, FiTarget, FiActivity } from "react-icons/fi";
 import Footer from "@/components/Footer";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const funArenaActivities = [
   {
@@ -373,16 +375,16 @@ const HubDeJeuxPage = () => {
                     Réservation nécessaire pour cette zone. Contactez-nous pour
                     plus d&apos;informations et pour planifier votre visite.
                   </p>
-                  <a href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true" target="_blank" rel="noopener noreferrer">
-                    <motion.button
-                      className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
+                  <BookingButton
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="inline-flex items-center gap-2">
                       Réserver
                       <FiArrowRight className="text-base" />
-                    </motion.button>
-                  </a>
+                    </span>
+                  </BookingButton>
                 </motion.div>
               </div>
             ) : (
@@ -489,16 +491,16 @@ const HubDeJeuxPage = () => {
                         Réservation nécessaire pour cette activité. Contactez-nous pour
                         plus d&apos;informations et pour planifier votre visite.
                       </p>
-                      <a href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true" target="_blank" rel="noopener noreferrer">
-                        <motion.button
-                          className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
+                      <BookingButton
+                        className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <span className="inline-flex items-center gap-2">
                           Réserver
                           <FiArrowRight className="text-base" />
-                        </motion.button>
-                      </a>
+                        </span>
+                      </BookingButton>
                     </>
                   ) : (
                     <p className="text-sm text-gray-400">

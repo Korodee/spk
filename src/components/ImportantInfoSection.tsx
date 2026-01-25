@@ -3,6 +3,8 @@
 import React from "react";
 import { FiAlertTriangle, FiClock, FiCalendar, FiUsers } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const infoContent = [
   {
@@ -143,15 +145,14 @@ const ImportantInfoSection = () => {
               Notre équipe est là pour vous aider à planifier votre visite
               parfaite
             </p>
-            <a href="tel:418-693-3334">
-              <motion.button
-                className="cursor-pointer bg-gradient-to-r from-purple-400 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Nous Contacter
-              </motion.button>
-            </a>
+            <BookingButton
+  className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+  whileHover={{ boxShadow: "0px 0px 20px rgb(255,255,255,0.4)" }}
+  aria-label="Réserver - Informations importantes"
+>
+  Réserver
+</BookingButton>
+
           </div>
         </motion.div>
       </div>

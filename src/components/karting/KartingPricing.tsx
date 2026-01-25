@@ -2,6 +2,8 @@
 
 import { motion, Variants } from "framer-motion";
 import { FiCheck } from "react-icons/fi";
+import { BookingButton } from "@/components/BookingButton";
+
 
 const pricingData = {
   regular: [
@@ -112,24 +114,21 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
         ))}
       </ul>
     </div>
-    <motion.button
-      className={`w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest
-        ${
-          color === "red"
-            ? "bg-red-600 hover:bg-red-500 text-white"
-            : "bg-white hover:bg-gray-200 text-black"
-        }
-      `}
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <a
-        href="tel:418-693-3334"
-        className="block w-full h-full items-center justify-center"
-      >
-        Réserver
-      </a>
-    </motion.button>
+    <BookingButton
+  aria-label={`Réserver karting - ${card.name}`}
+  className={`w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest text-center block
+    ${
+      color === "red"
+        ? "bg-red-600 hover:bg-red-500 text-white"
+        : "bg-white hover:bg-gray-200 text-black"
+    }
+  `}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.97 }}
+>
+  Réserver
+</BookingButton>
+
   </motion.div>
 );
 
