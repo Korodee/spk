@@ -52,7 +52,7 @@ const ActivityHero = ({ activity, customTitle, showPeriodNotice }: ActivityHeroP
           )}
           {shouldShowBookingButton && (
             <motion.div className="mt-8">
-              <a href="tel:418-693-3334">
+              <a href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
                   whileHover={{

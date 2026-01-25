@@ -28,11 +28,11 @@ const funArenaActivities = [
     name: "Boutique de Récompenses",
     title: "Boutique d'Échange",
     description:
-      "Échangez vos tickets contre des prix variés : peluches, bonbons et surprises pour tous les goûts.",
+      "Échangez vos tickets contre des prix variés : peluches, bonbons exotiques et surprises pour tous les goûts.",
     features: [
       "Large sélection de peluches",
       "Figurines et collectibles",
-      "Bonbons et friandises",
+      "Bonbons exotiques et friandises",
       "Articles exclusifs SPK",
     ],
     images: ["/7.jpg", "/16.jpg", "/12.jpg"],
@@ -344,6 +344,24 @@ const HubDeJeuxPage = () => {
                   ))}
                 </div>
 
+                {/* Active Zone Pricing and Opening Date */}
+                <motion.div
+                  className="text-center mt-12 mb-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-gray-300 mb-2">
+                      <span className="font-bold text-yellow-400">Tarif Active Zone :</span> 75 minutes de jeux, accès aux différentes salles = <span className="font-bold text-white">30$ par personne + tx</span>
+                    </p>
+                    <p className="text-base md:text-lg text-orange-400 font-semibold mt-4">
+                      L&apos;active zone ouvre le 23 janvier
+                    </p>
+                  </div>
+                </motion.div>
+
                 <motion.div
                   className="text-center mt-8"
                   initial={{ opacity: 0 }}
@@ -355,7 +373,7 @@ const HubDeJeuxPage = () => {
                     Réservation nécessaire pour cette zone. Contactez-nous pour
                     plus d&apos;informations et pour planifier votre visite.
                   </p>
-                  <a href="tel:418-693-3334">
+                  <a href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true" target="_blank" rel="noopener noreferrer">
                     <motion.button
                       className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                       whileHover={{ scale: 1.05 }}
@@ -460,6 +478,8 @@ const HubDeJeuxPage = () => {
                     ))}
                   </ul>
 
+              
+
                   {activity.id === "petites-quilles" ||
                   activity.id === "winter-karting" ||
                   activity.id === "arcade" ||
@@ -469,7 +489,7 @@ const HubDeJeuxPage = () => {
                         Réservation nécessaire pour cette activité. Contactez-nous pour
                         plus d&apos;informations et pour planifier votre visite.
                       </p>
-                      <a href="tel:418-693-3334">
+                      <a href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true" target="_blank" rel="noopener noreferrer">
                         <motion.button
                           className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                           whileHover={{ scale: 1.05 }}
@@ -489,6 +509,67 @@ const HubDeJeuxPage = () => {
                 </motion.div>
               </div>
             )}
+                {/* Arcade Pricing Table */}
+                {activity.id === "arcade" && (
+                    <motion.div
+                      className="mt-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                      <h3 className="text-2xl md:text-3xl font-black mb-2 bg-gradient-to-r from-green-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">
+                        Arcade
+                      </h3>
+                      <p className="text-gray-300 mb-6 text-sm md:text-base">
+                        Frais de 2$ pour une nouvelle carte
+                      </p>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left">
+                          <thead>
+                            <tr className="border-b border-white/20">
+                              <th className="pb-3 pr-4 text-blue-400 font-bold text-sm md:text-base">Crédits</th>
+                              <th className="pb-3 pr-4 text-green-400 font-bold text-sm md:text-base">Bonus</th>
+                              <th className="pb-3 pr-4 text-gray-300 font-bold text-sm md:text-base">Total</th>
+                              <th className="pb-3 text-red-400 font-bold text-sm md:text-base">Prix</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-gray-300">
+                            <tr className="border-b border-white/10">
+                              <td className="py-3 pr-4">40</td>
+                              <td className="py-3 pr-4">0</td>
+                              <td className="py-3 pr-4">40</td>
+                              <td className="py-3">10$</td>
+                            </tr>
+                            <tr className="border-b border-white/10">
+                              <td className="py-3 pr-4">100</td>
+                              <td className="py-3 pr-4">20</td>
+                              <td className="py-3 pr-4">120</td>
+                              <td className="py-3">25$</td>
+                            </tr>
+                            <tr className="border-b border-white/10">
+                              <td className="py-3 pr-4">200</td>
+                              <td className="py-3 pr-4">60</td>
+                              <td className="py-3 pr-4">260</td>
+                              <td className="py-3">50$</td>
+                            </tr>
+                            <tr className="border-b border-white/10">
+                              <td className="py-3 pr-4">300</td>
+                              <td className="py-3 pr-4">120</td>
+                              <td className="py-3 pr-4">420</td>
+                              <td className="py-3">75$</td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 pr-4">400</td>
+                              <td className="py-3 pr-4">240</td>
+                              <td className="py-3 pr-4">640</td>
+                              <td className="py-3">100$</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </motion.div>
+                  )}
           </div>
         </section>
       ))}

@@ -104,7 +104,7 @@ const SalleVipPageContent = () => {
                         </h2>
                     <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
                       {slideData[activeSlide].description}
-                    </p>
+                        </p>
                   </motion.div>
                 </AnimatePresence>
                         </div>

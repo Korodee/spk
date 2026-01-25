@@ -113,11 +113,11 @@ export const activities: Activity[] = [
     slug: "boutique-echange",
     image: "/16.jpg",
     description:
-      "Échangez vos tickets contre des prix variés : peluches, bonbons et surprises pour tous les goûts.",
+      "Échangez vos tickets contre des prix variés : peluches, bonbons exotiques et surprises pour tous les goûts.",
     details: [
       "Large sélection de peluches",
       "Figurines et collectibles",
-      "Bonbons et friandises",
+      "Bonbons exotiques et friandises",
     ],
     hubDeJeuxId: "redemption",
   },

@@ -148,7 +148,7 @@ const ContactPage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <FiMail className="text-purple-400" />
-              <span>spk@videotron.qc.ca</span>
+              <span>info@amusementspk.ca</span>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -322,7 +322,7 @@ const ContactPage = () => {
                     <div className="space-y-3">
                       <div className="flex items-center gap-3 text-gray-300">
                         <FiMail className="text-purple-400" />
-                        <span className="text-lg">spk@videotron.qc.ca</span>
+                        <span className="text-lg">info@amusementspk.ca</span>
                       </div>
                       <div className="flex items-center gap-3 text-gray-300">
                         <FiPhone className="text-orange-400" />

@@ -64,7 +64,7 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300 text-center md:text-left">
               <li>2175 Bd Saint-Paul</li>
               <li>Chicoutimi, QC</li>
-              <li>spk@videotron.qc.ca</li>
+              <li>info@amusementspk.ca</li>
               <li>418-693-3334</li>
               <li>Dimanche à jeudi : 9h à 23h</li>
               <li>Vendredi et samedi : 9h à 24h</li>
