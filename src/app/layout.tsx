@@ -24,6 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Adobe Fonts - Glowworm MN */}
+        <link rel="preconnect" href="https://use.typekit.net" />
+        <link rel="stylesheet" href="https://use.typekit.net/bso1fry.css" />
+      </head>
+
       <body
         className={`${sfProDisplay.variable} font-sans antialiased bg-white`}
         style={{

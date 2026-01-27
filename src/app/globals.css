@@ -303,3 +303,17 @@ body {
     );
   animation: move-background 40s linear infinite;
 }
+
+/* ============================= */
+/* SPK Hero Title - Glowworm MN */
+/* ============================= */
+
+@layer utilities {
+  .spk-hero-title {
+    font-family: glowworm-mn, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ff0033;
+    letter-spacing: 0.12em; /* <-- ça c’est la clé */
+  }
+}

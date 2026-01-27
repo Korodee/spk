@@ -10,8 +10,6 @@ import Footer from "@/components/Footer";
 import InfoBar from "@/components/InfoBar";
 import { BookingButton } from "@/components/BookingButton";
 
-
-
 export default function Home() {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -35,6 +33,7 @@ export default function Home() {
       },
     },
   };
+
   return (
     <>
       <div className="relative w-full h-screen overflow-hidden">
@@ -57,18 +56,23 @@ export default function Home() {
             >
               Passer une journée inoubliable
             </motion.p>
+
+            {/* AMUSEMENT */}
             <motion.h1
-              className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
-              variants={itemVariants}
-            >
-              Amusement
-            </motion.h1>
-            <motion.h2
-              className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter -skew-x-12"
-              variants={itemVariants}
-            >
-              SPK
-            </motion.h2>
+  className="spk-hero-title text-5xl md:text-8xl font-black"
+  variants={itemVariants}
+>
+  Amusement
+</motion.h1>
+
+<motion.h2
+  className="spk-hero-title text-5xl md:text-8xl font-black"
+  variants={itemVariants}
+>
+  SPK
+</motion.h2>
+
+
             <motion.div variants={itemVariants} className="mt-8">
               <BookingButton
                 className="px-10 py-4 font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-orange-500 to-purple-600 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -79,6 +83,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
+
         <motion.div
           className="absolute hidden md:block bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 w-full z-30"
           initial={{ opacity: 0, y: 20 }}
@@ -88,24 +93,13 @@ export default function Home() {
           <InfoBar />
         </motion.div>
       </div>
+
       <ActivitiesSection />
-
-      {/* Upcoming Activities Section */}
       <UpcomingActivitiesSection />
-
-      {/* Experience Section */}
       <ExperienceSection />
-
-      {/* Schedule Section */}
       <ScheduleSection />
-
-      {/* Important Info Section */}
       <ImportantInfoSection />
-
-      {/* FAQ Section */}
       <FAQSection />
-
-      {/* Footer */}
       <Footer />
     </>
   );
