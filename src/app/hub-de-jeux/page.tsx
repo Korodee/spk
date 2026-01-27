@@ -487,11 +487,11 @@ const HubDeJeuxPage = () => {
                   activity.id === "arcade" ||
                   activity.id === "redemption" ? (
                     <>
-                      <p className="text-sm text-gray-400 mb-4">
+                      {/* <p className="text-sm text-gray-400 mb-4">
                         Réservation nécessaire pour cette activité. Contactez-nous pour
                         plus d&apos;informations et pour planifier votre visite.
-                      </p>
-                      <BookingButton
+                      </p> */}
+                      {/* <BookingButton
                         className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -500,8 +500,8 @@ const HubDeJeuxPage = () => {
                           Réserver
                           <FiArrowRight className="text-base" />
                         </span>
-                      </BookingButton>
-                    </>
+                      </BookingButton> */}
+                    </>   
                   ) : (
                     <p className="text-sm text-gray-400">
                       Aucune réservation nécessaire pour cette zone. Présentez-vous
