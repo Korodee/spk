@@ -129,7 +129,7 @@ const MinigolfPageContent = () => {
           <p className="mb-4">
             Fermeture du 5 janvier au 6 février. Le minigolf sera complètement
             démoli pour laisser la place à un tout nouveau minigolf interactif
-            avec une nouvelle thématique. Suivez-nous sur les réseaux pour en
+            avec une nouvelle thématique. Réouverture prévue en mars. Suivez-nous sur les réseaux pour en
             savoir plus&nbsp;!
           </p>
           <p className="text-base md:text-lg text-red-50/90">
@@ -160,13 +160,13 @@ const MinigolfPageContent = () => {
           </motion.h2>
           <p className="text-center text-sm md:text-base text-red-300 mb-12 max-w-2xl mx-auto">
             Fermeture du 5 janvier au 6 février. Le minigolf est actuellement en
-            transformation pour devenir un tout nouveau minigolf interactif. Les
+            transformation pour devenir un tout nouveau minigolf interactif. Réouverture prévue en mars. Les
             tarifs ci-dessous seront mis à jour à la réouverture.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PricingTier
               title="Adulte"
-              price="13.50$"
+              price="15.50$"
               details="16 ans et plus"
               color="bg-yellow-500/50"
               delay={0.2}
