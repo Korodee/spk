@@ -127,7 +127,7 @@ const MinigolfPageContent = () => {
             Fermeture temporaire du minigolf
           </h2>
           <p className="mb-4">
-            Fermeture du 5 janvier au 6 février. Le minigolf sera complètement
+            Réouverture en mars. Le minigolf sera complètement
             démoli pour laisser la place à un tout nouveau minigolf interactif
             avec une nouvelle thématique. Réouverture prévue en mars. Suivez-nous sur les réseaux pour en
             savoir plus&nbsp;!
@@ -159,7 +159,7 @@ const MinigolfPageContent = () => {
             Nos Tarifs
           </motion.h2>
           <p className="text-center text-sm md:text-base text-red-300 mb-12 max-w-2xl mx-auto">
-            Fermeture du 5 janvier au 6 février. Le minigolf est actuellement en
+            Réouverture en mars. Le minigolf est actuellement en
             transformation pour devenir un tout nouveau minigolf interactif. Réouverture prévue en mars. Les
             tarifs ci-dessous seront mis à jour à la réouverture.
           </p>
@@ -173,7 +173,7 @@ const MinigolfPageContent = () => {
             />
             <PricingTier
               title="Enfant"
-              price="10$"
+              price="13$"
               details="Enfant (de 3 à 15 ans)"
               color="bg-green-500/50"
               delay={0.4}
