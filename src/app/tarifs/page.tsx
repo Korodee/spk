@@ -94,7 +94,7 @@ const ratesData = [
   },*/
   {
     category: "Arcade",
-    image: "/arcade.jpg",
+    image: "/1.jpg",
     feeNote: "Frais de 2$ pour une nouvelle carte",
     priceTable: [
       { credits: 40, bonus: 0, total: 40, price: "10$" },
