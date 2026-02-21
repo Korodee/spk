@@ -54,7 +54,8 @@ const ratesData = [
   },
   {
     category: "Quilles",
-    image: "/bowling.jpg",
+    //image: "/bowling.jpg",
+    image: "/17.jpg",
     items: [
       {
         name: "Allée de petites quilles (1 heure)",
