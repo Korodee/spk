@@ -64,7 +64,7 @@ const ratesData = [
     ],
   },
   {
-    category: "Salle Arcade VIP",
+    category: "Salle VIP",
     image: "/arcade.jpg",
     items: [
       {
