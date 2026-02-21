@@ -19,7 +19,7 @@ const ratesData = [
     image: "/golf.jpg",
     items: [
       { name: "Adulte", price: "15.50$" },
-      { name: "Enfant (15 ans et moins)", price: "10$" },
+      { name: "Enfant (15 ans et moins)", price: "13$" },
     ],
   },
   {
