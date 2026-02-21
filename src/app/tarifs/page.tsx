@@ -110,9 +110,9 @@ const ratesData = [
     items: [
       {
         name: "Accès Active Zone",
-        price: "Voir sur place",
+        price: "30$ par personne",
         description:
-          "Tarifs et formules disponibles à la réception selon les jeux choisis",
+          "75 minutes de jeux avec un accès aux différentes salles",
       },
     ],
   },
