@@ -45,7 +45,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Karting",
+    name: "Karting estival",
     slug: "karting",
     image: "/karting.jpg",
     description:
@@ -58,7 +58,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Paintball",
+    name: "Paintball estival",
     slug: "paintball",
     image: "/paintball.jpg",
     description:
@@ -71,7 +71,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Labyrinthe",
+    name: "Labyrinthe estival",
     slug: "labyrinth",
     image: "/labyrinth.jpg",
     description:
