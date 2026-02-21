@@ -80,7 +80,7 @@ const ratesData = [
       },
     ],
   },
-  {
+  /*{
     category: "Arcade",
     image: "/arcade.jpg",
     items: [
@@ -90,7 +90,20 @@ const ratesData = [
         description: "Tarifs variables selon les jeux et promotions en cours",
       },
     ],
-  },
+  },*/
+  {
+    category: "Arcade",
+    image: "/arcade.jpg",
+    feeNote: "Frais de 2$ pour une nouvelle carte",
+    priceTable: [
+      { credits: 40, bonus: 0, total: 40, price: "10$" },
+      { credits: 100, bonus: 20, total: 120, price: "25$" },
+      { credits: 200, bonus: 60, total: 260, price: "50$" },
+      { credits: 300, bonus: 120, total: 420, price: "75$" },
+      { credits: 400, bonus: 240, total: 640, price: "100$" },
+    ],
+    items: [],
+  },  
   {
     category: "Active Zone",
     image: "/active-zone.jpg",
@@ -306,7 +319,7 @@ const TarifsPage = () => {
                   </div>
                 </motion.div>
               )}
-              <motion.div
+              {/*<motion.div
                 className="flex flex-wrap justify-center gap-6"
                 variants={containerVariants}
               >
@@ -338,7 +351,69 @@ const TarifsPage = () => {
                     </div>
                   </motion.div>
                 ))}
-              </motion.div>
+              </motion.div> */}
+              {category.category === "Arcade" && category.priceTable ? (
+                <motion.div className="max-w-5xl mx-auto" variants={cardVariants}>
+                  {category.feeNote && (
+                    <p className="text-gray-300 mb-6 text-center">{category.feeNote}</p>
+                  )}
+              
+                  <div className="bg-black/40 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden">
+                    <table className="w-full text-left">
+                      <thead className="border-b border-white/10">
+                        <tr className="text-sm uppercase tracking-wider">
+                          <th className="py-4 px-6 text-blue-400">Crédits</th>
+                          <th className="py-4 px-6 text-green-400">Bonus</th>
+                          <th className="py-4 px-6 text-gray-200">Total</th>
+                          <th className="py-4 px-6 text-red-400 text-right">Prix</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {category.priceTable.map((row, idx) => (
+                          <tr key={idx} className="border-b border-white/5 last:border-b-0">
+                            <td className="py-4 px-6 text-lg">{row.credits}</td>
+                            <td className="py-4 px-6 text-lg">{row.bonus}</td>
+                            <td className="py-4 px-6 text-lg">{row.total}</td>
+                            <td className="py-4 px-6 text-lg text-right font-semibold">
+                              {row.price}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  className="flex flex-wrap justify-center gap-6"
+                  variants={containerVariants}
+                >
+                  {category.items.map((item) => (
+                    <motion.div
+                      key={item.name}
+                      className="bg-black/40 backdrop-blur-lg p-6 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl border border-white/10 group flex flex-col text-center"
+                      variants={cardVariants}
+                      whileHover={{
+                        y: -8,
+                        scale: 1.05,
+                        boxShadow: "0px 15px 30px rgba(99, 50, 200, 0.4)",
+                      }}
+                    >
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                        {item.description && (
+                          <p className="text-sm text-gray-400 mb-4">{item.description}</p>
+                        )}
+                      </div>
+                      <div className="mt-auto">
+                        <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                          {item.price}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
 
               {/* Découvrir Button */}
               {categoryToSlug[category.category] && (
