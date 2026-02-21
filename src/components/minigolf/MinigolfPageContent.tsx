@@ -127,7 +127,7 @@ const MinigolfPageContent = () => {
             Fermeture temporaire du minigolf
           </h2>
           <p className="mb-4">
-            Réouverture en mars. Le minigolf sera complètement
+            Le minigolf sera complètement
             démoli pour laisser la place à un tout nouveau minigolf interactif
             avec une nouvelle thématique. Réouverture prévue en mars. Suivez-nous sur les réseaux pour en
             savoir plus&nbsp;!
@@ -159,7 +159,7 @@ const MinigolfPageContent = () => {
             Nos Tarifs
           </motion.h2>
           <p className="text-center text-sm md:text-base text-red-300 mb-12 max-w-2xl mx-auto">
-            Réouverture en mars. Le minigolf est actuellement en
+            Le minigolf est actuellement en
             transformation pour devenir un tout nouveau minigolf interactif. Réouverture prévue en mars. Les
             tarifs ci-dessous seront mis à jour à la réouverture.
           </p>
