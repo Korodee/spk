@@ -596,7 +596,7 @@ const HubDeJeuxPage = () => {
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
               Casse-Croûte{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
-                Printemps 2026
+                Été 2026
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
