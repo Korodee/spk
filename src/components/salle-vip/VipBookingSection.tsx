@@ -24,28 +24,62 @@ const VipBookingSection = () => {
             exit={{ opacity: 0, y: -20 }}
             className="space-y-6 text-center"
           >
-            <div>
-              <p className="text-xl md:text-2xl text-white">
-                Evidemment toute nos mini jeux sont{" "}
-                <span className="text-yellow-400 font-bold">gratuit !</span>
-              </p>
-              <p className="text-base md:text-lg text-gray-400 mt-2">
-                Nous sommes flexibles sur les salles, capables d&apos;être
-                modulé selon vos besoins. Services extérieur possible (Traiteur
-                etc...)
-              </p>
-              <p className="text-sm text-yellow-500 mt-4">
-                *A l&apos;exception de Alcool, liqueur, chocolat et friandise.
-              </p>
-            </div>
-            <div>
-              <p className="text-xl md:text-2xl text-white">
-                Apres la réservation nous allons vous contacter pour réaliser le
-                paiement et être sur que votre réservation soit parfaite.
-              </p>
-              <p className="text-base md:text-lg text-gray-400 mt-2">
-                Mode de paiement: Téléphone, Interac et en personne.
-              </p>
+            <div className="space-y-6 text-white">
+              {/* Accès et réservation */}
+              <div>
+                <p className="text-xl md:text-2xl font-semibold">
+                  Accès à la salle
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2">
+                  Votre salle n’est pas accessible avant l’heure exacte de votre réservation.
+                  Vous devez prévoir votre réservation en fonction du temps de décoration, si besoin,
+                  c’est-à-dire 1 heure de plus.
+                </p>
+              </div>
+            
+              {/* Consommation obligatoire */}
+              <div>
+                <p className="text-xl md:text-2xl font-semibold">
+                  Consommations sur place
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2">
+                  Vous devez vous procurer sur place, obligatoirement, les chips, chocolats,
+                  bonbons, popcorn, jus, eau et boisson gazeuse (tout ce que nous vendons).
+                </p>
+              </div>
+            
+              {/* Interdictions */}
+              <div>
+                <p className="text-xl md:text-2xl font-semibold text-red-400">
+                  Interdictions importantes
+                </p>
+                <ul className="list-disc list-inside text-base md:text-lg text-gray-300 mt-2 space-y-1">
+                  <li>Les ballons avec des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permises.</li>
+                  <li>
+                    Il est strictement interdit d’apporter bière, prêt à boire alcoolisé et alcool fort puisque nous avons un permis de vente d’alcool.
+                  </li>
+                </ul>
+                <p className="text-sm text-red-400 mt-3 font-semibold">
+                  Un non-respect de cette directive peut mener à une expulsion immédiate.
+                </p>
+              </div>
+            
+              {/* Fin de réservation */}
+              <div>
+                <p className="text-xl md:text-2xl font-semibold">
+                  Fin de réservation
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2">
+                  5 minutes avant la fin de votre réservation, un employé va passer pour voir l’état de la salle.
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2">
+                  Vous devez remettre la salle propre et en ordre et sans les décorations.
+                  Nous pourrions vous charger des frais supplémentaires selon l’état des lieux.
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2 font-medium">
+                  Vous devrez avoir quitté pour l’heure de fin moins 1 minute (xxh59).
+                </p>
+              </div>
             </div>
           </motion.div>
         );
