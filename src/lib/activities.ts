@@ -16,12 +16,11 @@ export const activities: Activity[] = [
       "Plongez dans une arène de combat futuriste et affrontez vos amis dans une partie de laser tag endiablée.",
     details: [
       "Équipement de pointe",
-      "Plusieurs modes de jeu",
       "Arène sur plusieurs niveaux",
     ],
   },
   {
-    name: "Mini-golf fluo",
+    name: "Mini-golf fluo (Bientôt)",
     slug: "minigolf",
     image: "/golf.jpg",
     description:
@@ -52,7 +51,7 @@ export const activities: Activity[] = [
       "Ressentez l'adrénaline de la vitesse sur notre piste de karting extérieure asphaltée. Qui sera le plus rapide ?",
     details: [
       "Karts à gaz haute performance",
-      "période estivale",
+      "Période estivale",
       "Piste asphaltée de 900m",
       "Système de chronométrage",
     ],
@@ -65,7 +64,7 @@ export const activities: Activity[] = [
       "Élaborez des stratégies et menez votre équipe à la victoire dans nos arènes de paintball thématiques.",
     details: [
       "Équipement de sécurité complet",
-      "période estivale",
+      "Période estivale",
       "Plusieurs scénarios de jeu",
       "Idéal pour les groupes",
     ],
@@ -78,7 +77,7 @@ export const activities: Activity[] = [
       "Mettez votre logique et votre agilité à l'épreuve dans notre LABYRINTHE, un labyrinthe de défis inspiré de Fort Boyard.",
     details: [
       "Défis physiques et intellectuels",
-      "période estivale",
+      "Période estivale",
       "Jeu en équipe",
       "Course contre la montre",
     ],
@@ -96,7 +95,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Salle d'Arcade",
+    name: "Arcade",
     slug: "arcade",
     image: "/14.jpg",
     description:
@@ -141,7 +140,7 @@ export const activities: Activity[] = [
     description:
       "4 allées de petites quilles destinées aux familles et fêtes d'enfants. Chaque allée peut accueillir jusqu'à 6 joueurs.",
     details: [
-      "4 allées de petites quilles",
+      "4 courtes allées de petites quilles",
       "Idéal pour les familles et fêtes d'enfants",
       "Jusqu'à 6 joueurs par allée",
     ],
