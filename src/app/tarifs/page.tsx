@@ -9,58 +9,104 @@ const ratesData = [
     category: "Laser tag",
     image: "/laser-tag.jpg",
     items: [
-      { name: "1ère partie", price: "11.50$" },
-      { name: "2ème partie", price: "9.50$" },
-      { name: "3ème partie", price: "7.50$" },
+      { name: "1ère partie", price: "11.50$ + taxes / personne" },
+      { name: "2ème partie", price: "9.50$ + taxes / personne" },
+      { name: "Parties supplémentaires", price: "7.50$ + taxes / personne" },
+    ],
+    notes: [
+      "Apportez des vêtements de sport et des espadrilles.",
+      "Après la 2e partie, les parties supplémentaires reviennent à 7.50$ + taxes / personne.",
+      "Tous les prix sont par personne.",
     ],
   },
   {
     category: "Mini-golf fluo",
     image: "/golf.jpg",
     items: [
-      { name: "Adulte", price: "15.50$" },
-      { name: "Enfant (15 ans et moins)", price: "13$" },
+      { name: "Adulte", price: "15.50$ + taxes / personne" },
+      { name: "Enfant (15 ans et moins)", price: "13$ + taxes / personne" },
     ],
+    notes: ["Prix par personne."],
   },
   {
     category: "Réalité Virtuelle",
     image: "/virtual-real.jpg",
     items: [
-      { name: "Régulière", price: "7$" },
-      { name: "Horreur", price: "9$" },
-      { name: "360", price: "12$" },
+      { name: "Régulière", price: "7$ + taxes / partie" },
+      { name: "Horreur", price: "9$ + taxes / partie" },
+      { name: "Zombie", price: "10$ + taxes / partie / personne" },
+      { name: "Chaise 360", price: "12$ + taxes / partie" },
     ],
+    notes: ["Chaise 360 : maximum 250 lbs."],
   },
   {
     category: "Karting",
     image: "/karting.jpg",
     items: [
-      { name: "Adulte", price: "36$/15 min" },
-      { name: "Enfant (15 ans et moins)", price: "26$/15 min" },
+      {
+        name: "Course régulière adulte (15 min)",
+        price: "36$ + taxes / personne",
+      },
+      {
+        name: "Course supplémentaire adulte (15 min)",
+        price: "26$ + taxes / personne",
+      },
+      {
+        name: "Course régulière enfant (15 min)",
+        price: "26$ + taxes / personne",
+        description: "De 9 ans à 15 ans, minimum 54 pouces",
+      },
+      {
+        name: "Mini grand prix (25 minutes)",
+        price: "64$ + taxes / personne",
+        description:
+          "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 10 min de course finale",
+      },
+      {
+        name: "Grand prix (30 minutes)",
+        price: "69$ + taxes / personne",
+        description:
+          "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 15 min de course finale",
+      },
+      {
+        name: "Carte VIP",
+        price: "175$ + taxes / personne",
+        description:
+          "Accès à 5 courses gratuites de 15 minutes. Toutes les autres courses sont au tarif de course supplémentaire de 26$ + taxes.",
+      },
     ],
   },
   {
     category: "Paintball",
     image: "/paintball.jpg",
     items: [
-      { name: "Paintball", price: "39$" },
-      { name: "Combo Paintball Karting", price: "62$" },
+      {
+        name: "Paintball",
+        price: "39$ + taxes / personne",
+        description: "Durée de 4 heures",
+      },
+      {
+        name: "Combo Paintball Karting",
+        price: "62$ + taxes / personne",
+        description:
+          "4 heures de paintball + 1 course régulière de 15 minutes",
+      },
     ],
+    notes: ["Minimum de 8 personnes.", "Durée : 4 heures."],
   },
   {
     category: "LABYRINTHE",
     image: "/labyrinth.jpg",
-    items: [{ name: "Labyrinthe", price: "11$" }],
+    items: [{ name: "Labyrinthe", price: "11$ + taxes / personne" }],
   },
   {
     category: "Quilles",
-    //image: "/bowling.jpg",
     image: "/17.jpg",
     items: [
       {
-        name: "Allée de petites quilles (1 heure)",
-        price: "30$",
-        description: "+ 2$ bas antidérapant par personne",
+        name: "Allée de petites quilles",
+        price: "30$ + taxes / heure / allée",
+        description: "Bas antidérapants : 2$ + taxes / personne",
       },
     ],
   },
@@ -69,51 +115,76 @@ const ratesData = [
     image: "/amusement.jpg",
     items: [
       {
-        name: "Salle A / B / C",
-        price: "60$/h",
-        description: "Avec 50$ et + activités",
+        name: "Salle A",
+        price: "65$ + taxes / h",
+        description: "Avec activités",
       },
-      { name: "Salle A / B / C (sans activité)", price: "70$/h" },
       {
-        name: "Salle pour soirée (A & B)",
-        price: "500$",
-        description: "17h à 01h00, possibilité de service de bar",
+        name: "Salle A",
+        price: "75$ + taxes / h",
+        description: "Sans activités",
       },
+      {
+        name: "Salle B",
+        price: "60$ + taxes / h",
+        description: "Avec activités",
+      },
+      {
+        name: "Salle B",
+        price: "70$ + taxes / h",
+        description: "Sans activités",
+      },
+      {
+        name: "Salle C",
+        price: "50$ + taxes / h",
+        description: "Avec activités",
+      },
+      {
+        name: "Salle C",
+        price: "60$ + taxes / h",
+        description: "Sans activités",
+      },
+      {
+        name: "Combo Salle A + B",
+        price: "500$",
+        description:
+          "De 17h00 à 1h00, possibilité de service de bar inclus si plus de 40 personnes",
+      },
+    ],
+    notes: [
+      "Votre salle n’est pas accessible avant l’heure exacte de votre réservation.",
+      "Si vous prévoyez du temps pour la décoration, veuillez réserver une heure supplémentaire.",
+      "Il est obligatoire de se procurer sur place les chips, chocolats, bonbons, popcorn, jus, eau et boissons gazeuses.",
+      "Les ballons contenant des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permis.",
+      "Il est strictement interdit d’apporter de la bière, des prêts-à-boire alcoolisés ou de l’alcool fort.",
+      "Le non-respect de ces règles peut entraîner une expulsion immédiate.",
+      "Cinq minutes avant la fin de votre réservation, un employé passera vérifier l’état de la salle.",
+      "La salle doit être remise propre, en ordre et sans décorations.",
+      "Des frais supplémentaires pourraient être appliqués selon l’état des lieux.",
+      "Vous devez avoir quitté les lieux au plus tard une minute avant l’heure de fin (xxh59).",
     ],
   },
-  /*{
-    category: "Arcade",
-    image: "/arcade.jpg",
-    items: [
-      {
-        name: "Accès libre à l'arcade",
-        price: "Voir sur place",
-        description: "Tarifs variables selon les jeux et promotions en cours",
-      },
-    ],
-  },*/
   {
     category: "Arcade",
     image: "/1.jpg",
-    feeNote: "Frais de 2$ pour une nouvelle carte",
+    feeNote: "Frais de 2$ + taxes pour une nouvelle carte",
     priceTable: [
-      { credits: 40, bonus: 0, total: 40, price: "10$" },
-      { credits: 100, bonus: 20, total: 120, price: "25$" },
-      { credits: 200, bonus: 60, total: 260, price: "50$" },
-      { credits: 300, bonus: 120, total: 420, price: "75$" },
-      { credits: 400, bonus: 240, total: 640, price: "100$" },
+      { credits: 40, bonus: 0, total: 40, price: "10$ + taxes" },
+      { credits: 100, bonus: 20, total: 120, price: "25$ + taxes" },
+      { credits: 200, bonus: 60, total: 260, price: "50$ + taxes" },
+      { credits: 300, bonus: 120, total: 420, price: "75$ + taxes" },
+      { credits: 400, bonus: 240, total: 640, price: "100$ + taxes" },
     ],
     items: [],
-  },  
+  },
   {
     category: "Active Zone",
     image: "/active-zone.jpg",
     items: [
       {
         name: "Accès Active Zone",
-        price: "30$ par personne",
-        description:
-          "75 minutes de jeux avec un accès aux différentes salles",
+        price: "30$ + taxes / personne",
+        description: "75 minutes de jeux dans toutes les salles",
       },
     ],
   },
@@ -223,9 +294,6 @@ const TarifsPage = () => {
             />
           </motion.div>
 
-          {/* Floating Price Cards */}
-          {/* (Removed as per user request) */}
-
           {/* Description */}
           <motion.p
             className="text-lg md:text-xl text-gray-300 max-w-[80%] md:max-w-2xl mx-auto mb-6"
@@ -236,20 +304,8 @@ const TarifsPage = () => {
             Choisissez votre aventure. Des tarifs pour tous les goûts et tous
             les âges.
           </motion.p>
-
-          {/* Animated Badge */}
-          <motion.div
-            className="inline-block"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <span className="inline-block bg-gradient-to-r from-orange-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium">
-              (Prix unitaires avant taxes)
-            </span>
-          </motion.div>
         </motion.div>
+
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
@@ -301,6 +357,7 @@ const TarifsPage = () => {
               >
                 {category.category}
               </motion.h2>
+
               {category.category === "Mini-golf fluo" && (
                 <motion.div
                   className="max-w-3xl mx-auto mb-10"
@@ -311,54 +368,23 @@ const TarifsPage = () => {
                       Information importante
                     </p>
                     <p className="text-sm md:text-base text-red-50">
-                      Le minigolf sera
-                      complètement démoli pour laisser la place à un tout
-                      nouveau minigolf interactif avec une nouvelle
-                      thématique. Réouverture prévue en mai. Suivez-nous sur les réseaux pour en savoir
-                      plus&nbsp;!
+                      Le minigolf sera complètement démoli pour laisser la place
+                      à un tout nouveau minigolf interactif avec une nouvelle
+                      thématique. Réouverture prévue en mai. Suivez-nous sur les
+                      réseaux pour en savoir plus&nbsp;!
                     </p>
                   </div>
                 </motion.div>
               )}
-              {/*<motion.div
-                className="flex flex-wrap justify-center gap-6"
-                variants={containerVariants}
-              >
-                {category.items.map((item) => (
-                  <motion.div
-                    key={item.name}
-                    className="bg-black/40 backdrop-blur-lg p-6 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl border border-white/10 group flex flex-col text-center"
-                    variants={cardVariants}
-                    whileHover={{
-                      y: -8,
-                      scale: 1.05,
-                      boxShadow: "0px 15px 30px rgba(99, 50, 200, 0.4)",
-                    }}
-                  >
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        {item.name}
-                      </h3>
-                      {item.description && (
-                        <p className="text-sm text-gray-400 mb-4">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                    <div className="mt-auto">
-                      <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-                        {item.price}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div> */}
+
               {category.category === "Arcade" && category.priceTable ? (
                 <motion.div className="max-w-5xl mx-auto" variants={cardVariants}>
                   {category.feeNote && (
-                    <p className="text-gray-300 mb-6 text-center">{category.feeNote}</p>
+                    <p className="text-gray-300 mb-6 text-center">
+                      {category.feeNote}
+                    </p>
                   )}
-              
+
                   <div className="bg-black/40 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden">
                     <table className="w-full text-left">
                       <thead className="border-b border-white/10">
@@ -371,7 +397,10 @@ const TarifsPage = () => {
                       </thead>
                       <tbody>
                         {category.priceTable.map((row, idx) => (
-                          <tr key={idx} className="border-b border-white/5 last:border-b-0">
+                          <tr
+                            key={idx}
+                            className="border-b border-white/5 last:border-b-0"
+                          >
                             <td className="py-4 px-6 text-lg">{row.credits}</td>
                             <td className="py-4 px-6 text-lg">{row.bonus}</td>
                             <td className="py-4 px-6 text-lg">{row.total}</td>
@@ -391,7 +420,7 @@ const TarifsPage = () => {
                 >
                   {category.items.map((item) => (
                     <motion.div
-                      key={item.name}
+                      key={`${item.name}-${item.price}`}
                       className="bg-black/40 backdrop-blur-lg p-6 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl border border-white/10 group flex flex-col text-center"
                       variants={cardVariants}
                       whileHover={{
@@ -401,9 +430,13 @@ const TarifsPage = () => {
                       }}
                     >
                       <div className="flex-grow">
-                        <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {item.name}
+                        </h3>
                         {item.description && (
-                          <p className="text-sm text-gray-400 mb-4">{item.description}</p>
+                          <p className="text-sm text-gray-400 mb-4">
+                            {item.description}
+                          </p>
                         )}
                       </div>
                       <div className="mt-auto">
@@ -413,6 +446,27 @@ const TarifsPage = () => {
                       </div>
                     </motion.div>
                   ))}
+                </motion.div>
+              )}
+
+              {category.notes && category.notes.length > 0 && (
+                <motion.div
+                  className="max-w-4xl mx-auto mt-8"
+                  variants={cardVariants}
+                >
+                  <div className="bg-black/40 backdrop-blur-lg p-6 rounded-2xl border border-white/10">
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-4 text-center">
+                      Informations importantes
+                    </h3>
+                    <ul className="space-y-2 text-sm md:text-base text-gray-300">
+                      {category.notes.map((note, idx) => (
+                        <li key={idx} className="flex gap-2">
+                          <span className="text-orange-400 mt-0.5">•</span>
+                          <span>{note}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               )}
 
@@ -433,10 +487,11 @@ const TarifsPage = () => {
           </div>
         ))}
       </div>
-      {/* Add tax note at the bottom of the page */}
+
       <div className="mt-12 text-center">
         <span className="text-gray-400 text-sm">* tx non incluses</span>
       </div>
+
       <Footer />
     </div>
   );
