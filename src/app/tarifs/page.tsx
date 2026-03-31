@@ -103,30 +103,32 @@ const ratesData: RateCategory[] = [
     image: "/karting.jpg",
     items: [
       {
-        name: "Course régulière adulte (15 min)",
+        name: "Course régulière adulte",
         price: "36$",
         subtitle: "+ taxes / personne",
+        description: "15 minutes de course",
       },
       {
         name: "Course supplémentaire",
         price: "26$",
         subtitle: "+ taxes / personne",
+        description: "15 minutes de course",
       },
       {
-        name: "Course régulière enfant (15 min)",
+        name: "Course régulière enfant",
         price: "26$",
         subtitle: "+ taxes / personne",
         description: "De 9 ans à 15 ans avec un minimum de 54 pouces",
       },
       {
-        name: "Mini grand prix (25 minutes)",
+        name: "Mini grand prix",
         price: "64$",
         subtitle: "+ taxes / personne",
         description:
           "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 10 min de course finale",
       },
       {
-        name: "Grand prix (30 minutes)",
+        name: "Grand prix",
         price: "69$",
         subtitle: "+ taxes / personne",
         description:
