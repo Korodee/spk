@@ -117,51 +117,140 @@ const VipBookingSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
           >
-            <h3 className="text-center text-4xl md:text-5xl font-black text-white mb-8">
+            <h3 className="text-center text-4xl md:text-5xl font-black text-white mb-10">
               Réserver une Salle VIP
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-white/5 p-6 md:p-8 rounded-2xl text-center border border-white/10">
-                <p className="text-4xl md:text-5xl font-bold text-yellow-400">
-                  60${" "}
-                  <span className="text-2xl md:text-3xl text-white/50">
-                    + taxes / h
-                  </span>
-                </p>
-                <p className="text-base md:text-lg mt-2 text-gray-300">
-                  pour 50$ d&apos;activité et plus
-                </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {/* Salle A */}
+              <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/30 hover:bg-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 opacity-0 group-hover:opacity-100 transition duration-300" />
+            
+                <div className="relative">
+                  <p className="text-sm uppercase tracking-[0.2em] text-yellow-400 font-bold mb-3">
+                    Salle A
+                  </p>
+            
+                  <p className="text-4xl md:text-5xl font-black text-white">
+                    65$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    avec activités
+                  </p>
+            
+                  <div className="my-4 h-px bg-white/10" />
+            
+                  <p className="text-3xl md:text-4xl font-bold text-yellow-400">
+                    70$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    sans activités
+                  </p>
+                </div>
               </div>
-              <div className="bg-white/5 p-6 md:p-8 rounded-2xl text-center border border-white/10">
-                <p className="text-4xl md:text-5xl font-bold text-yellow-400">
-                  70${" "}
-                  <span className="text-2xl md:text-3xl text-white/50">
-                    + taxes / h
-                  </span>
-                </p>
-                <p className="text-base md:text-lg mt-2 text-gray-300">
-                  sans activité
-                </p>
+            
+              {/* Salle B */}
+              <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/30 hover:bg-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 opacity-0 group-hover:opacity-100 transition duration-300" />
+            
+                <div className="relative">
+                  <p className="text-sm uppercase tracking-[0.2em] text-yellow-400 font-bold mb-3">
+                    Salle B
+                  </p>
+            
+                  <p className="text-4xl md:text-5xl font-black text-white">
+                    60$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    avec activités
+                  </p>
+            
+                  <div className="my-4 h-px bg-white/10" />
+            
+                  <p className="text-3xl md:text-4xl font-bold text-yellow-400">
+                    70$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    sans activités
+                  </p>
+                </div>
               </div>
-              <div className="bg-white/5 p-6 md:p-8 rounded-2xl text-center border border-white/10">
-                <p className="text-4xl md:text-5xl font-bold text-yellow-400">
-                  500$
-                </p>
-                <p className="text-base md:text-lg mt-2 text-gray-300">
-                  Salle pour soirée (A & B)
-                </p>
-                <p className="text-sm mt-2 text-gray-400">
-                  17h à 01h00, possibilité de service de bar
-                </p>
+            
+              {/* Salle C */}
+              <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/30 hover:bg-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 opacity-0 group-hover:opacity-100 transition duration-300" />
+            
+                <div className="relative">
+                  <p className="text-sm uppercase tracking-[0.2em] text-yellow-400 font-bold mb-3">
+                    Salle C
+                  </p>
+            
+                  <p className="text-4xl md:text-5xl font-black text-white">
+                    50$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    avec activités
+                  </p>
+            
+                  <div className="my-4 h-px bg-white/10" />
+            
+                  <p className="text-3xl md:text-4xl font-bold text-yellow-400">
+                    60$
+                  </p>
+                  <p className="text-sm text-gray-400">+ taxes / h</p>
+                  <p className="text-base md:text-lg text-gray-300 mt-2">
+                    sans activités
+                  </p>
+                </div>
+              </div>
+            
+              {/* Combo A + B */}
+              <div className="group relative overflow-hidden rounded-2xl border border-yellow-400/20 bg-gradient-to-br from-yellow-400/10 via-white/5 to-white/5 p-6 md:p-8 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:bg-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 opacity-100" />
+            
+                <div className="relative">
+                  <p className="text-sm uppercase tracking-[0.2em] text-yellow-400 font-bold mb-3">
+                    Combo Salle A + B
+                  </p>
+            
+                  <p className="text-4xl md:text-5xl font-black text-yellow-400">
+                    500$
+                  </p>
+            
+                  <p className="text-base md:text-lg text-gray-200 mt-3">
+                    De 17h00 à 1h00
+                  </p>
+            
+                  <p className="text-sm md:text-base text-gray-300 mt-3 leading-relaxed">
+                    Possibilité de service de bar inclus pour les groupes de plus de 40 personnes.
+                  </p>
+                </div>
               </div>
             </div>
-            <a href="tel:418-693-3334">
+            
+            <a
+              href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full max-w-md mx-auto mt-10"
+            >
               <motion.button
-                className="w-full max-w-md mx-auto mt-10 block py-4 md:py-5 text-lg md:text-xl font-bold uppercase rounded-lg bg-yellow-400 text-black shadow-lg shadow-yellow-400/30"
-                whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-                whileTap={{ scale: 0.95 }}
+                className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-300 px-8 py-4 md:py-5 text-lg md:text-xl font-black uppercase tracking-wide text-black shadow-lg shadow-yellow-400/30 transition-all duration-300"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
-                Réserver
+                <span className="relative z-10 flex items-center justify-center">
+                  Réserver
+                  <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </motion.button>
             </a>
           </motion.div>
