@@ -314,7 +314,7 @@ const TarifsPage = () => {
                       Le minigolf sera
                       complètement démoli pour laisser la place à un tout
                       nouveau minigolf interactif avec une nouvelle
-                      thématique. Réouverture prévue en mars. Suivez-nous sur les réseaux pour en savoir
+                      thématique. Réouverture prévue en mai. Suivez-nous sur les réseaux pour en savoir
                       plus&nbsp;!
                     </p>
                   </div>
