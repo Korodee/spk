@@ -194,7 +194,7 @@ const ratesData: RateCategory[] = [
         name: "Salle A",
         price: "65$",
         subtitle: "+ taxes / h",
-        description: "Avec activités",
+        description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle A",
@@ -206,7 +206,7 @@ const ratesData: RateCategory[] = [
         name: "Salle B",
         price: "60$",
         subtitle: "+ taxes / h",
-        description: "Avec activités",
+        description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle B",
@@ -218,7 +218,7 @@ const ratesData: RateCategory[] = [
         name: "Salle C",
         price: "50$",
         subtitle: "+ taxes / h",
-        description: "Avec activités",
+        description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle C",
