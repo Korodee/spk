@@ -165,28 +165,28 @@ const VipSection = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </BookingButton>*/}
-            <motion.div
-            className="text-center md:text-left"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <BookingButton className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-4 font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-blue-700 whitespace-nowrap">
-              <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              
-              <span className="relative z-10 flex items-center">
-                Réserver la Salle VIP
-                <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </span>
-            </BookingButton>
-              
+              <motion.div
+                className="text-center md:text-left"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <BookingButton className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-4 font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-blue-700 whitespace-nowrap">
+                  <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  
+                  <span className="relative z-10 flex items-center">
+                    Réserver la Salle VIP
+                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </span>
+                </BookingButton>
+
               <p className="mt-4 text-sm text-gray-500">
                 Réservation exclusive • Accès prioritaire
               </p>
-              {/*</motion.div>*/}
+            </motion.div>
           </motion.div>
         </div>
       </div>
