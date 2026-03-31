@@ -25,26 +25,24 @@ const VipBookingSection = () => {
             className="space-y-6 text-center"
           >
             <div className="space-y-6 text-white">
-              {/* Accès et réservation */}
+              {/* Accès à la salle */}
               <div>
                 <p className="text-xl md:text-2xl font-semibold">
                   Accès à la salle
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mt-2">
                   Votre salle n’est pas accessible avant l’heure exacte de votre réservation.
-                  Vous devez prévoir votre réservation en fonction du temps de décoration, si besoin,
-                  c’est-à-dire 1 heure de plus.
+                  Si vous prévoyez du temps pour la décoration, veuillez réserver une heure supplémentaire.
                 </p>
               </div>
             
-              {/* Consommation obligatoire */}
+              {/* Consommations sur place */}
               <div>
                 <p className="text-xl md:text-2xl font-semibold">
                   Consommations sur place
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Vous devez vous procurer sur place, obligatoirement, les chips, chocolats,
-                  bonbons, popcorn, jus, eau et boisson gazeuse (tout ce que nous vendons).
+                  Il est obligatoire de se procurer sur place les chips, chocolats, bonbons, popcorn, jus, eau et boissons gazeuses (tous les produits que nous offrons).
                 </p>
               </div>
             
@@ -54,13 +52,13 @@ const VipBookingSection = () => {
                   Interdictions importantes
                 </p>
                 <ul className="list-disc list-inside text-base md:text-lg text-gray-300 mt-2 space-y-1">
-                  <li>Les ballons avec des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permises.</li>
+                  <li>Les ballons contenant des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permis.</li>
                   <li>
-                    Il est strictement interdit d’apporter bière, prêt à boire alcoolisé et alcool fort puisque nous avons un permis de vente d’alcool.
+                    Il est strictement interdit d’apporter de la bière, des prêts-à-boire alcoolisés ou de l’alcool fort, puisque nous détenons un permis de vente d’alcool.
                   </li>
                 </ul>
                 <p className="text-sm text-red-400 mt-3 font-semibold">
-                  Un non-respect de cette directive peut mener à une expulsion immédiate.
+                  Le non-respect de ces règles peut entraîner une expulsion immédiate.
                 </p>
               </div>
             
@@ -70,14 +68,14 @@ const VipBookingSection = () => {
                   Fin de réservation
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mt-2">
-                  5 minutes avant la fin de votre réservation, un employé va passer pour voir l’état de la salle.
+                  Cinq minutes avant la fin de votre réservation, un employé passera vérifier l’état de la salle.
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Vous devez remettre la salle propre et en ordre et sans les décorations.
-                  Nous pourrions vous charger des frais supplémentaires selon l’état des lieux.
+                  La salle doit être remise propre, en ordre et sans décorations.
+                  Des frais supplémentaires pourraient être appliqués selon l’état des lieux.
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mt-2 font-medium">
-                  Vous devrez avoir quitté pour l’heure de fin moins 1 minute (xxh59).
+                  Vous devez avoir quitté les lieux au plus tard une minute avant l’heure de fin (xxh59).
                 </p>
               </div>
             </div>
