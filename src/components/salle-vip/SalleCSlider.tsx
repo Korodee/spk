@@ -7,9 +7,9 @@ import Image from "next/image";
 const slideData = [
   {
     id: "Paradis",
-    title: "Salle ludique avec bar spacieux et convivial",
+    title: "Salle ludique conviviale",
     description:
-      "Dans cette salle animée, l'atmosphère est propice à la détente et à l'amusement, offrant un éventail de petits jeux divertissants, le tout agrémenté d'un vaste bar accueillant et spacieux.",
+      "Dans cette salle animée, l'atmosphère est propice à la détente et à l'amusement, offrant un éventail de petits jeux divertissants.",
     image: "/paradis-3.jpg",
   },
   {
