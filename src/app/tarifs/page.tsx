@@ -4,7 +4,29 @@ import React from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
-const ratesData = [
+type RateItem = {
+  name: string;
+  price: string;
+  description?: string;
+};
+
+type ArcadePriceRow = {
+  credits: number;
+  bonus: number;
+  total: number;
+  price: string;
+};
+
+type RateCategory = {
+  category: string;
+  image: string;
+  items: RateItem[];
+  notes?: string[];
+  feeNote?: string;
+  priceTable?: ArcadePriceRow[];
+};
+
+const ratesData: RateCategory[] = [
   {
     category: "Laser tag",
     image: "/laser-tag.jpg",
@@ -15,7 +37,7 @@ const ratesData = [
     ],
     notes: [
       "Apportez des vêtements de sport et des espadrilles.",
-      "Après la 2e partie, les parties supplémentaires reviennent à 7.50$ + taxes / personne.",
+      "Après la 2e partie, les parties supplémentaires reviennent à 7.50$.",
       "Tous les prix sont par personne.",
     ],
   },
@@ -34,7 +56,7 @@ const ratesData = [
     items: [
       { name: "Régulière", price: "7$ + taxes / partie" },
       { name: "Horreur", price: "9$ + taxes / partie" },
-      { name: "Zombie", price: "10$ + taxes / partie / personne" },
+      { name: "Zombie", price: "10$ + taxes / partie" },
       { name: "Chaise 360", price: "12$ + taxes / partie" },
     ],
     notes: ["Chaise 360 : maximum 250 lbs."],
@@ -48,13 +70,13 @@ const ratesData = [
         price: "36$ + taxes / personne",
       },
       {
-        name: "Course supplémentaire adulte (15 min)",
+        name: "Course supplémentaire",
         price: "26$ + taxes / personne",
       },
       {
         name: "Course régulière enfant (15 min)",
         price: "26$ + taxes / personne",
-        description: "De 9 ans à 15 ans, minimum 54 pouces",
+        description: "De 9 ans à 15 ans avec un minimum de 54 pouces",
       },
       {
         name: "Mini grand prix (25 minutes)",
@@ -92,7 +114,7 @@ const ratesData = [
           "4 heures de paintball + 1 course régulière de 15 minutes",
       },
     ],
-    notes: ["Minimum de 8 personnes.", "Durée : 4 heures."],
+    notes: ["Minimum de 8 personnes.", "Durée de 4 heures."],
   },
   {
     category: "LABYRINTHE",
@@ -106,7 +128,7 @@ const ratesData = [
       {
         name: "Allée de petites quilles",
         price: "30$ + taxes / heure / allée",
-        description: "Bas antidérapants : 2$ + taxes / personne",
+        description: "2$ + taxes / personne pour les bas antidérapants",
       },
     ],
   },
@@ -121,7 +143,7 @@ const ratesData = [
       },
       {
         name: "Salle A",
-        price: "75$ + taxes / h",
+        price: "70$ + taxes / h",
         description: "Sans activités",
       },
       {
@@ -190,7 +212,6 @@ const ratesData = [
   },
 ];
 
-// Mapping of category names to activity slugs
 const categoryToSlug: { [key: string]: string } = {
   "Laser tag": "jeu-laser",
   "Mini-golf fluo": "minigolf",
@@ -198,7 +219,7 @@ const categoryToSlug: { [key: string]: string } = {
   Karting: "karting",
   Paintball: "paintball",
   LABYRINTHE: "labyrinth",
-  "Salle Arcade VIP": "salle-arcade-vip",
+  "Salle VIP": "arcade",
 };
 
 const containerVariants: Variants = {
@@ -227,7 +248,6 @@ const TarifsPage = () => {
           <div className="absolute inset-0 w-full h-full bg-black/70"></div>
         </div>
 
-        {/* Floating Elements */}
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-orange-400 to-purple-500 rounded-full opacity-20 blur-xl"
           animate={{
@@ -267,14 +287,12 @@ const TarifsPage = () => {
           }}
         />
 
-        {/* Main Content */}
         <motion.div
           className="relative z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Animated Title */}
           <motion.div
             className="relative mb-8"
             initial={{ scale: 0.8 }}
@@ -285,7 +303,6 @@ const TarifsPage = () => {
               Nos Tarifs
             </h1>
 
-            {/* Animated Underline */}
             <motion.div
               className="h-1 bg-gradient-to-r from-orange-400 via-purple-500 to-cyan-400 mx-auto rounded-full"
               initial={{ width: 0 }}
@@ -294,7 +311,6 @@ const TarifsPage = () => {
             />
           </motion.div>
 
-          {/* Description */}
           <motion.p
             className="text-lg md:text-xl text-gray-300 max-w-[80%] md:max-w-2xl mx-auto mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -306,7 +322,6 @@ const TarifsPage = () => {
           </motion.p>
         </motion.div>
 
-        {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
           animate={{
@@ -378,7 +393,10 @@ const TarifsPage = () => {
               )}
 
               {category.category === "Arcade" && category.priceTable ? (
-                <motion.div className="max-w-5xl mx-auto" variants={cardVariants}>
+                <motion.div
+                  className="max-w-5xl mx-auto"
+                  variants={cardVariants}
+                >
                   {category.feeNote && (
                     <p className="text-gray-300 mb-6 text-center">
                       {category.feeNote}
@@ -392,7 +410,9 @@ const TarifsPage = () => {
                           <th className="py-4 px-6 text-blue-400">Crédits</th>
                           <th className="py-4 px-6 text-green-400">Bonus</th>
                           <th className="py-4 px-6 text-gray-200">Total</th>
-                          <th className="py-4 px-6 text-red-400 text-right">Prix</th>
+                          <th className="py-4 px-6 text-red-400 text-right">
+                            Prix
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -470,12 +490,8 @@ const TarifsPage = () => {
                 </motion.div>
               )}
 
-              {/* Découvrir Button */}
               {categoryToSlug[category.category] && (
-                <motion.div
-                  className="text-center mt-12"
-                  variants={cardVariants}
-                >
+                <motion.div className="text-center mt-12" variants={cardVariants}>
                   <Link href={`/activity/${categoryToSlug[category.category]}`}>
                     <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                       Découvrir
