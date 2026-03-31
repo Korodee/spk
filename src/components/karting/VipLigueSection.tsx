@@ -7,7 +7,7 @@ import { BookingButton } from "@/components/BookingButton";
 const vipData = {
   vipCard: {
     title: "Carte V.I.P Karting",
-    price: "170",
+    price: "175",
     features: [
       "5 courses de 15 min",
       "26$ + Tx pour le reste de la saison",
