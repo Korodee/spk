@@ -99,7 +99,6 @@ const UpcomingActivitiesSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               Nous contacter
-              <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </Link>
 
