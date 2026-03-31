@@ -12,7 +12,7 @@ const funArenaActivities = [
   {
     id: "arcade",
     name: "Arcade",
-    title: "Salle d'Arcade",
+    title: "Arcade",
     description:
       "Plongez dans un univers de jeux d'arcade modernes avec une ambiance néon immersive et colorée.",
     features: [
