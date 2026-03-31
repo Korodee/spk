@@ -4,48 +4,61 @@ import { motion, Variants } from "framer-motion";
 import { FiCheck } from "react-icons/fi";
 import { BookingButton } from "@/components/BookingButton";
 
-
 const pricingData = {
   regular: [
     {
-      name: "Prix Réduit",
+      name: "Course régulière enfant",
       price: "26",
-      features: ["15 Minutes", "15 ans et moins", "La 2e course: 26,00$ + tx"],
+      subtitle: "+ taxes / personne",
+      features: ["15 minutes", "9 ans à 15 ans", "Minimum 54 pouces"],
       color: "red",
     },
     {
-      name: "Régulier",
+      name: "Course régulière adulte",
       price: "36",
-      features: ["15 Minutes", "16 ans et plus", "La 2e course: 26,00$ + tx"],
+      subtitle: "+ taxes / personne",
+      features: ["15 minutes", "16 ans et plus"],
       color: "red",
     },
     {
-      name: "Les Deux",
+      name: "Course supplémentaire",
       price: "26",
-    features: ["15 Minutes", "2e course", "26,00$ + tx"],
+      subtitle: "+ taxes / personne",
+      features: ["15 minutes", "Applicable après une première course"],
+      color: "red",
+    },
+    {
+      name: "Carte VIP",
+      price: "175",
+      subtitle: "+ taxes / personne",
+      features: [
+        "Accès à 5 courses gratuites de 15 minutes",
+        "Toutes les autres courses au tarif supplémentaire",
+        "26$ + taxes par course supplémentaire",
+      ],
       color: "red",
     },
   ],
   grandPrix: [
     {
-      name: "Mini Grand Prix",
+      name: "Mini grand prix",
       price: "64",
+      subtitle: "+ taxes / personne",
       features: [
-        "5 Minutes de qualification",
-        "10 Minutes de course",
-        "10 Minutes de Finale",
-        "10 personnes et plus",
+        "25 minutes",
+        "Bloc 1 : 5 min de qualification + 10 min course 1",
+        "Bloc 2 : 10 min de course finale",
       ],
       color: "gray",
     },
     {
-      name: "Grand Prix",
+      name: "Grand prix",
       price: "69",
+      subtitle: "+ taxes / personne",
       features: [
-        "5 Minutes de qualification",
-        "10 Minutes de course",
-        "15 Minutes de Finale",
-        "10 personnes et plus",
+        "30 minutes",
+        "Bloc 1 : 5 min de qualification + 10 min course 1",
+        "Bloc 2 : 15 min de course finale",
       ],
       color: "gray",
     },
@@ -68,6 +81,7 @@ interface PricingCardProps {
   card: {
     name: string;
     price: string;
+    subtitle: string;
     features: string[];
   };
   index: number;
@@ -81,13 +95,11 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
     whileInView="visible"
     viewport={{ once: true, amount: 0.5 }}
     transition={{ staggerChildren: 0.1, delayChildren: index * 0.2 }}
-    className={`relative border rounded-2xl p-8 flex flex-col h-full
-      ${
-        color === "red"
-          ? "border-red-500/30 bg-red-900/10"
-          : "border-gray-500/30 bg-gray-900/10"
-      }
-    `}
+    className={`relative border rounded-2xl p-8 flex flex-col h-full ${
+      color === "red"
+        ? "border-red-500/30 bg-red-900/10"
+        : "border-gray-500/30 bg-gray-900/10"
+    }`}
   >
     <div className="flex-grow">
       <h3
@@ -97,10 +109,12 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
       >
         {card.name}
       </h3>
+
       <div className="my-8">
         <span className="text-6xl font-black text-white">${card.price}</span>
-        <span className="text-xl text-gray-400"> + taxes</span>
+        <p className="text-sm text-gray-400 mt-2">{card.subtitle}</p>
       </div>
+
       <ul className="space-y-4">
         {card.features.map((feature: string, i: number) => (
           <li key={i} className="flex items-center gap-3">
@@ -114,21 +128,19 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
         ))}
       </ul>
     </div>
-    <BookingButton
-  aria-label={`Réserver karting - ${card.name}`}
-  className={`w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest text-center block
-    ${
-      color === "red"
-        ? "bg-red-600 hover:bg-red-500 text-white"
-        : "bg-white hover:bg-gray-200 text-black"
-    }
-  `}
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.97 }}
->
-  Réserver
-</BookingButton>
 
+    <BookingButton
+      aria-label={`Réserver karting - ${card.name}`}
+      className={`w-full mt-8 py-3 rounded-lg font-bold uppercase tracking-widest text-center block ${
+        color === "red"
+          ? "bg-red-600 hover:bg-red-500 text-white"
+          : "bg-white hover:bg-gray-200 text-black"
+      }`}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.97 }}
+    >
+      Réserver
+    </BookingButton>
   </motion.div>
 );
 
@@ -136,7 +148,6 @@ const KartingPricing = () => {
   return (
     <section className="bg-black py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, y: -20 }}
@@ -169,7 +180,7 @@ const KartingPricing = () => {
             <PricingCard
               key={card.name}
               card={card}
-              index={i + 2}
+              index={i + pricingData.regular.length}
               color="gray"
             />
           ))}
