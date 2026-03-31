@@ -93,15 +93,18 @@ const VipBookingSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Politique d&apos;annulation
             </h3>
+            
             <ul className="space-y-3 text-base md:text-lg">
               <li className="flex items-center justify-center gap-3 text-green-400">
-                <FiCheck /> 8 jours et plus, remboursement total
+                <FiCheck /> 14 jours et plus : remboursement en carte cadeau (moins 5% de frais d’administration)
               </li>
+            
               <li className="flex items-center justify-center gap-3 text-yellow-400">
-                <FiCheck /> 7 jours à 48 heures, 50% du montant
+                <FiCheck /> 8 à 13 jours : 50% du montant en carte cadeau
               </li>
+            
               <li className="flex items-center justify-center gap-3 text-red-500">
-                <FiX /> 48 heures et moins, pas de remboursement
+                <FiX /> 7 jours et moins : aucun remboursement
               </li>
             </ul>
           </motion.div>
