@@ -88,7 +88,7 @@ const ratesData: RateCategory[] = [
       {
         name: "Zombie",
         price: "10$",
-        subtitle: "+ taxes / partie",
+        subtitle: "+ taxes / partie / personne",
       },
       {
         name: "Chaise 360",
@@ -196,7 +196,7 @@ const ratesData: RateCategory[] = [
       },
       {
         name: "Salle A",
-        price: "70$",
+        price: "75$",
         subtitle: "+ taxes / h",
         description: "Sans activités",
       },
