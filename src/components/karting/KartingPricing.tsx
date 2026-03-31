@@ -27,18 +27,7 @@ const pricingData = {
       features: ["15 minutes", "Applicable après une première course"],
       color: "red",
     },
-    {
-      name: "Carte VIP",
-      price: "175",
-      subtitle: "+ taxes / personne",
-      features: [
-        "Accès à 5 courses gratuites de 15 minutes",
-        "Toutes les autres courses au tarif supplémentaire",
-        "26$ + taxes par course supplémentaire",
-      ],
-      color: "red",
-    },
-  ],
+    ],
   grandPrix: [
     {
       name: "Mini grand prix",
