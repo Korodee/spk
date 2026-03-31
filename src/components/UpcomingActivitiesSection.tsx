@@ -83,7 +83,7 @@ const UpcomingActivitiesSection = () => {
             </motion.button>
           </Link>
 
-          {/* ✅ Remplace le tel: par BookingButton */}
+          {/* ✅ Remplace le tel: par BookingButton 
           <BookingButton
             aria-label="Nous contacter"
             className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-bold rounded-full uppercase tracking-wider hover:bg-purple-500/20 transition-all duration-300 text-center block"
@@ -91,7 +91,19 @@ const UpcomingActivitiesSection = () => {
             whileTap={{ scale: 0.95 }}
           >
             Nous contacter
-          </BookingButton>
+          </BookingButton>*/}
+          <Link href="/contact">
+            <motion.button
+              className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-bold rounded-full uppercase tracking-wider hover:bg-purple-500/20 transition-all duration-300 text-center block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Nous contacter
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.button>
+          </Link>
+
+          
         </motion.div>
       </div>
     </section>
