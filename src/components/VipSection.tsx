@@ -186,7 +186,7 @@ const VipSection = () => {
               <p className="mt-4 text-sm text-gray-500">
                 Réservation exclusive • Accès prioritaire
               </p>
-            </motion.div>
+              {/*</motion.div>*/}
           </motion.div>
         </div>
       </div>
