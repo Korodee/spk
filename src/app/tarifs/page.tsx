@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 type RateItem = {
   name: string;
   price: string;
+  subtitle?: string;
   description?: string;
 };
 
@@ -31,9 +32,21 @@ const ratesData: RateCategory[] = [
     category: "Laser tag",
     image: "/laser-tag.jpg",
     items: [
-      { name: "1ère partie", price: "11.50$ + taxes / personne" },
-      { name: "2ème partie", price: "9.50$ + taxes / personne" },
-      { name: "Parties supplémentaires", price: "7.50$ + taxes / personne" },
+      {
+        name: "1ère partie",
+        price: "11.50$",
+        subtitle: "+ taxes / personne",
+      },
+      {
+        name: "2ème partie",
+        price: "9.50$",
+        subtitle: "+ taxes / personne",
+      },
+      {
+        name: "Parties supplémentaires",
+        price: "7.50$",
+        subtitle: "+ taxes / personne",
+      },
     ],
     notes: [
       "Apportez des vêtements de sport et des espadrilles.",
@@ -45,8 +58,16 @@ const ratesData: RateCategory[] = [
     category: "Mini-golf fluo",
     image: "/golf.jpg",
     items: [
-      { name: "Adulte", price: "15.50$ + taxes / personne" },
-      { name: "Enfant (15 ans et moins)", price: "13$ + taxes / personne" },
+      {
+        name: "Adulte",
+        price: "15.50$",
+        subtitle: "+ taxes / personne",
+      },
+      {
+        name: "Enfant (15 ans et moins)",
+        price: "13$",
+        subtitle: "+ taxes / personne",
+      },
     ],
     notes: ["Prix par personne."],
   },
@@ -54,10 +75,26 @@ const ratesData: RateCategory[] = [
     category: "Réalité Virtuelle",
     image: "/virtual-real.jpg",
     items: [
-      { name: "Régulière", price: "7$ + taxes / partie" },
-      { name: "Horreur", price: "9$ + taxes / partie" },
-      { name: "Zombie", price: "10$ + taxes / partie" },
-      { name: "Chaise 360", price: "12$ + taxes / partie" },
+      {
+        name: "Régulière",
+        price: "7$",
+        subtitle: "+ taxes / partie",
+      },
+      {
+        name: "Horreur",
+        price: "9$",
+        subtitle: "+ taxes / partie",
+      },
+      {
+        name: "Zombie",
+        price: "10$",
+        subtitle: "+ taxes / partie",
+      },
+      {
+        name: "Chaise 360",
+        price: "12$",
+        subtitle: "+ taxes / partie",
+      },
     ],
     notes: ["Chaise 360 : maximum 250 lbs."],
   },
@@ -67,32 +104,38 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Course régulière adulte (15 min)",
-        price: "36$ + taxes / personne",
+        price: "36$",
+        subtitle: "+ taxes / personne",
       },
       {
         name: "Course supplémentaire",
-        price: "26$ + taxes / personne",
+        price: "26$",
+        subtitle: "+ taxes / personne",
       },
       {
         name: "Course régulière enfant (15 min)",
-        price: "26$ + taxes / personne",
+        price: "26$",
+        subtitle: "+ taxes / personne",
         description: "De 9 ans à 15 ans avec un minimum de 54 pouces",
       },
       {
         name: "Mini grand prix (25 minutes)",
-        price: "64$ + taxes / personne",
+        price: "64$",
+        subtitle: "+ taxes / personne",
         description:
           "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 10 min de course finale",
       },
       {
         name: "Grand prix (30 minutes)",
-        price: "69$ + taxes / personne",
+        price: "69$",
+        subtitle: "+ taxes / personne",
         description:
           "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 15 min de course finale",
       },
       {
         name: "Carte VIP",
-        price: "175$ + taxes / personne",
+        price: "175$",
+        subtitle: "+ taxes / personne",
         description:
           "Accès à 5 courses gratuites de 15 minutes. Toutes les autres courses sont au tarif de course supplémentaire de 26$ + taxes.",
       },
@@ -104,12 +147,14 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Paintball",
-        price: "39$ + taxes / personne",
+        price: "39$",
+        subtitle: "+ taxes / personne",
         description: "Durée de 4 heures",
       },
       {
         name: "Combo Paintball Karting",
-        price: "62$ + taxes / personne",
+        price: "62$",
+        subtitle: "+ taxes / personne",
         description:
           "4 heures de paintball + 1 course régulière de 15 minutes",
       },
@@ -119,7 +164,13 @@ const ratesData: RateCategory[] = [
   {
     category: "LABYRINTHE",
     image: "/labyrinth.jpg",
-    items: [{ name: "Labyrinthe", price: "11$ + taxes / personne" }],
+    items: [
+      {
+        name: "Labyrinthe",
+        price: "11$",
+        subtitle: "+ taxes / personne",
+      },
+    ],
   },
   {
     category: "Quilles",
@@ -127,7 +178,8 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Allée de petites quilles",
-        price: "30$ + taxes / heure / allée",
+        price: "30$",
+        subtitle: "+ taxes / heure / allée",
         description: "2$ + taxes / personne pour les bas antidérapants",
       },
     ],
@@ -138,32 +190,38 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Salle A",
-        price: "65$ + taxes / h",
+        price: "65$",
+        subtitle: "+ taxes / h",
         description: "Avec activités",
       },
       {
         name: "Salle A",
-        price: "70$ + taxes / h",
+        price: "70$",
+        subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
         name: "Salle B",
-        price: "60$ + taxes / h",
+        price: "60$",
+        subtitle: "+ taxes / h",
         description: "Avec activités",
       },
       {
         name: "Salle B",
-        price: "70$ + taxes / h",
+        price: "70$",
+        subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
         name: "Salle C",
-        price: "50$ + taxes / h",
+        price: "50$",
+        subtitle: "+ taxes / h",
         description: "Avec activités",
       },
       {
         name: "Salle C",
-        price: "60$ + taxes / h",
+        price: "60$",
+        subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
@@ -205,7 +263,8 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Accès Active Zone",
-        price: "30$ + taxes / personne",
+        price: "30$",
+        subtitle: "+ taxes / personne",
         description: "75 minutes de jeux dans toutes les salles",
       },
     ],
@@ -440,7 +499,7 @@ const TarifsPage = () => {
                 >
                   {category.items.map((item) => (
                     <motion.div
-                      key={`${item.name}-${item.price}`}
+                      key={`${item.name}-${item.price}-${item.subtitle ?? ""}`}
                       className="bg-black/40 backdrop-blur-lg p-6 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl border border-white/10 group flex flex-col text-center"
                       variants={cardVariants}
                       whileHover={{
@@ -459,10 +518,16 @@ const TarifsPage = () => {
                           </p>
                         )}
                       </div>
+
                       <div className="mt-auto">
                         <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
                           {item.price}
                         </p>
+                        {item.subtitle && (
+                          <p className="text-sm text-gray-400 mt-2">
+                            {item.subtitle}
+                          </p>
+                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -491,7 +556,10 @@ const TarifsPage = () => {
               )}
 
               {categoryToSlug[category.category] && (
-                <motion.div className="text-center mt-12" variants={cardVariants}>
+                <motion.div
+                  className="text-center mt-12"
+                  variants={cardVariants}
+                >
                   <Link href={`/activity/${categoryToSlug[category.category]}`}>
                     <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                       Découvrir
@@ -502,10 +570,6 @@ const TarifsPage = () => {
             </motion.div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-12 text-center">
-        <span className="text-gray-400 text-sm">* tx non incluses</span>
       </div>
 
       <Footer />
