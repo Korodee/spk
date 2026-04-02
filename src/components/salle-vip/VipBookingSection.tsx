@@ -142,7 +142,7 @@ const VipBookingSection = () => {
                   <div className="my-4 h-px bg-white/10" />
             
                   <p className="text-3xl md:text-4xl font-bold text-yellow-400">
-                    70$
+                    75$
                   </p>
                   <p className="text-sm text-gray-400">+ taxes / h</p>
                   <p className="text-base md:text-lg text-gray-300 mt-2">
