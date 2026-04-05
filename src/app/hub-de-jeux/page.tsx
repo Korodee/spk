@@ -235,7 +235,7 @@ const HubDeJeuxPage = () => {
           }}
         >
           <div className="text-center">
-            <p className="text-sm text-gray-400 mb-2">Defiler vers le bas</p>
+            <p className="text-sm text-gray-400 mb-2 tracking-[0.2em] uppercase">Défiler vers le bas</p>
             <div className="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center mx-auto">
               <motion.div
                 className="w-1 h-3 bg-purple-500 rounded-full mt-2"
