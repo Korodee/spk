@@ -281,6 +281,7 @@ const categoryToSlug: { [key: string]: string } = {
   Paintball: "paintball",
   LABYRINTHE: "labyrinth",
   "Salle VIP": "salle-arcade-vip",
+  "Active Zone": "hub-de-jeux#active-zone",
 };
 
 const containerVariants: Variants = {
@@ -710,7 +711,13 @@ const TarifsPage = () => {
                   className="text-center mt-12"
                   variants={cardVariants}
                 >
-                  <Link href={`/activity/${categoryToSlug[category.category]}`}>
+                  <Link
+                    href={
+                      category.category === "Active Zone"
+                        ? `/${categoryToSlug[category.category]}`
+                        : `/activity/${categoryToSlug[category.category]}`
+                    }
+                  >
                     <button className="bg-purple-500 cursor-pointer hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                       Découvrir
                     </button>
