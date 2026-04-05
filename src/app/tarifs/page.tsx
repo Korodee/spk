@@ -386,7 +386,7 @@ const TarifsPage = () => {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           animate={{
             y: [0, 10, 0],
           }}
@@ -396,6 +396,10 @@ const TarifsPage = () => {
             ease: "easeInOut",
           }}
         >
+          <p className="text-xs md:text-sm text-gray-400 mb-2 tracking-[0.2em] uppercase">
+            Défiler vers le bas
+          </p>
+        
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <motion.div
               className="w-1 h-3 bg-white/60 rounded-full mt-2"
