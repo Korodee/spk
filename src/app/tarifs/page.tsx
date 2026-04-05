@@ -453,7 +453,155 @@ const TarifsPage = () => {
                 </motion.div>
               )}
 
-              {category.category === "Arcade" && category.priceTable ? (
+              {category.category === "Salle VIP" ? (
+                <motion.div className="max-w-7xl mx-auto" variants={cardVariants}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div className="bg-black/40 backdrop-blur-lg p-6 rounded-2xl border border-white/10 group flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0px_15px_30px_rgba(99,50,200,0.4)]">
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          Salle A
+                        </h3>
+
+                        <div className="mt-6">
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            65$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Avec 50$ et plus d&apos;activités
+                          </p>
+                        </div>
+
+                        <div className="my-6 h-px bg-white/10" />
+
+                        <div>
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            75$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Sans activités
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-black/40 backdrop-blur-lg p-6 rounded-2xl border border-white/10 group flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0px_15px_30px_rgba(99,50,200,0.4)]">
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          Salle B
+                        </h3>
+
+                        <div className="mt-6">
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            60$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Avec 50$ et plus d&apos;activités
+                          </p>
+                        </div>
+
+                        <div className="my-6 h-px bg-white/10" />
+
+                        <div>
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            70$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Sans activités
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-black/40 backdrop-blur-lg p-6 rounded-2xl border border-white/10 group flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0px_15px_30px_rgba(99,50,200,0.4)]">
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          Salle C
+                        </h3>
+
+                        <div className="mt-6">
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            50$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Avec 50$ et plus d&apos;activités
+                          </p>
+                        </div>
+
+                        <div className="my-6 h-px bg-white/10" />
+
+                        <div>
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            60$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-2">
+                            + taxes / h
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            Sans activités
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-black/40 backdrop-blur-lg p-6 rounded-2xl border border-white/10 group flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0px_15px_30px_rgba(99,50,200,0.4)]">
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          Combo Salle A + B
+                        </h3>
+
+                        <div className="mt-6">
+                          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+                            500$
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3">
+                            De 17h00 à 1h00
+                          </p>
+                          <p className="text-sm text-gray-400 mt-3 leading-relaxed">
+                            Possibilité de service de bar inclus si plus de 40
+                            personnes.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://book.timify.com/?accountId=604d33264585c611886149c1&hideCloseButton=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full max-w-md mx-auto mt-10"
+                  >
+                    <motion.button
+                      className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-300 px-8 py-4 md:py-5 text-lg md:text-xl font-black uppercase tracking-wide text-black shadow-lg shadow-yellow-400/30 transition-all duration-300"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      <span className="relative z-10 flex items-center justify-center">
+                        Réserver
+                        <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </motion.button>
+                  </a>
+                </motion.div>
+              ) : category.category === "Arcade" && category.priceTable ? (
                 <motion.div
                   className="max-w-5xl mx-auto"
                   variants={cardVariants}
