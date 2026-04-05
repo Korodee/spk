@@ -282,6 +282,7 @@ const categoryToSlug: { [key: string]: string } = {
   LABYRINTHE: "labyrinth",
   "Salle VIP": "salle-arcade-vip",
   "Active Zone": "hub-de-jeux#active-zone",
+  Quilles: "hub-de-jeux#petites-quilles",
 };
 
 const containerVariants: Variants = {
@@ -713,7 +714,8 @@ const TarifsPage = () => {
                 >
                   <Link
                     href={
-                      category.category === "Active Zone"
+                      category.category === "Active Zone" ||
+                      category.category === "Quilles"
                         ? `/${categoryToSlug[category.category]}`
                         : `/activity/${categoryToSlug[category.category]}`
                     }
