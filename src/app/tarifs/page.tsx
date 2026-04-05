@@ -280,7 +280,7 @@ const categoryToSlug: { [key: string]: string } = {
   Karting: "karting",
   Paintball: "paintball",
   LABYRINTHE: "labyrinth",
-  "Salle VIP": "arcade",
+  "Salle VIP": "salle-arcade-vip",
 };
 
 const containerVariants: Variants = {
