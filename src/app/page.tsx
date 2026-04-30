@@ -109,6 +109,9 @@ export default function Home() {
               Pour l’occasion, profitez de forfaits découvertes à moindre prix
               et de hot-dogs vapeurs pas chers.
             </p>
+            <p className="text-gray-300 max-w-3xl mx-auto mt-4 text-lg">
+              La musique sera au rendez-vous. Nous vous attendons mercredi le 6 mai 2026 à partir de 16h00 !
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
