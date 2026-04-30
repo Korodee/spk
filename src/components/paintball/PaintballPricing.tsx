@@ -57,9 +57,9 @@ const PaintballPricing = () => {
               </div>
               <p className="font-bold text-xl">1/2 JOURNÉE</p>
               <p className="text-7xl font-black my-2">
-                39<span className="text-5xl">$</span>
+                39.00<span className="text-5xl">$</span>
               </p>
-              <p className="text-gray-400">+ TAXES</p>
+              <p className="text-gray-400">+ TAXES / personne</p>
             </div>
 
             <BookingButton
@@ -97,7 +97,7 @@ const PaintballPricing = () => {
                 <h4 className="text-2xl font-bold">Combo Paintball / Karting (régulier)</h4>
               </div>
               <div className="text-right">
-                <p className="text-5xl font-black">
+                <p className="text-2xl font-black">
                   67.00<span className="text-3xl">$</span>
                 </p>
                 <p className="text-gray-400">+ TAXES / personne</p>
@@ -109,7 +109,7 @@ const PaintballPricing = () => {
                 <h4 className="text-2xl font-bold">Combo Paintball / Karting (Mini Grand Prix)</h4>
               </div>
               <div className="text-right">
-                <p className="text-5xl font-black">
+                <p className="text-2xl font-black">
                   89.00<span className="text-3xl">$</span>
                 </p>
                 <p className="text-gray-400">+ TAXES / personne</p>
@@ -121,8 +121,8 @@ const PaintballPricing = () => {
                 <h4 className="text-2xl font-bold">Combo Paintball / Karting (Grand Prix)</h4>
               </div>
               <div className="text-right">
-                <p className="text-5xl font-black">
-                  94<span className="text-3xl">$</span>
+                <p className="text-2xl font-black">
+                  94.00<span className="text-3xl">$</span>
                 </p>
                 <p className="text-gray-400">+ TAXES / personne</p>
               </div>
