@@ -94,13 +94,37 @@ const PaintballPricing = () => {
 
             <div className="mt-8 border-t border-gray-700 pt-8 flex justify-between items-center">
               <div>
-                <h4 className="text-2xl font-bold">Combo Paintball / Karting</h4>
+                <h4 className="text-2xl font-bold">Combo Paintball / Karting (régulier)</h4>
               </div>
               <div className="text-right">
                 <p className="text-5xl font-black">
-                  62<span className="text-3xl">$</span>
+                  67.00<span className="text-3xl">$</span>
                 </p>
-                <p className="text-gray-400">+ TAXES</p>
+                <p className="text-gray-400">+ TAXES / personne</p>
+              </div>
+            </div>
+
+            <div className="mt-8 border-t border-gray-700 pt-8 flex justify-between items-center">
+              <div>
+                <h4 className="text-2xl font-bold">Combo Paintball / Karting (Mini Grand Prix)</h4>
+              </div>
+              <div className="text-right">
+                <p className="text-5xl font-black">
+                  89.00<span className="text-3xl">$</span>
+                </p>
+                <p className="text-gray-400">+ TAXES / personne</p>
+              </div>
+            </div>
+
+            <div className="mt-8 border-t border-gray-700 pt-8 flex justify-between items-center">
+              <div>
+                <h4 className="text-2xl font-bold">Combo Paintball / Karting (Grand Prix)</h4>
+              </div>
+              <div className="text-right">
+                <p className="text-5xl font-black">
+                  94<span className="text-3xl">$</span>
+                </p>
+                <p className="text-gray-400">+ TAXES / personne</p>
               </div>
             </div>
 
