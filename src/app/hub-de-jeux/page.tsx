@@ -356,10 +356,7 @@ const HubDeJeuxPage = () => {
                 >
                   <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto">
                     <p className="text-lg md:text-xl text-gray-300 mb-2">
-                      <span className="font-bold text-yellow-400">Tarif Active Zone :</span> 75 minutes de jeux, accès aux différentes salles = <span className="font-bold text-white">30$ par personne + tx</span>
-                    </p>
-                    <p className="text-base md:text-lg text-orange-400 font-semibold mt-4">
-                      L&apos;active zone ouvre le 23 janvier
+                      <span className="font-bold text-yellow-400">Tarif Active Zone :</span> 75 minutes de jeux, accès aux différentes salles = <span className="font-bold text-white">31.00$ par personne + tx</span>
                     </p>
                   </div>
                 </motion.div>
@@ -541,31 +538,31 @@ const HubDeJeuxPage = () => {
                               <td className="py-3 pr-4">40</td>
                               <td className="py-3 pr-4">0</td>
                               <td className="py-3 pr-4">40</td>
-                              <td className="py-3">10$</td>
+                              <td className="py-3">10.00$</td>
                             </tr>
                             <tr className="border-b border-white/10">
                               <td className="py-3 pr-4">100</td>
                               <td className="py-3 pr-4">20</td>
                               <td className="py-3 pr-4">120</td>
-                              <td className="py-3">25$</td>
+                              <td className="py-3">25.00$</td>
                             </tr>
                             <tr className="border-b border-white/10">
                               <td className="py-3 pr-4">200</td>
                               <td className="py-3 pr-4">60</td>
                               <td className="py-3 pr-4">260</td>
-                              <td className="py-3">50$</td>
+                              <td className="py-3">50.00$</td>
                             </tr>
                             <tr className="border-b border-white/10">
                               <td className="py-3 pr-4">300</td>
                               <td className="py-3 pr-4">120</td>
                               <td className="py-3 pr-4">420</td>
-                              <td className="py-3">75$</td>
+                              <td className="py-3">75.00$</td>
                             </tr>
                             <tr>
                               <td className="py-3 pr-4">400</td>
                               <td className="py-3 pr-4">240</td>
                               <td className="py-3 pr-4">640</td>
-                              <td className="py-3">100$</td>
+                              <td className="py-3">100.00$</td>
                             </tr>
                           </tbody>
                         </table>
