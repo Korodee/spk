@@ -166,14 +166,14 @@ const MinigolfPageContent = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PricingTier
               title="Adulte"
-              price="15.50$"
+              price="16.00$"
               details="16 ans et plus"
               color="bg-yellow-500/50"
               delay={0.2}
             />
             <PricingTier
               title="Enfant"
-              price="13$"
+              price="13.50$"
               details="Enfant (de 3 à 15 ans)"
               color="bg-green-500/50"
               delay={0.4}
