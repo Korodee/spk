@@ -8,21 +8,21 @@ const pricingData = {
   regular: [
     {
       name: "Course régulière enfant",
-      price: "26",
+      price: "27.00$",
       subtitle: "+ taxes / personne",
       features: ["15 minutes", "9 ans à 15 ans", "Minimum 54 pouces"],
       color: "red",
     },
     {
       name: "Course régulière adulte",
-      price: "36",
+      price: "37.00$",
       subtitle: "+ taxes / personne",
       features: ["15 minutes", "16 ans et plus"],
       color: "red",
     },
     {
       name: "Course supplémentaire",
-      price: "26",
+      price: "27.00$",
       subtitle: "+ taxes / personne",
       features: ["15 minutes", "Applicable après une première course"],
       color: "red",
@@ -31,7 +31,7 @@ const pricingData = {
   grandPrix: [
     {
       name: "Mini grand prix",
-      price: "64",
+      price: "65.00$",
       subtitle: "+ taxes / personne",
       features: [
         "25 minutes",
@@ -42,7 +42,7 @@ const pricingData = {
     },
     {
       name: "Grand prix",
-      price: "69",
+      price: "70.00$",
       subtitle: "+ taxes / personne",
       features: [
         "30 minutes",
