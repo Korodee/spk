@@ -79,7 +79,7 @@ const VipLigueSection = () => {
 
               <div className="my-8">
                 <span className="text-7xl font-black text-white">
-                  {vipData.vipCard.price}
+                  ${vipData.vipCard.price}
                 </span>
                 <span className="text-xl text-gray-400"> + taxes</span>
               </div>
