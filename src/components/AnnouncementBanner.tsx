@@ -45,13 +45,20 @@ const AnnouncementBanner = () => {
                 {/* Text Content */}
                 <div className="text-center sm:text-left sm:flex-1 flex items-center">
                   <p className="text-white flex flex-row items-center justify-center sm:justify-start font-bold text-sm sm:text-base md:text-lg tracking-wide">
-                    <span className="inline-block">
+                   {/* <span className="inline-block">
                       Nouveautés{" "}
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
+                    </span>*/}
+                    <span className="inline-block">
+                      Journée Québécoise du Steamé 2026 {" "}
+                      <span className="hidden sm:inline"> 4 forfaits découvertes et des hot-dogs vapeurs pas chers ! Mercredi 6 mai de 16h00 à 21h00</span>
                     </span>
                   </p>
                 </div>
 
+                {/* A REMETTRE
+                
+                
                 <Link href="/hub-de-jeux" className="flex-shrink-0 flex items-center">
                   <span className="sm:hidden text-white text-[12px] font-bold uppercase tracking-wider underline underline-offset-2">
                     Découvrir les nouveautés
@@ -64,7 +71,7 @@ const AnnouncementBanner = () => {
                     Découvrir les nouveautés
                     <FiArrowRight className="text-sm" />
                   </motion.button>
-                </Link>
+                </Link> */}
 
                 {/* Close Button */}
                 <button
