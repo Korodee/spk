@@ -18,25 +18,25 @@ const vrExperiences: VrExperience[] = [
   {
     image: "/chaise.png",
     title: "Chaise 360 degrés",
-    price: "12$",
+    price: "12.00$",
     description: "Par scénario par joueur (durées variables de 8 minutes)",
   },
   {
     image: "/glissade.png",
     title: "La Glissade",
-    price: "7$",
+    price: "7.00$",
     description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
   },
   {
     image: "/vaisseau.webp",
     title: "La Vaisseau",
-    price: "7$",
+    price: "7.00$",
     description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
   },
   {
     image: "/cinema.jpg",
     title: "Cinéma 9D",
-    price: "7$",
+    price: "7.00$",
     description: "Par scénario par joueur (durées variables de 3 à 6 minutes)",
   },
 ];
