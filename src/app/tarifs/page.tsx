@@ -34,17 +34,17 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "1ère partie",
-        price: "11.50$",
+        price: "12.00$",
         subtitle: "+ taxes / personne",
       },
       {
         name: "2ème partie",
-        price: "9.50$",
+        price: "10.00$",
         subtitle: "+ taxes / personne",
       },
       {
         name: "Parties supplémentaires",
-        price: "7.50$",
+        price: "8.00$",
         subtitle: "+ taxes / personne",
       },
     ],
@@ -60,12 +60,12 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Adulte",
-        price: "15.50$",
+        price: "16.00$",
         subtitle: "+ taxes / personne",
       },
       {
         name: "Enfant (15 ans et moins)",
-        price: "13$",
+        price: "13.50$",
         subtitle: "+ taxes / personne",
       },
     ],
@@ -77,22 +77,22 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Régulière",
-        price: "7$",
+        price: "7.00$",
         subtitle: "+ taxes / partie",
       },
       {
         name: "Horreur",
-        price: "9$",
+        price: "9.00$",
         subtitle: "+ taxes / partie",
       },
       {
         name: "Zombie",
-        price: "10$",
+        price: "10.00$",
         subtitle: "+ taxes / partie / personne",
       },
       {
         name: "Chaise 360",
-        price: "12$",
+        price: "12.00$",
         subtitle: "+ taxes / partie",
       },
     ],
@@ -104,39 +104,39 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Course régulière adulte",
-        price: "36$",
+        price: "37.00$",
         subtitle: "+ taxes / personne",
         description: "15 minutes de course",
       },
       {
         name: "Course supplémentaire",
-        price: "26$",
+        price: "27.00$",
         subtitle: "+ taxes / personne",
         description: "15 minutes de course",
       },
       {
         name: "Course régulière enfant",
-        price: "26$",
+        price: "27.00$",
         subtitle: "+ taxes / personne",
         description: "De 9 ans à 15 ans avec un minimum de 54 pouces",
       },
       {
         name: "Mini grand prix",
-        price: "64$",
+        price: "65.00$",
         subtitle: "+ taxes / personne",
         description:
           "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 10 min de course finale",
       },
       {
         name: "Grand prix",
-        price: "69$",
+        price: "70.00$",
         subtitle: "+ taxes / personne",
         description:
           "Bloc 1 : 5 min de qualification + 10 min course 1 • Bloc 2 : 15 min de course finale",
       },
       {
         name: "Carte VIP",
-        price: "175$",
+        price: "175.00$",
         subtitle: "+ taxes / personne",
         description:
           "Accès à 5 courses gratuites de 15 minutes. Toutes les autres courses sont au tarif de course supplémentaire de 26$ + taxes.",
@@ -149,16 +149,30 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Paintball",
-        price: "39$",
+        price: "39.00$",
         subtitle: "+ taxes / personne",
         description: "Durée de 4 heures",
       },
       {
         name: "Combo Paintball Karting",
-        price: "62$",
+        price: "67.00$",
         subtitle: "+ taxes / personne",
         description:
           "4 heures de paintball + 1 course régulière de 15 minutes",
+      },
+      {
+        name: "Combo Paintball Karting (Mini Grand-Prix)",
+        price: "89.00$",
+        subtitle: "+ taxes / personne",
+        description:
+          "4 heures de paintball + 1 Mini Grand-Prix de 25 minutes",
+      },
+      {
+        name: "Combo Paintball Karting (Grand-Prix)",
+        price: "94.00$",
+        subtitle: "+ taxes / personne",
+        description:
+          "4 heures de paintball + 1 Grand-Prix de 30 minutes",
       },
     ],
     notes: ["Minimum de 8 personnes.", "Durée de 4 heures."],
@@ -169,7 +183,7 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Labyrinthe",
-        price: "11$",
+        price: "11.00$",
         subtitle: "+ taxes / personne",
       },
     ],
@@ -180,9 +194,9 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Allée de petites quilles",
-        price: "30$",
+        price: "32.00$",
         subtitle: "+ taxes / heure / allée",
-        description: "2$ + taxes / personne pour les bas antidérapants",
+        description: "2.00$ + taxes / personne pour les bas antidérapants",
       },
     ],
   },
@@ -192,43 +206,43 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Salle A",
-        price: "65$",
+        price: "65.00$",
         subtitle: "+ taxes / h",
         description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle A",
-        price: "75$",
+        price: "75.00$",
         subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
         name: "Salle B",
-        price: "60$",
+        price: "60.00$",
         subtitle: "+ taxes / h",
         description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle B",
-        price: "70$",
+        price: "70.00$",
         subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
         name: "Salle C",
-        price: "50$",
+        price: "50.00$",
         subtitle: "+ taxes / h",
         description: "Avec 50$ et plus d'activités",
       },
       {
         name: "Salle C",
-        price: "60$",
+        price: "60.00$",
         subtitle: "+ taxes / h",
         description: "Sans activités",
       },
       {
         name: "Combo Salle A + B",
-        price: "500$",
+        price: "500.00$",
         description:
           "De 17h00 à 1h00, possibilité de service de bar inclus si plus de 40 personnes",
       },
@@ -249,13 +263,13 @@ const ratesData: RateCategory[] = [
   {
     category: "Arcade",
     image: "/1.jpg",
-    feeNote: "Frais de 2$ + taxes pour une nouvelle carte",
+    feeNote: "Frais de 2.00$ + taxes pour une nouvelle carte",
     priceTable: [
-      { credits: 40, bonus: 0, total: 40, price: "10$ + taxes" },
-      { credits: 100, bonus: 20, total: 120, price: "25$ + taxes" },
-      { credits: 200, bonus: 60, total: 260, price: "50$ + taxes" },
-      { credits: 300, bonus: 120, total: 420, price: "75$ + taxes" },
-      { credits: 400, bonus: 240, total: 640, price: "100$ + taxes" },
+      { credits: 40, bonus: 0, total: 40, price: "10.00$ + taxes" },
+      { credits: 100, bonus: 20, total: 120, price: "25.00$ + taxes" },
+      { credits: 200, bonus: 60, total: 260, price: "50.00$ + taxes" },
+      { credits: 300, bonus: 120, total: 420, price: "75.00$ + taxes" },
+      { credits: 400, bonus: 240, total: 640, price: "100.00$ + taxes" },
     ],
     items: [],
   },
@@ -265,7 +279,7 @@ const ratesData: RateCategory[] = [
     items: [
       {
         name: "Accès Active Zone",
-        price: "30$",
+        price: "31.00$",
         subtitle: "+ taxes / personne",
         description: "75 minutes de jeux dans toutes les salles",
       },
