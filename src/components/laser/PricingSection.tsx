@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 const pricingData = [
   {
     tier: "1 ÈRE PARTIE",
-    price: "11.50",
+    price: "12.00",
     color: "red",
     gradient: "from-red-500 to-orange-500",
     shadow: "shadow-red-500/40",
   },
   {
     tier: "2 IÈME PARTIE",
-    price: "9.50",
+    price: "10.00",
     color: "blue",
     gradient: "from-blue-500 to-cyan-500",
     shadow: "shadow-blue-500/40",
   },
   {
-    tier: "3 IÈME PARTIE",
-    price: "7.50",
+    tier: "Partie supplémentaire",
+    price: "8.00",
     color: "purple",
     gradient: "from-purple-500 to-pink-500",
     shadow: "shadow-purple-500/40",
