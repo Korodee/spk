@@ -100,7 +100,7 @@ const PricingCard = ({ card, index, color }: PricingCardProps) => (
       </h3>
 
       <div className="my-8">
-        <span className="text-6xl font-black text-white">${card.price}</span>
+        <span className="text-6xl font-black text-white">{card.price}</span>
         <p className="text-sm text-gray-400 mt-2">{card.subtitle}</p>
       </div>
 
