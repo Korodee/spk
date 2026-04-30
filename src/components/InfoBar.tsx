@@ -67,7 +67,7 @@ export default function InfoBar() {
               Période Actuelle
             </p>
             <p className="mt-1 text-2xl font-black text-yellow-400 tracking-tighter">
-              HIVER
+              ESTIVALE
             </p>
           </div>
         </div>
