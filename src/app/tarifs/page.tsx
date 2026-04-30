@@ -50,7 +50,7 @@ const ratesData: RateCategory[] = [
     ],
     notes: [
       "Apportez des vêtements de sport et des espadrilles.",
-      "Après la 2e partie, les parties supplémentaires reviennent à 7.50$.",
+      "Après la 2e partie, les parties supplémentaires reviennent à 8.00$.",
       "Tous les prix sont par personne.",
     ],
   },
