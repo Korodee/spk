@@ -1,4 +1,4 @@
-ow"use client";
+"use client";
 import { motion, Variants } from "framer-motion";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
