@@ -1,4 +1,4 @@
-"use client";
+ow"use client";
 import { motion, Variants } from "framer-motion";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -137,7 +137,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-sm text-gray-400 mt-4">Taxes incluses</p>
+              <p className="text-lg text-yellow-400 mt-4">Taxes incluses</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
@@ -169,7 +169,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-sm text-gray-400 mt-4">Taxes incluses</p>
+              <p className="text-lg text-yellow-400 mt-4">Taxes incluses</p>
             </div>
           </div>
         </div>
