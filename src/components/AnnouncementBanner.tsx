@@ -50,8 +50,8 @@ const AnnouncementBanner = () => {
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>*/}
                     <span className="inline-block">
-                      Journée Québécoise du Steamé 2026 {" "}
-                      <span className="hidden sm:inline"> 4 forfaits découvertes et des hot-dogs vapeurs pas chers ! Mercredi 6 mai de 16h00 à 21h00</span>
+                      Nouveautés{" "}
+                      <span className="hidden sm:inline">Ouverture de la saison de PaintBall le Samedi 16 mai 2026 ! Appelez nous pour réserver</span>
                     </span>
                   </p>
                 </div>
