@@ -50,7 +50,7 @@ const AnnouncementBanner = () => {
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>*/}
                     <span className="inline-block">
-                      <span className="hidden sm:inline">Ouverture de la saison de PaintBall le Samedi 16 mai 2026 ! Appelez nous pour réserver</span>
+                      <span className="hidden sm:inline justify-center">Ouverture de la saison de PaintBall le Samedi 16 mai 2026 ! Appelez nous pour réserver</span>
                     </span>
                   </p>
                 </div>
