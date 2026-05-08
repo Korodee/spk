@@ -97,7 +97,7 @@ export default function Home() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/kart4.jpg')" }}
+          style={{ backgroundImage: "url('/kart4_tronqué.jpg')" }}
         />
       
         <div className="absolute inset-0 bg-black/70" />
