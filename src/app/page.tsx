@@ -94,82 +94,56 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <section className="bg-neutral-950 text-white py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-orange-400 uppercase tracking-widest font-bold">
-              Journée québécoise du steamé 2026
-            </p>
-
-            <h2 className="text-3xl md:text-5xl font-black mt-3">
-              Party hot-dogs vapeurs
-            </h2>
-
-            <p className="text-gray-300 max-w-3xl mx-auto mt-4 text-lg">
-              Pour l’occasion, profitez de forfaits découvertes à moindre prix
-              et de hot-dogs vapeurs pas chers.
-            </p>
-            <p className="text-gray-300 max-w-3xl mx-auto mt-4 text-lg">
-              La musique sera au rendez-vous. Nous vous attendons mercredi le 6 mai 2026 à partir de 16h00 !
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
-              <h3 className="text-2xl font-black mb-4 text-orange-400">
-                Nourriture
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/kart4.jpg')" }}
+        />
+      
+        <div className="absolute inset-0 bg-black/70" />
+      
+        <div className="relative z-10 max-w-5xl mx-auto text-center text-white">
+          <p className="text-orange-400 uppercase tracking-widest font-bold">
+            Saison de karting 2026
+          </p>
+      
+          <h2 className="text-3xl md:text-5xl font-black mt-3">
+            Nouvel horaire
+          </h2>
+      
+          <p className="text-gray-200 max-w-3xl mx-auto mt-6 text-lg md:text-xl">
+            Venez profiter de notre piste de karting avec notre nouvel horaire prolongé!
+          </p>
+      
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-black text-orange-400 mb-3">
+                Lundi au vendredi
               </h3>
-
-              <div className="space-y-3">
-                <div className="flex justify-between gap-4 border-b border-white/10 pb-3">
-                  <span>Trio 2 hot-dogs vapeur + chips + liqueur</span>
-                  <span className="font-black whitespace-nowrap">7.50 $</span>
-                </div>
-
-                <div className="flex justify-between gap-4 border-b border-white/10 pb-3">
-                  <span>Trio 2 hot-dogs vapeur + chips + bière</span>
-                  <span className="font-black whitespace-nowrap">11.00 $</span>
-                </div>
-
-                <div className="flex justify-between gap-4">
-                  <span>Hot-dog</span>
-                  <span className="font-black whitespace-nowrap">2.00 $</span>
-                </div>
-              </div>
-
-              <p className="text-3xl text-extrabold text-yellow-400 mt-4">Taxes incluses</p>
+      
+              <p className="text-3xl font-extrabold">
+                13h à 21h
+              </p>
             </div>
-
-            <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
-              <h3 className="text-2xl font-black mb-4 text-purple-400">
-                Forfaits découvertes
+      
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-black text-yellow-400 mb-3">
+                Samedi
               </h3>
-
-              <div className="space-y-3">
-                <div className="flex justify-between gap-4 border-b border-white/10 pb-3">
-                  <span>Active Zone 30 min + carte d’arcade 40 crédits</span>
-                  <span className="font-black whitespace-nowrap">30.00 $</span>
-                </div>
-
-                <div className="flex justify-between gap-4 border-b border-white/10 pb-3">
-                  <span>Carte d’arcade 40 crédits + karting 10 min</span>
-                  <span className="font-black whitespace-nowrap">35.00 $</span>
-                </div>
-
-                <div className="flex justify-between gap-4 border-b border-white/10 pb-3">
-                  <span>Karting 10 min + Active Zone 30 min</span>
-                  <span className="font-black whitespace-nowrap">40.00 $</span>
-                </div>
-
-                <div className="flex justify-between gap-4">
-                  <span>
-                    Karting 10 min + Active Zone 30 min + carte d’arcade 40 crédits
-                  </span>
-                  <span className="font-black whitespace-nowrap">50.00 $</span>
-                </div>
-              </div>
-
-              <p className="text-3xl text-extrabold text-yellow-400 mt-4">Taxes incluses</p>
+      
+              <p className="text-3xl font-extrabold">
+                9h à 21h
+              </p>
+            </div>
+      
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-black text-purple-400 mb-3">
+                Dimanche
+              </h3>
+      
+              <p className="text-3xl font-extrabold">
+                9h à 17h
+              </p>
             </div>
           </div>
         </div>
