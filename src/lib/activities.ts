@@ -20,15 +20,15 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Mini-golf fluo (Bientôt)",
+    name: "Mini-golf fluo",
     slug: "minigolf",
     image: "/golf.jpg",
     description:
-      "Testez votre précision sur notre parcours de minigolf Blacklight, une expérience fluo et amusante pour tous les âges.",
+      "Redécouvrez le minigolf dans sa toute nouvelle version : un parcours réinventé avec une nouvelle thématique, de nouveaux décors et encore plus de plaisir.",
     details: [
       "Parcours 18 trous",
-      "Thème Blacklight immersif",
-      "Accessible à tous",
+      "Toboggan géant en spirale",
+      "Zone photo souvenir",
     ],
   },
   {
