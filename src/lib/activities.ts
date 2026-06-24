@@ -22,7 +22,8 @@ export const activities: Activity[] = [
   {
     name: "Mini-golf fluo",
     slug: "minigolf",
-    image: "/golf.jpg",
+    //image: "/golf.jpg",
+    image: "/entree_minigolf.jpg",
     description:
       "Redécouvrez le minigolf dans sa toute nouvelle version : un parcours réinventé avec une nouvelle thématique, de nouveaux décors et encore plus de plaisir.",
     details: [
