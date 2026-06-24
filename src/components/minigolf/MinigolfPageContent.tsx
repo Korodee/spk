@@ -124,20 +124,22 @@ const MinigolfPageContent = () => {
               </p>
           
               <h2 className="text-2xl md:text-3xl font-black mb-4">
-                Le Minigolf SPK est maintenant ouvert !
+                Le Minigolf est maintenant ouvert !
               </h2>
           
               <p className="mb-4">
                 Venez découvrir notre tout nouveau minigolf entièrement rénové aux
-                couleurs de SPK. Avec son nouveau décor, son ambiance renouvelée et ses
+                couleurs du centre d'amusement SPK. Avec son nouveau décor, son ambiance renouvelée et ses
                 défis amusants pour tous les âges, c&apos;est l&apos;activité parfaite pour
-                profiter de l&apos;été en famille ou entre amis.
+                profiter en famille ou entre amis.
               </p>
           
               <p className="text-base md:text-lg text-green-50/90">
-                Profitez de 18 trous passionnants ainsi que de 2 trous bonus qui
-                ajouteront encore plus de plaisir à votre partie. Un module de jeux pour
-                enfants est également inclus gratuitement sur le site du minigolf.
+                Parcourez nos 18 trous thématiques remplis de défis amusants et
+                découvrez de magnifiques maquettes tout au long du parcours. Les plus
+                jeunes pourront également profiter de notre impressionnant toboggan en
+                spirale, tandis que toute la famille pourra immortaliser sa visite dans
+                notre zone photo souvenir.
               </p>
           </motion.div>
       </div>
