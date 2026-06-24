@@ -79,12 +79,13 @@ export default async function ActivityPage({ params }: LocalPageProps) {
         ou pour réserver !
       </p>
       <p>
-        <strong>Un dépôt de 55$</strong> vous sera demandé afin pour réserver
+        <strong>Un dépôt de 60 $</strong> vous sera demandé afin pour réserver
         vos parties de paintball à l&apos;avance.
         <br />
         <strong>Politique d&apos;annulation :</strong> 48h avant sinon non
         remboursable.
       </p>
+      <p><strong>L'âge minimal est de 12 ans.</strong></p>
     </>
   );
 
