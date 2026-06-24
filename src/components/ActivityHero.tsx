@@ -19,7 +19,7 @@ interface ActivityHeroProps {
 const ActivityHero = ({ activity, customTitle, showPeriodNotice }: ActivityHeroProps) => {
   const hideBookingForSlugs = new Set([
     "realite-virtuelle",
-    "minigolf",
+    "paintball",
   ]);
 
   const shouldShowBookingButton = !hideBookingForSlugs.has(activity.slug);
