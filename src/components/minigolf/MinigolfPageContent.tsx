@@ -113,33 +113,33 @@ const MinigolfPageContent = () => {
 
       {/* Info Section */}
       <div className="py-20 px-4">
-        <motion.div
-          className="max-w-4xl mx-auto bg-gradient-to-r from-red-700/80 via-orange-600/80 to-red-700/80 backdrop-blur-md border border-red-300/70 rounded-2xl p-8 text-center text-lg text-red-50 leading-relaxed shadow-xl"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1 }}
-        >
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-100 mb-3">
-            Information importante
-          </p>
-          <h2 className="text-2xl md:text-3xl font-black mb-4">
-            Fermeture temporaire du minigolf
-          </h2>
-          <p className="mb-4">
-            Le minigolf sera complètement
-            démoli pour laisser la place à un tout nouveau minigolf interactif
-            avec une nouvelle thématique. Réouverture prévue en mai. Suivez-nous sur les réseaux pour en
-            savoir plus&nbsp;!
-          </p>
-          <p className="text-base md:text-lg text-red-50/90">
-            18 trous passionnants, mais également deux trous bonus pour ajouter
-            une dimension supplémentaire à votre expérience de jeu. Chaque trou
-            est soigneusement conçu pour défier vos compétences et stimuler
-            votre créativité. De plus, nous sommes fiers de vous offrir un
-            module de jeux d&apos;enfants gratuit et inclus dans le minigolf.
-          </p>
-        </motion.div>
+          <motion.div
+            className="max-w-4xl mx-auto bg-gradient-to-r from-lime-500/80 via-green-400/80 to-emerald-500/80 backdrop-blur-md border border-green-200/70 rounded-2xl p-8 text-center text-lg text-white leading-relaxed shadow-xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-50 mb-3">
+                Nouveauté 2026
+              </p>
+          
+              <h2 className="text-2xl md:text-3xl font-black mb-4">
+                Le Minigolf SPK est maintenant ouvert !
+              </h2>
+          
+              <p className="mb-4">
+                Venez découvrir notre tout nouveau minigolf entièrement rénové aux
+                couleurs de SPK. Avec son nouveau décor, son ambiance renouvelée et ses
+                défis amusants pour tous les âges, c&apos;est l&apos;activité parfaite pour
+                profiter de l&apos;été en famille ou entre amis.
+              </p>
+          
+              <p className="text-base md:text-lg text-green-50/90">
+                Profitez de 18 trous passionnants ainsi que de 2 trous bonus qui
+                ajouteront encore plus de plaisir à votre partie. Un module de jeux pour
+                enfants est également inclus gratuitement sur le site du minigolf.
+              </p>
+          </motion.div>
       </div>
 
       {/* Pricing Section */}
@@ -159,9 +159,7 @@ const MinigolfPageContent = () => {
             Nos Tarifs
           </motion.h2>
           <p className="text-center text-sm md:text-base text-red-300 mb-12 max-w-2xl mx-auto">
-            Le minigolf est actuellement en
-            transformation pour devenir un tout nouveau minigolf interactif. Réouverture prévue en mai. Les
-            tarifs ci-dessous seront mis à jour à la réouverture.
+            Le minigolf est actuellement ouvert, n'oubliez pas d'apporter vos bas !
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PricingTier
