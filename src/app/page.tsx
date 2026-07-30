@@ -118,21 +118,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-2xl font-black text-orange-400 mb-3">
-                Lundi au vendredi
+                Lundi au Jeudi
               </h3>
       
               <p className="text-3xl font-extrabold">
-                13h à 21h
+                9h à 23h
               </p>
             </div>
       
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-2xl font-black text-yellow-400 mb-3">
-                Samedi
+                Vendredi et Samedi
               </h3>
       
               <p className="text-3xl font-extrabold">
-                9h à 21h
+                9h à minuit
               </p>
             </div>
       
@@ -142,7 +142,7 @@ export default function Home() {
               </h3>
       
               <p className="text-3xl font-extrabold">
-                9h à 17h
+                9h à 13h
               </p>
             </div>
           </div>
