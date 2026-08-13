@@ -50,7 +50,7 @@ const AnnouncementBanner = () => {
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>*/}
                     <span className="inline-block">
-                      <span className="hidden sm:flex justify-center text-center">Le mini-Golf est maintenant ouvert !</span>
+                      <span className="hidden sm:flex justify-center text-center">En raison des pluies des derniers jours, nous sommes contraints de fermer le labyrinthe</span>
                     </span>
                   </p>
                 </div>
