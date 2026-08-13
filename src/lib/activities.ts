@@ -71,7 +71,7 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "Labyrinthe estival",
+    name: "NON DISPONIBLE - Labyrinthe",
     slug: "labyrinth",
     image: "/labyrinth.jpg",
     description:
