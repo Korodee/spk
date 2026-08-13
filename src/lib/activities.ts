@@ -83,7 +83,7 @@ export const activities: Activity[] = [
       "Jeu en équipe",
       "Course contre la montre",
     ],
-    disabled: True,
+    disabled: true,
   },
   {
     name: "Salle VIP",
