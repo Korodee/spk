@@ -5,6 +5,7 @@ export interface Activity {
   description: string;
   details: string[];
   hubDeJeuxId?: string; // If provided, links to /hub-de-jeux#hubDeJeuxId instead of /activity/slug
+  disabled?: boolean;
 }
 
 export const activities: Activity[] = [
@@ -82,6 +83,7 @@ export const activities: Activity[] = [
       "Jeu en équipe",
       "Course contre la montre",
     ],
+    disabled: True,
   },
   {
     name: "Salle VIP",
