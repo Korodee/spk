@@ -471,7 +471,7 @@ const TarifsPage = () => {
                     </p>
                   </div>
                 </motion.div>
-              )}*/
+              )*/}
 
               {category.category === "Salle VIP" ? (
                 <motion.div className="max-w-7xl mx-auto" variants={cardVariants}>
