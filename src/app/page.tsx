@@ -112,7 +112,7 @@ export default function Home() {
           </h2>
       
           <p className="text-gray-200 max-w-3xl mx-auto mt-6 text-lg md:text-xl">
-            Venez profiter de notre piste de karting avec notre horaire automnale!
+            Venez profiter de notre piste de karting avec notre horaire automnal !
           </p>
       
           <div className="grid md:grid-cols-3 gap-6 mt-12">
