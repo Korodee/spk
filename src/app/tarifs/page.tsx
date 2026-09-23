@@ -454,7 +454,7 @@ const TarifsPage = () => {
                 {category.category}
               </motion.h2>
 
-              /*{category.category === "Mini-golf fluo" && (
+              {/*category.category === "Mini-golf fluo" && (
                 <motion.div
                   className="max-w-3xl mx-auto mb-10"
                   variants={cardVariants}
