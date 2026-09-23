@@ -122,7 +122,7 @@ export default function Home() {
               </h3>
       
               <p className="text-3xl font-extrabold">
-                9h à 23h
+                12h à 21h
               </p>
             </div>
       
@@ -132,7 +132,7 @@ export default function Home() {
               </h3>
       
               <p className="text-3xl font-extrabold">
-                9h à minuit
+                9h à 22h
               </p>
             </div>
       
@@ -142,7 +142,7 @@ export default function Home() {
               </h3>
       
               <p className="text-3xl font-extrabold">
-                9h à 23h
+                9h à 21h
               </p>
             </div>
           </div>
