@@ -10,7 +10,7 @@ const faqData = [
   {
     question: "Quels sont les tarifs pour les activités ?",
     answer:
-      "Nos tarifs varient selon l'activité choisie. Pour le karting, nous offrons des prix réduits à 26$ pour les 15 ans et moins, 36$ pour les 16 ans et plus, et une option 'Les Deux' à 26$ pour 2 courses. La carte VIP karting est disponible à 170$ avec 5 courses de 15 min, puis 26$ + taxes pour le reste de la saison. Pour les autres activités, veuillez consulter nos pages d'activités ou nous contacter directement.",
+      "Nos tarifs varient selon l'activité choisie. Pour le karting, nous offrons des prix réduits à 27$ pour les 15 ans et moins, 37$ pour les 16 ans et plus. La carte VIP karting est disponible à 170$ avec 5 courses de 15 min, puis 27$ + taxes pour le reste de la saison. Pour les autres activités, veuillez consulter nos pages d'activités ou nous contacter directement.",
   },
   {
     question: "Dois-je réserver à l'avance ?",
@@ -25,7 +25,7 @@ const faqData = [
   {
     question: "Y a-t-il des restrictions d'âge pour les activités ?",
     answer:
-      "Oui, certaines activités ont des restrictions d'âge. Pour le karting, nous avons des tarifs réduits pour les 15 ans et moins. Pour le paintball, un dépôt de 55$ est requis pour les réservations. Pour plus de détails sur les restrictions spécifiques à chaque activité, n'hésitez pas à nous contacter.",
+      "Oui, certaines activités ont des restrictions d'âge. Pour le karting, nous avons des tarifs réduits pour les 15 ans et moins. Pour le paintball, un dépôt de 60$ est requis pour les réservations. Pour plus de détails sur les restrictions spécifiques à chaque activité, n'hésitez pas à nous contacter.",
   },
   {
     question: "Que se passe-t-il en cas de mauvais temps ?",
@@ -40,7 +40,7 @@ const faqData = [
   {
     question: "Quelle est votre politique d'annulation ?",
     answer:
-      "Pour le paintball, un dépôt de 55$ est requis pour réserver. La politique d'annulation est de 48h avant, sinon non remboursable. Pour les autres activités, veuillez nous contacter pour connaître les détails de notre politique d'annulation.",
+      "Pour le paintball, un dépôt de 60$ est requis pour réserver. La politique d'annulation est de 48h avant, sinon non remboursable. Pour les autres activités, veuillez nous contacter pour connaître les détails de notre politique d'annulation.",
   },
   {
     question: "Acceptez-vous les cartes de crédit ?",
