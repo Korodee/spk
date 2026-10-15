@@ -50,7 +50,7 @@ const AnnouncementBanner = () => {
                       <span className="hidden sm:inline">Découvrez nos nouvelles activités excitantes</span>
                     </span>*/}
                     <span className="inline-block">
-                      <span className="hidden sm:flex justify-center text-center">En raison des pluies des derniers jours, nous sommes contraints de fermer le labyrinthe</span>
+                      <span className="hidden sm:flex justify-center text-center">Les étudiants des Cégeps et des Universités économisent 10% du 12 au 16 octobre</span>
                     </span>
                   </p>
                 </div>
