@@ -71,7 +71,7 @@ export const activities: Activity[] = [
       "Idéal pour les groupes",
     ],
   },
-  {
+  /*{
     name: "NON DISPONIBLE - Labyrinthe",
     slug: "labyrinth",
     image: "/labyrinth.jpg",
@@ -84,7 +84,7 @@ export const activities: Activity[] = [
       "Course contre la montre",
     ],
     disabled: true,
-  },
+  },*/
   {
     name: "Salle VIP",
     slug: "salle-arcade-vip",
