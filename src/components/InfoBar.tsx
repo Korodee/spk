@@ -36,7 +36,7 @@ export default function InfoBar() {
 
           {/* Middle Section */}
           <div className="w-full md:w-1/3 flex justify-center">
-            <Link href="/activities" className="cursor-pointer">
+            <div>
               <div className="bg-white/5 hover:bg-white/10 transition-colors px-4 py-2 rounded-lg flex items-center justify-center">
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -56,7 +56,7 @@ export default function InfoBar() {
                   </motion.span>
                 </AnimatePresence>
               </div>
-            </Link>
+            </div>
           </div>
 
           <div className="w-full h-px md:w-px md:h-12 bg-white/10" />
