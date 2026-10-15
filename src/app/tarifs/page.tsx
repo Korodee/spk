@@ -177,7 +177,7 @@ const ratesData: RateCategory[] = [
     ],
     notes: ["Minimum de 8 personnes.", "Durée de 4 heures."],
   },
-  {
+  /*{
     category: "LABYRINTHE",
     image: "/labyrinth.jpg",
     items: [
@@ -187,7 +187,7 @@ const ratesData: RateCategory[] = [
         subtitle: "+ taxes / personne",
       },
     ],
-  },
+  },*/
   {
     category: "Quilles",
     image: "/17.jpg",
