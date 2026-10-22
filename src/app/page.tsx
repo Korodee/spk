@@ -147,7 +147,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-2xl font-black text-red-400 mb-3">
+              <h3 className="text-2xl font-black text-blue-400 mb-3">
                 Dimanche
               </h3>
       
