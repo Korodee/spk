@@ -118,7 +118,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-2xl font-black text-orange-400 mb-3">
-                Lundi au Jeudi
+                Lundi au Mercredi
+              </h3>
+      
+              <p className="text-3xl font-extrabold">
+                12h à 17h
+              </p>
+            </div>
+      
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-black text-yellow-400 mb-3">
+                Jeudi et Vendredi
               </h3>
       
               <p className="text-3xl font-extrabold">
@@ -127,24 +137,25 @@ export default function Home() {
             </div>
       
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-2xl font-black text-yellow-400 mb-3">
-                Vendredi et Samedi
-              </h3>
-      
-              <p className="text-3xl font-extrabold">
-                9h à 22h
-              </p>
-            </div>
-      
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-2xl font-black text-purple-400 mb-3">
-                Dimanche
+                Samedi
               </h3>
       
               <p className="text-3xl font-extrabold">
                 9h à 21h
               </p>
             </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-black text-red-400 mb-3">
+                Dimanche
+              </h3>
+      
+              <p className="text-3xl font-extrabold">
+                9h à 17h
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
