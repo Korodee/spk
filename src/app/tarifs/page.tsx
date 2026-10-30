@@ -71,7 +71,7 @@ const ratesData: RateCategory[] = [
     ],
     notes: ["Prix par personne."],
   },
-  {
+  /*{
     category: "Réalité Virtuelle",
     image: "/virtual-real.jpg",
     items: [
@@ -97,7 +97,7 @@ const ratesData: RateCategory[] = [
       },
     ],
     notes: ["Chaise 360 : maximum 250 lbs."],
-  },
+  },*/
   {
     category: "Karting",
     image: "/karting.jpg",
