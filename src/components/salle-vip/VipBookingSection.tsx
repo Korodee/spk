@@ -17,72 +17,111 @@ const VipBookingSection = () => {
     switch (activeTab) {
       case "info":
         return (
-          <motion.div
-            key="info"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6 text-center"
-          >
-            <div className="space-y-6 text-white">
-              {/* Accès à la salle */}
-              <div>
-                <p className="text-xl md:text-2xl font-semibold">
-                  Accès à la salle
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Votre salle n’est pas accessible avant l’heure exacte de votre réservation.
-                  Si vous prévoyez du temps pour la décoration, veuillez réserver une heure supplémentaire.
-                </p>
-              </div>
-            
-              {/* Consommations sur place */}
-              <div>
-                <p className="text-xl md:text-2xl font-semibold">
-                  Consommations sur place
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Il est obligatoire de se procurer sur place les chips, chocolats, bonbons, popcorn, jus, eau et boissons gazeuses (tous les produits que nous offrons).
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Vous pouvez apporter votre gâteau ainsi que votre lait pour l'anniversaire de vos proches. N'oubliez pas vos assiettes et ustensiles.</p>
-              </div>
-            
-              {/* Interdictions */}
-              <div>
-                <p className="text-xl md:text-2xl font-semibold text-red-400">
-                  Interdictions importantes
-                </p>
-                <ul className="list-disc list-inside text-base md:text-lg text-gray-300 mt-2 space-y-1">
-                  <li>Il est strictement interdit d'apporter de la nourriture en provenant de l'extérieur (traiteurs, restaurants et autres), nous avons une cantine sur place pour répondre à vos besoin.</li>
-                  <li>Les ballons contenant des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permis.</li>
-                  <li>
-                    Il est strictement interdit d’apporter de la bière, des prêts-à-boire alcoolisés ou de l’alcool fort, puisque nous détenons un permis de vente d’alcool.
-                  </li>
-                </ul>
-                <p className="text-sm text-red-400 mt-3 font-semibold">
-                  Le non-respect de ces règles peut entraîner une expulsion immédiate.
-                </p>
-              </div>
-            
-              {/* Fin de réservation */}
-              <div>
-                <p className="text-xl md:text-2xl font-semibold">
-                  Fin de réservation
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2">
-                  Cinq minutes avant la fin de votre réservation, un employé passera vérifier l’état de la salle.
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2">
-                  La salle doit être remise propre, en ordre et sans décorations.
-                  Des frais supplémentaires pourraient être appliqués selon l’état des lieux.
-                </p>
-                <p className="text-base md:text-lg text-gray-300 mt-2 font-medium">
-                  Vous devez avoir quitté les lieux au plus tard une minute avant l’heure de fin (xxh59).
-                </p>
-              </div>
-            </div>
-          </motion.div>
+                <motion.div
+                key="info"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="space-y-5 text-center"
+              >
+                <div className="space-y-5 text-white">
+
+                  {/* Accès à la salle */}
+                  <div className="rounded-xl border-l-4 border-amber-400 bg-white/5 px-5 py-5">
+                    <p className="text-xl md:text-2xl font-semibold">
+                      Accès à la salle
+                    </p>
+                    <p className="text-base md:text-lg text-gray-300 mt-2">
+                      Votre salle <strong className="text-amber-300">
+                        n’est pas accessible avant l’heure exacte
+                      </strong> de votre réservation.
+                      Si vous prévoyez du temps pour la décoration,
+                      <strong className="text-white">
+                        {" "}vous devez réserver une heure supplémentaire.
+                      </strong>
+                    </p>
+                  </div>
+
+                  {/* Consommations sur place */}
+                  <div className="rounded-xl border-l-4 border-amber-400 bg-white/5 px-5 py-5">
+                    <p className="text-xl md:text-2xl font-semibold">
+                      Consommations sur place
+                    </p>
+                    <p className="text-base md:text-lg text-gray-300 mt-2">
+                      <strong className="text-amber-300">
+                        Il est obligatoire de se procurer sur place
+                      </strong> les chips, chocolats, bonbons, popcorn, jus,
+                      eau et boissons gazeuses, ainsi que tous les
+                      produits que nous offrons.
+                    </p>
+                    <p className="text-base md:text-lg text-gray-300 mt-3">
+                      Vous pouvez apporter votre gâteau ainsi que
+                      votre lait pour l’anniversaire de vos proches.
+                      <strong className="text-white">
+                        {" "}N’oubliez pas vos assiettes et ustensiles.
+                      </strong>
+                    </p>
+                  </div>
+
+                  {/* Interdictions */}
+                  <div className="rounded-xl border-l-4 border-red-500 bg-red-500/10 px-5 py-5">
+                    <p className="text-xl md:text-2xl font-semibold text-red-400">
+                      Interdictions importantes
+                    </p>
+                    <ul className="list-disc list-inside text-base md:text-lg text-gray-300 mt-3 space-y-3">
+                      <li>
+                        <strong className="text-red-300">
+                          Il est strictement interdit d’apporter
+                          de la nourriture provenant de l’extérieur
+                        </strong> (traiteurs, restaurants ou autres
+                        établissements). Une cantine est disponible
+                        sur place afin de répondre à vos besoins.
+                      </li>
+                      <li>
+                        <strong className="text-red-300">
+                          Les ballons contenant des confettis,
+                          les gommes et les bouteilles d’eau
+                          réutilisables sont interdits.
+                        </strong>
+                      </li>
+                      <li>
+                        <strong className="text-red-300">
+                          Il est strictement interdit d’apporter
+                          de la bière, des prêts-à-boire alcoolisés
+                          ou de l’alcool fort,
+                        </strong> puisque nous détenons un permis
+                        de vente d’alcool.
+                      </li>
+                    </ul>
+                    <p className="text-sm md:text-base text-red-400 mt-5 font-bold">
+                      Le non-respect de ces règles peut entraîner
+                      une expulsion immédiate.
+                    </p>
+                  </div>
+
+                  {/* Fin de réservation */}
+                  <div className="rounded-xl border-l-4 border-amber-400 bg-white/5 px-5 py-5">
+                    <p className="text-xl md:text-2xl font-semibold">
+                      Fin de réservation
+                    </p>
+                    <p className="text-base md:text-lg text-gray-300 mt-2">
+                      Cinq minutes avant la fin de votre réservation,
+                      un employé passera vérifier l’état de la salle.
+                    </p>
+                    <p className="text-base md:text-lg text-gray-300 mt-3">
+                      La salle <strong className="text-amber-300">
+                        doit être remise propre, en ordre et sans décorations.
+                      </strong> Des frais supplémentaires pourraient être
+                      appliqués selon l’état des lieux.
+                    </p>
+                    <p className="text-base md:text-lg text-amber-300 mt-4 font-bold">
+                      Vous devez avoir quitté les lieux au plus tard
+                      une minute avant l’heure de fin de votre réservation.
+                    </p>
+                  </div>
+
+                </div>
+              </motion.div>
         );
       case "policy":
         return (
