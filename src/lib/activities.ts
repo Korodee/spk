@@ -33,7 +33,7 @@ export const activities: Activity[] = [
       "Zone photo souvenir",
     ],
   },
-  {
+  /*{
     name: "Réalité Virtuelle",
     slug: "realite-virtuelle",
     image: "/virtual-real.jpg",
@@ -44,7 +44,7 @@ export const activities: Activity[] = [
       "Stations VR individuelles",
       "Expériences multijoueurs",
     ],
-  },
+  },*/
   {
     name: "Karting estival",
     slug: "karting",
