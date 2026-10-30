@@ -44,6 +44,8 @@ const VipBookingSection = () => {
                 <p className="text-base md:text-lg text-gray-300 mt-2">
                   Il est obligatoire de se procurer sur place les chips, chocolats, bonbons, popcorn, jus, eau et boissons gazeuses (tous les produits que nous offrons).
                 </p>
+                <p className="text-base md:text-lg text-gray-300 mt-2">
+                  Vous pouvez apporter votre gâteau ainsi que votre lait pour l'anniversaire de vos proches. N'oubliez pas vos assiettes et ustensiles.</p>
               </div>
             
               {/* Interdictions */}
@@ -52,6 +54,7 @@ const VipBookingSection = () => {
                   Interdictions importantes
                 </p>
                 <ul className="list-disc list-inside text-base md:text-lg text-gray-300 mt-2 space-y-1">
+                  <li>Il est strictement interdit d'apporter de la nourriture en provenant de l'extérieur (traiteurs, restaurants et autres), nous avons une cantine sur place pour répondre à vos besoin.</li>
                   <li>Les ballons contenant des confettis, les gommes et les bouteilles d’eau réutilisables ne sont pas permis.</li>
                   <li>
                     Il est strictement interdit d’apporter de la bière, des prêts-à-boire alcoolisés ou de l’alcool fort, puisque nous détenons un permis de vente d’alcool.
