@@ -248,6 +248,7 @@ const ratesData: RateCategory[] = [
       },
     ],
     notes: [
+      "Il est strictement interdit d’apporter de la nourriture provenant de l’extérieur (traiteurs, restaurants ou autres établissements). Une cantine est disponible sur place afin de répondre à vos besoins.",
       "Votre salle n’est pas accessible avant l’heure exacte de votre réservation.",
       "Si vous prévoyez du temps pour la décoration, veuillez réserver une heure supplémentaire.",
       "Il est obligatoire de se procurer sur place les chips, chocolats, bonbons, popcorn, jus, eau et boissons gazeuses.",
